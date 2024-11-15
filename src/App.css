@@ -3,41 +3,47 @@ body {
   padding: 0;
   background-image: url('/bg_L.jpg');
   background-repeat: no-repeat;
-  /* Prevent image from repeating */
   background-position: top left;
-  /* Position it at the top-left corner */
   background-size: 125% auto;
-  /* Scale image to fit horizontally while maintaining aspect ratio */
   background-attachment: scroll;
-  /* Allow the background to scroll with content */
   height: 100%;
-  /* Make sure the body takes full height */
   overflow-x: hidden;
-  /* Prevent horizontal scrolling */
   overflow-y: auto;
-  /* Enable vertical scrolling */
 }
 
 .coming-soon {
   position: absolute;
-  top: 10vh; /* Positioning based on 15% of the viewport height */
+  top: 10vh;
   left: 70%;
-  width: 30vw; /* 50% of the viewport width */
-  padding: 0 2.5%; /* Add 2.5% padding on left and right */
-  transform: translateX(-50%); /* Center the element by its own width */
+  width: 30vw;
+  padding: 0 2.5%;
+  transform: translateX(-50%);
 }
 
 .image-yuvaan {
   position: absolute;
-  top: 5vh; /* Adjusted top positioning to avoid overlap with "Coming Soon" */
+  top: 5vh;
   left: 30%;
-  width: 55vw; /* 50% of the viewport width */
-  padding: 0 2.5%; /* Add 2.5% padding on left and right */
-  transform: translateX(-50%); /* Center the element by its own width */
+  width: 55vw;
+  padding: 0 2.5%;
+  transform: translateX(-50%);
 }
 
 .navbar-space {
   margin-top: 60px;
-  padding-top: 100vh; 
+  padding-top: 100vh;
 }
 
+/* Floating Scroll Down Icon */
+.scroll-down-icon {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+}
