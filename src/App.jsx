@@ -12,6 +12,7 @@ function App() {
         <img src="/cs2.png" alt="CS2" className="coming-soon" />
         <img src="/image_Yuvaan.png" alt="Yuvaan" className="image-yuvaan" />
       </div>
+      
       <div>
         {[...Array(140)].map((_, i) => (
           <br key={i} />
