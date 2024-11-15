@@ -5,12 +5,14 @@ import './App.css'
 import Navbar from './components/Navbar'
 
 function App() {
-
-
   return (
     <>
-      <img src="/bg.jpg" alt="" srcset="" />
       <Navbar />
+      <div>
+        {[...Array(500)].map((_, i) => (
+          <br key={i} />
+        ))}
+      </div>
     </>
   )
 }

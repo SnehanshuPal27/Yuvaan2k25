@@ -1,10 +1,12 @@
-.background-img {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  z-index: -1;
-  /* Make sure it stays behind any other content */
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('/bg.jpg');
+  background-repeat: no-repeat; /* Prevent image from repeating */
+  background-position: top left; /* Position it at the top-left corner */
+  background-size: 100% auto; /* Scale image to fit horizontally while maintaining aspect ratio */
+  background-attachment: scroll; /* Allow the background to scroll with content */
+  height: 100%; /* Make sure the body takes full height */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  overflow-y: auto; /* Enable vertical scrolling */
 }
