@@ -2,11 +2,46 @@ body {
   margin: 0;
   padding: 0;
   background-image: url('/bg.jpg');
-  background-repeat: no-repeat; /* Prevent image from repeating */
-  background-position: top left; /* Position it at the top-left corner */
-  background-size: 125% auto; /* Scale image to fit horizontally while maintaining aspect ratio */
-  background-attachment: scroll; /* Allow the background to scroll with content */
-  height: 100%; /* Make sure the body takes full height */
-  overflow-x: hidden; /* Prevent horizontal scrolling */
-  overflow-y: auto; /* Enable vertical scrolling */
+  background-repeat: no-repeat;
+  /* Prevent image from repeating */
+  background-position: top left;
+  /* Position it at the top-left corner */
+  background-size: 125% auto;
+  /* Scale image to fit horizontally while maintaining aspect ratio */
+  background-attachment: scroll;
+  /* Allow the background to scroll with content */
+  height: 100%;
+  /* Make sure the body takes full height */
+  overflow-x: hidden;
+  /* Prevent horizontal scrolling */
+  overflow-y: auto;
+  /* Enable vertical scrolling */
+}
+
+.coming-soon {
+  position: absolute;
+  top: 15vh;
+  /* Positioning based on 15% of the viewport height */
+  left: 50%;
+  /* Center horizontally */
+  width: 50vw;
+  /* 50% of the viewport width */
+  padding: 0 2.5%;
+  /* Add 2.5% padding on left and right */
+  transform: translateX(-50%);
+  /* Center the element by its own width */
+}
+
+.image-yuvaan {
+  position: absolute;
+  top: -20vh;
+  /* Positioning based on 20% of the viewport height */
+  left: 50%;
+  /* Center horizontally */
+  width: 50vw;
+  /* 50% of the viewport width */
+  padding: 0 2.5%;
+  /* Add 2.5% padding on left and right */
+  transform: translateX(-50%);
+  /* Center the element by its own width */
 }
