@@ -9,7 +9,7 @@ function App() {
     <>
       <Navbar />
       <div>
-        {[...Array(500)].map((_, i) => (
+        {[...Array(100)].map((_, i) => (
           <br key={i} />
         ))}
       </div>

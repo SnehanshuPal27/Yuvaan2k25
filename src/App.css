@@ -4,7 +4,7 @@ body {
   background-image: url('/bg.jpg');
   background-repeat: no-repeat; /* Prevent image from repeating */
   background-position: top left; /* Position it at the top-left corner */
-  background-size: 100% auto; /* Scale image to fit horizontally while maintaining aspect ratio */
+  background-size: 125% auto; /* Scale image to fit horizontally while maintaining aspect ratio */
   background-attachment: scroll; /* Allow the background to scroll with content */
   height: 100%; /* Make sure the body takes full height */
   overflow-x: hidden; /* Prevent horizontal scrolling */
