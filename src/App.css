@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-image: url('/bg.jpg');
+  background-image: url('/bg_L.jpg');
   background-repeat: no-repeat;
   /* Prevent image from repeating */
   background-position: top left;
@@ -20,28 +20,24 @@ body {
 
 .coming-soon {
   position: absolute;
-  top: 15vh;
-  /* Positioning based on 15% of the viewport height */
-  left: 50%;
-  /* Center horizontally */
-  width: 50vw;
-  /* 50% of the viewport width */
-  padding: 0 2.5%;
-  /* Add 2.5% padding on left and right */
-  transform: translateX(-50%);
-  /* Center the element by its own width */
+  top: 10vh; /* Positioning based on 15% of the viewport height */
+  left: 70%;
+  width: 30vw; /* 50% of the viewport width */
+  padding: 0 2.5%; /* Add 2.5% padding on left and right */
+  transform: translateX(-50%); /* Center the element by its own width */
+  z-index: 1;
 }
 
 .image-yuvaan {
   position: absolute;
-  top: -20vh;
-  /* Positioning based on 20% of the viewport height */
-  left: 50%;
-  /* Center horizontally */
-  width: 50vw;
-  /* 50% of the viewport width */
-  padding: 0 2.5%;
-  /* Add 2.5% padding on left and right */
-  transform: translateX(-50%);
-  /* Center the element by its own width */
+  top: 5vh; /* Adjusted top positioning to avoid overlap with "Coming Soon" */
+  left: 30%;
+  width: 55vw; /* 50% of the viewport width */
+  padding: 0 2.5%; /* Add 2.5% padding on left and right */
+  transform: translateX(-50%); /* Center the element by its own width */
+  z-index: 1; /* Ensures the image stays in the background */
+}
+
+.navbar-space {
+  margin-top: 60px; /* Adjust based on Navbar height */
 }
