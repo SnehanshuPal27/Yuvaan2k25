@@ -1,0 +1,101 @@
+/* Main navbar styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1rem 5vw;
+    /* Dynamic horizontal padding based on viewport width */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(4px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.navbar-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    flex: 0 1 auto;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.logo img {
+    height: 5vh;
+    /* Dynamic height based on viewport height to maintain aspect ratio */
+    width: auto;
+    /* Keeps the aspect ratio of the logo */
+    transition: all 0.3s ease;
+}
+
+/* Nav links styles */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2vw;
+    /* Dynamic gap between navigation items */
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #00bcd4;
+}
+
+/* Hamburger menu icon for smaller devices */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    margin: 3px;
+    transition: all 0.3s ease;
+}
+
+/* Media query for smaller devices */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.8);
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 200px;
+        height: 100vh;
+        padding-top: 5rem;
+        gap: 2rem;
+        z-index: 2;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
