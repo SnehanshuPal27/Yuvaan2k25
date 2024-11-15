@@ -25,7 +25,6 @@ body {
   width: 30vw; /* 50% of the viewport width */
   padding: 0 2.5%; /* Add 2.5% padding on left and right */
   transform: translateX(-50%); /* Center the element by its own width */
-  z-index: 1;
 }
 
 .image-yuvaan {
@@ -35,9 +34,10 @@ body {
   width: 55vw; /* 50% of the viewport width */
   padding: 0 2.5%; /* Add 2.5% padding on left and right */
   transform: translateX(-50%); /* Center the element by its own width */
-  z-index: 1; /* Ensures the image stays in the background */
 }
 
 .navbar-space {
-  margin-top: 60px; /* Adjust based on Navbar height */
+  margin-top: 60px;
+  padding-top: 100vh; 
 }
+
