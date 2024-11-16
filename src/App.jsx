@@ -54,9 +54,21 @@ function App() {
         <img src="/cs2.png" alt="CS2" className="coming-soon" />
         <img src="/image_Yuvaan.png" alt="Yuvaan" className="image-yuvaan" />
       </div>
+
       <div className='info'>
-        <CardList cards={cardsData} />
-        <CardList cards={cardsData} />
+        <div className = "card-row">
+          <h2 className="card-heading">Teams:-</h2>
+          <CardList cards={cardsData} />
+        </div>
+        <div className = "card-row">
+          <h2 className="card-heading">SGC Members:-</h2>
+          <CardList cards={cardsData} />
+        </div>
+        <div className = "card-row">
+          <h2 className="card-heading">Sponsors:-</h2>
+          <CardList cards={cardsData} />
+        </div>
+
         {[...Array(140)].map((_, i) => (
           <br key={i} />
         ))}
