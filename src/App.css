@@ -47,3 +47,20 @@ body {
   font-size: 16px;
   cursor: pointer;
 }
+.info{
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card-heading{
+  font-size: 5rem;
+  margin: 0 0 0 3rem;
+}
+.card-row{
+  width: 100%;
+  margin: 3rem;
+  border: 3px solid white;
+  border-radius: 2rem;
+}
