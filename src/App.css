@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -5,33 +11,54 @@ body {
   background-repeat: no-repeat;
   background-position: top left;
   background-size: 125% auto;
-  background-attachment: scroll;
-  height: 100%;
+  background-attachment: fixed;
+  min-height: 100vh;
   overflow-x: hidden;
-  overflow-y: auto;
 }
 
+/* Main content positioning */
 .coming-soon {
-  position: absolute;
+  position: fixed;
   top: 10vh;
-  left: 70%;
+  right: 0;
   width: 30vw;
   padding: 0 2.5%;
-  transform: translateX(-50%);
 }
 
 .image-yuvaan {
-  position: absolute;
+  position: fixed;
   top: 5vh;
-  left: 30%;
+  left: 0;
   width: 55vw;
   padding: 0 2.5%;
-  transform: translateX(-50%);
 }
 
+/* Content space for scrollable content */
 .navbar-space {
-  margin-top: 60px;
-  padding-top: 100vh;
+  height: 100vh;
+  width: 100%;
+}
+
+/* Cards section starts after the full viewport */
+.info {
+  margin-top: 100vh;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.card-heading {
+  font-size: clamp(2.5rem, 5vw, 5rem);
+  margin: 0 0 0 3rem;
+}
+
+.card-row {
+  width: calc(100% - 6rem);
+  margin: 3rem auto;
+  border: 3px solid white;
+  border-radius: 2rem;
+  padding: 1.5rem;
 }
 
 /* Floating Scroll Down Icon */
@@ -42,25 +69,75 @@ body {
   transform: translateX(-50%);
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
-  padding: 10px;
+  padding: 10px 20px;
   border-radius: 25px;
-  font-size: 16px;
+  font-size: clamp(14px, 1.5vw, 16px);
   cursor: pointer;
+  z-index: 1000;
 }
-.info{
-  margin: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+
+/* Responsive breakpoints */
+@media(max-width: 1280px) {
+  body {
+    background-size: cover;
+  }
+  
+  .coming-soon {
+    width: 40vw;
+  }
+  
+  .image-yuvaan {
+    width: 60vw;
+  }
 }
-.card-heading{
-  font-size: 5rem;
-  margin: 0 0 0 3rem;
+
+@media(max-width: 780px) {
+  body {
+    background-image: url('/bg_M.jpg');
+  }
+  
+  .coming-soon {
+    width: 90vw;
+    top: 50vh;
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .image-yuvaan {
+    width: 90vw;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .card-row {
+    width: calc(100% - 2rem);
+    margin: 2rem auto;
+  }
+  
+  .card-heading {
+    margin: 0 0 0 1rem;
+    font-size: clamp(2rem, 4vw, 4rem);
+  }
 }
-.card-row{
-  width: 100%;
-  margin: 3rem;
-  border: 3px solid white;
-  border-radius: 2rem;
+
+@media(max-width: 468px) {
+  body {
+    background-image: url('/bg_S.jpg');
+  }
+  
+  .info {
+    margin-top: 100vh;
+    padding: 0.5rem;
+  }
+  
+  .card-row {
+    width: calc(100% - 1rem);
+    margin: 1rem auto;
+  }
+  
+  .card-heading {
+    margin: 0;
+    text-align: center;
+  }
 }
