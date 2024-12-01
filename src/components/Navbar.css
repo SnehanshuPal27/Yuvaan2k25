@@ -1,9 +1,11 @@
 /* Main navbar styles */
 .navbar {
+    z-index: 3;
     position: fixed;
     top: 0;
     width: 100%;
-    padding: 1rem 5vw; /* Dynamic horizontal padding based on viewport width */
+    padding: 1rem 5vw;
+    /* Dynamic horizontal padding based on viewport width */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -11,7 +13,8 @@
     backdrop-filter: blur(4px);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
-    overflow: hidden; /* Prevent overflow */
+    overflow: hidden;
+    /* Prevent overflow */
 }
 
 .navbar-container {
@@ -19,7 +22,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: nowrap; /* Prevent navbar items from wrapping */
+    flex-wrap: nowrap;
+    /* Prevent navbar items from wrapping */
 }
 
 .logo {
@@ -35,8 +39,10 @@
 }
 
 .logo img {
-    height: 5vh; /* Dynamic height based on viewport height to maintain aspect ratio */
-    width: auto; /* Keeps the aspect ratio of the logo */
+    height: 5vh;
+    /* Dynamic height based on viewport height to maintain aspect ratio */
+    width: auto;
+    /* Keeps the aspect ratio of the logo */
     transition: all 0.3s ease;
 }
 
@@ -44,8 +50,10 @@
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 2vw; /* Dynamic gap between navigation items */
-    align-items: center; /* Vertically center the nav items */
+    gap: 2vw;
+    /* Dynamic gap between navigation items */
+    align-items: center;
+    /* Vertically center the nav items */
 }
 
 .nav-links li a {

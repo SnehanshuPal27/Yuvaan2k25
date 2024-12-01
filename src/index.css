@@ -1,4 +1,8 @@
 :root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -18,6 +22,7 @@ a {
   color: #646cff;
   text-decoration: inherit;
 }
+
 a:hover {
   color: #535bf2;
 }
@@ -25,9 +30,22 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  flex-direction: column;
+  /* Ensure vertical stacking of content */
+  align-items: stretch;
+  /* Stretch content to full width */
   min-width: 320px;
   min-height: 100vh;
+  width: 100%;
+  /* Take full width */
+}
+
+#root {
+  width: 100%;
+  /* Ensure the React root div takes full width */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 h1 {
@@ -46,12 +64,33 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
   border-color: #646cff;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* Full width adjustment for larger screens */
+@media (min-width: 1200px) {
+  :root {
+    width: 100%;
+    background-color: #242424;
+    /* Adjust background color for large screens if needed */
+  }
+
+  body {
+    width: 100%;
+    margin: 0 auto;
+    /* Center content horizontally */
+  }
+
+  #root {
+    width: 100%;
+  }
 }
 
 @media (prefers-color-scheme: light) {
@@ -59,9 +98,11 @@ button:focus-visible {
     color: #213547;
     background-color: #ffffff;
   }
+
   a:hover {
     color: #747bff;
   }
+
   button {
     background-color: #f9f9f9;
   }

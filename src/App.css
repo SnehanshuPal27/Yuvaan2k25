@@ -41,11 +41,13 @@ body {
 
 /* Cards section starts after the full viewport */
 .info {
+  z-index: 1;
   margin-top: 100vh;
   padding: 1rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  width: 100%;
 }
 
 .card-heading {
@@ -54,6 +56,7 @@ body {
 }
 
 .card-row {
+  z-index: 2;
   width: calc(100% - 6rem);
   margin: 3rem auto;
   border: 3px solid white;
@@ -81,11 +84,11 @@ body {
   body {
     background-size: cover;
   }
-  
+
   .coming-soon {
     width: 40vw;
   }
-  
+
   .image-yuvaan {
     width: 60vw;
   }
@@ -95,7 +98,7 @@ body {
   body {
     background-image: url('/bg_M.jpg');
   }
-  
+
   .coming-soon {
     width: 90vw;
     top: 50vh;
@@ -103,18 +106,18 @@ body {
     left: 50%;
     transform: translateX(-50%);
   }
-  
+
   .image-yuvaan {
     width: 90vw;
     left: 50%;
     transform: translateX(-50%);
   }
-  
+
   .card-row {
     width: calc(100% - 2rem);
     margin: 2rem auto;
   }
-  
+
   .card-heading {
     margin: 0 0 0 1rem;
     font-size: clamp(2rem, 4vw, 4rem);
@@ -125,17 +128,17 @@ body {
   body {
     background-image: url('/bg_S.jpg');
   }
-  
+
   .info {
     margin-top: 100vh;
     padding: 0.5rem;
   }
-  
+
   .card-row {
     width: calc(100% - 1rem);
     margin: 1rem auto;
   }
-  
+
   .card-heading {
     margin: 0;
     text-align: center;
