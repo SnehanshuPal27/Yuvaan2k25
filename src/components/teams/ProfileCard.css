@@ -1,0 +1,80 @@
+.prof-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    justify-self: center;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.prof-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .prof-card {
+        /* Existing styles */
+        margin: 0 auto;
+    }
+}
+
+.profile-container img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.profile-info {
+    padding: 15px;
+    text-align: left;
+}
+
+.profile-info h1 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 5px;
+    font-family: 'Arial', sans-serif;
+}
+
+.profile-info .job-title {
+    font-size: 1rem;
+    color: #6c757d;
+    margin-bottom: 10px;
+}
+
+.profile-info .desc {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+.profile-social {
+    padding: 15px;
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid #eee;
+    background-color: #f9f9f9;
+}
+
+.profile-social a {
+    font-size: 0.9rem;
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.profile-social a:hover {
+    color: #0056b3;
+}
+
+/*.card-bottom {*/
+/*    margin-bottom: 0;*/
+/*    margin-top: 1px;*/
+
+/*    !*left: 0;*!*/
+/*    !*right: 0;*!*/
+/*    height: 5px;*/
+/*    background: linear-gradient(45deg, #007bff, #00b4d8);*/
+/*}*/

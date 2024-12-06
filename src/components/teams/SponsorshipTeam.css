@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap');
+
+/* Existing styles for .sponsorship-team and its children */
+.sponsorship-team {
+    /*display: flex;*/
+    /*align-items: center;*/
+    padding: 20px;
+    margin: 5%;
+    background-color: #10375C;
+    text-align: center;
+}
+
+.sponsorship-team h2 {
+
+    font-size: 8vh;
+    margin-bottom: 20px;
+    color: #F3C623;
+    font-family: "Tilt Prism", sans-serif;
+}
+
+.team-members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Media Queries for responsive adjustments */
+@media (max-width: 768px) {
+    /* Target screens smaller than 768px */
+    .sponsorship-team {
+        padding: 15px;
+        margin: 3%;
+    }
+
+    .sponsorship-team h2 {
+        font-size: 3.5vh;
+    }
+
+    .team-members {
+        flex-direction: column;
+        align-self: center;
+        /* Stack members vertically on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Target screens smaller than 480px */
+    .sponsorship-team {
+        padding: 10px;
+        margin: 2%;
+    }
+
+    .sponsorship-team h2 {
+        font-size: 3vh;
+    }
+}
