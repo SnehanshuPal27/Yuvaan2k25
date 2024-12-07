@@ -15,11 +15,12 @@ function App() {
             {/*<div className="Spaces" style={{paddingTop:'100px'}}></div>*/}
             <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/eventTeam" element={<EventManagementTeam/>}/>
-                <Route path="/sponsorTeam" element={<SponsorshipTeam/>}/>
-                <Route path="/mediaTeam" element={<MediaPublicityTeam/>}/>
-                <Route path="/prTeam" element={<PRTeam/>}/>
-                <Route path="/wcTeam" element={<WCTeam/>}/>
+                <Route path="/eventTeam" element={<EventManagementTeam />} />
+                <Route path="/sponsorTeam" element={<SponsorshipTeam />} />
+                <Route path="/mediaTeam" element={<MediaPublicityTeam />} />
+                <Route path="/prTeam" element={<PRTeam />} />
+                <Route path="/wcTeam" element={<WCTeam />} />
+                <Route path="*" element={<Home />} />
 
 
                 {/* Add other routes as needed */}

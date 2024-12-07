@@ -40,21 +40,21 @@ function Home() {
             title: 'Event Management',
             copy: 'It\'s the desert you\'ve always dreamed of',
             button: 'View Members',
-            imageUrl: 'https://images.unsplash.com/photo-1545243424-0ce743321e11',
+            imageUrl: '/EventManagement.jpeg',
             buttonUrl: '/desert-destinations'
         },
         {
             title: 'Sponsors',
             copy: 'The ones who earn the money for the event',
             button: 'View Members',
-            imageUrl: 'https://images.unsplash.com/photo-1545243424-0ce743321e11',
+            imageUrl: '/Sponsors.jpeg',
             buttonUrl: '/desert-destinations'
         },
         {
             title: 'Web & Creatives',
             copy: 'The ones who earn the money for the event',
             button: 'View Members',
-            imageUrl: 'https://images.unsplash.com/photo-1545243424-0ce743321e11',
+            imageUrl: '/WebCreatives.jpeg',
             buttonUrl: '/desert-destinations'
         },
 
