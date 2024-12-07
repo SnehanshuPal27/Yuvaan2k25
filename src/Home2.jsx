@@ -33,7 +33,7 @@ function Home() {
             title: 'Public Relations',
             copy: 'Plan your next beach trip with these fabulous destinations',
             button: 'View Members',
-            imageUrl: 'https://images.unsplash.com/photo-1533903345306-15d1c30952de',
+            imageUrl: '/PR.jpeg',
             buttonUrl: '/prTeam'
         },
         {
