@@ -3,6 +3,7 @@ import './App2.css';
 
 import CardList from './components/cards/CardComponent.jsx';
 import Navbar from "./components/Navbar.jsx";
+import About from "./components/about/About.jsx";
 
 function Home() {
     const [isAtTop, setIsAtTop] = useState(true);
@@ -48,21 +49,21 @@ function Home() {
             copy: 'It\'s the desert you\'ve always dreamed of',
             button: 'View Members',
             imageUrl: '/EventManagement.jpeg',
-            buttonUrl: '/desert-destinations'
+            buttonUrl: '/eventTeam'
         },
         {
             title: 'Sponsors',
             copy: 'The ones who earn the money for the event',
             button: 'View Members',
             imageUrl: '/Sponsors.jpeg',
-            buttonUrl: '/desert-destinations'
+            buttonUrl: '/sponsorTeam'
         },
         {
             title: 'Web & Creatives',
             copy: 'The ones who earn the money for the event',
             button: 'View Members',
             imageUrl: '/WebCreatives.jpeg',
-            buttonUrl: '/desert-destinations'
+            buttonUrl: '/wcTeam'
         },
 
         // Add other card data as needed...
@@ -80,6 +81,7 @@ function Home() {
             </div>
 
             <div className='info'>
+                <About/>
                 <div ref={teamsRef} className="card-row">
                     <h2 className="card-heading">Teams:-</h2>
                     <CardList cards={cardsData} />

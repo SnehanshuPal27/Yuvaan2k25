@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+.about-container {
+    display: flex; /* Enable flexbox layout */
+    justify-content: space-between; /* Optional: Add space between child items */
+    align-items: flex-start; /* Align items at the top */
+    /*width: 100%; !* Ensure it takes the full width *!*/
+    color: white;
+    margin: 3rem;
+    gap: 50px;
+    /*background-color: rgba(255, 255, 255, 0.2);*/
+
+}
+
+.after-movie, .about-yuvaan {
+    text-align: center;
+    width: 50%; /* Each section takes half the width */
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+    padding: 10px; /* Add some padding for spacing */
+    gap: 20px;
+
+}
+.about-yuvaan h1,.after-movie h1{
+    padding: 20px;
+    font-size: 45px;
+    font-family: "Bebas Neue", sans-serif;
+    color: pink;
+}
+.about-yuvaan p {
+    font-size: 20px;
+    padding: 20px;
+    text-align: justify;
+    font-family: "Roboto Mono", monospace;
+}
+.video-container iframe {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    /* Ensure the video fits its container */
+    /*height: 315px; !* Set a fixed height for the iframe *!*/
+}
+
+@media screen and (max-width: 1024px) {
+    .about-yuvaan p {
+        font-size: 14px;
+
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .about-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between; /* Optional: Add space between child items */
+        align-items: flex-start; /* Align items at the top */
+        /*width: 100%; !* Ensure it takes the full width *!*/
+        color: white;
+        margin: 3rem;
+        gap: 50px;
+        /*background-color: rgba(255, 255, 255, 0.2);*/
+
+    }
+    .about-yuvaan p {
+        font-size: 14px;
+
+    }
+}
