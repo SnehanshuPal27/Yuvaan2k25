@@ -1,10 +1,17 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import './App2.css';
 
-import CardList from './components/cards/Cards';
+import CardList from './components/cards/CardComponent.jsx';
+import Navbar from "./components/Navbar.jsx";
 
 function Home() {
     const [isAtTop, setIsAtTop] = useState(true);
+
+    // Create refs for each section
+    const introDivRef = useRef(null);
+    const teamsRef = useRef(null);
+    const sgcMembersRef = useRef(null);
+    const sponsorsRef = useRef(null);
 
     // Function to check scroll position
     const handleScroll = () => {
@@ -61,36 +68,31 @@ function Home() {
         // Add other card data as needed...
     ];
 
-
     return (
         <>
-            <div className="intro-div">
-            <div className="navbar-space">
-                <img src="/cs2.png" alt="CS2" className="coming-soon" />
-                <img src="/image_Yuvaan.png" alt="Yuvaan" className="image-yuvaan" />
-            </div>
-            </div>
+            <Navbar refs={{ home: introDivRef, teams: teamsRef, sgc: sgcMembersRef, sponsors: sponsorsRef }} />
 
+            <div ref={introDivRef} className="intro-div">
+                <div className="navbar-space">
+                    <img src="/cs2.png" alt="CS2" className="coming-soon" />
+                    <img src="/image_Yuvaan.png" alt="Yuvaan" className="image-yuvaan" />
+                </div>
+            </div>
 
             <div className='info'>
-                <div className = "card-row">
+                <div ref={teamsRef} className="card-row">
                     <h2 className="card-heading">Teams:-</h2>
                     <CardList cards={cardsData} />
                 </div>
-                <div className = "card-row">
+                <div ref={sgcMembersRef} className="card-row">
                     <h2 className="card-heading">SGC Members:-</h2>
                     <CardList cards={cardsData} />
                 </div>
-                <div className = "card-row">
+                <div ref={sponsorsRef} className="card-row">
                     <h2 className="card-heading">Sponsors:-</h2>
                     <CardList cards={cardsData} />
                 </div>
-
-                {/*{[...Array(140)].map((_, i) => (*/}
-                {/*    <br key={i} />*/}
-                {/*))}*/}
             </div>
-
 
             {isAtTop && (
                 <div className="scroll-down-icon">

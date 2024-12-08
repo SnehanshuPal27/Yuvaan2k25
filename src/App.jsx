@@ -11,7 +11,7 @@ import WCTeam from "./components/teams/WCTeam.jsx";
 function App() {
     return (
         <Router>
-            <Navbar />
+            {/*<Navbar />*/}
             {/*<div className="Spaces" style={{paddingTop:'100px'}}></div>*/}
             <Routes>
                 <Route path="/" element={<Home />} />

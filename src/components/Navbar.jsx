@@ -1,29 +1,46 @@
 import React, { useState } from 'react';
 import './Navbar.css';
 
-function Navbar() {
+function Navbar({ refs }) {
     const [isOpen, setIsOpen] = useState(false);
 
     const handleToggle = () => {
         setIsOpen(!isOpen);
     };
 
+    const scrollToSection = (ref) => {
+        if (ref && ref.current) {
+            ref.current.scrollIntoView({ behavior: 'smooth' });
+        }
+        setIsOpen(false);
+    };
+
     return (
         <nav className="navbar">
             <div className="navbar-container">
                 <div className="logo">
-                    <a href="/"><img src="/logo.png" alt="Logo" /></a>
+                    <a href="/">
+                        <img src="/logo.png" alt="Logo" />
+                    </a>
                 </div>
                 <div className="hamburger" onClick={handleToggle}>
-                    <div></div>
-                    <div></div>
-                    <div></div>
+                    <div className="bar"></div>
+                    <div className="bar"></div>
+                    <div className="bar"></div>
                 </div>
                 <ul className={`nav-links ${isOpen ? 'show' : ''}`}>
-                    <li><a href="#home" onClick={handleToggle}>Home</a></li>
-                    <li><a href="#about" onClick={handleToggle}>About</a></li>
-                    <li><a href="#services" onClick={handleToggle}>Services</a></li>
-                    <li><a href="#contact" onClick={handleToggle}>Contact</a></li>
+                    <li>
+                        <a onClick={() => scrollToSection(refs.home)}>Home</a>
+                    </li>
+                    <li>
+                        <a onClick={() => scrollToSection(refs.teams)}>Teams</a>
+                    </li>
+                    <li>
+                        <a onClick={() => scrollToSection(refs.sgc)}>SGC Members</a>
+                    </li>
+                    <li>
+                        <a onClick={() => scrollToSection(refs.sponsors)}>Sponsors</a>
+                    </li>
                 </ul>
             </div>
         </nav>

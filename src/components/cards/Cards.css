@@ -32,20 +32,19 @@
   background-size: cover; /* Ensures the image covers the entire card */
   background-position: center; /* Centers the image within the card */
   background-repeat: no-repeat; /* Prevents tiling of the image */
-  /*background-color: whitesmoke;*/
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.1);
 }
 
 @media (min-width: 600px) {
   .card {
-    flex: 1 1 calc(50% - 1rem);
+    flex: 1 1 45%;
     height: 350px;
   }
 }
 
 @media (min-width: 800px) {
   .card {
-    flex: 1 1 calc(25% - 1rem);
+    flex: 1 1 22%;
   }
 }
 

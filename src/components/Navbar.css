@@ -16,7 +16,6 @@
     overflow: hidden;
     /* Prevent overflow */
 }
-
 .navbar-container {
     width: 100%;
     display: flex;
@@ -25,11 +24,9 @@
     flex-wrap: nowrap;
     /* Prevent navbar items from wrapping */
 }
-
 .logo {
     flex: 0 1 auto;
 }
-
 .logo a {
     display: flex;
     align-items: center;
@@ -37,7 +34,6 @@
     color: #fff;
     font-weight: bold;
 }
-
 .logo img {
     height: 5vh;
     /* Dynamic height based on viewport height to maintain aspect ratio */
@@ -45,7 +41,6 @@
     /* Keeps the aspect ratio of the logo */
     transition: all 0.3s ease;
 }
-
 /* Nav links styles */
 .nav-links {
     list-style: none;
@@ -55,25 +50,21 @@
     align-items: center;
     /* Vertically center the nav items */
 }
-
 .nav-links li a {
     color: #fff;
     text-decoration: none;
     font-size: 1rem;
     transition: color 0.3s ease;
 }
-
 .nav-links li a:hover {
     color: #00bcd4;
 }
-
 /* Hamburger menu icon for smaller devices */
 .hamburger {
     display: none;
     flex-direction: column;
     cursor: pointer;
 }
-
 .hamburger div {
     width: 25px;
     height: 3px;
@@ -81,33 +72,38 @@
     margin: 3px;
     transition: all 0.3s ease;
 }
-
+/* Media query for smaller devices */
 /* Media query for smaller devices */
 @media (max-width: 768px) {
     .nav-links {
         display: none;
         flex-direction: column;
-        background: rgba(0, 0, 0, 0.8);
+        background: rgba(0, 0, 0, 0.9); /* Slightly darker for full-screen visibility */
         position: fixed;
         top: 0;
-        right: 0;
-        width: 200px;
-        height: 100vh;
-        padding-top: 5rem;
+        left: 0; /* Changed from right to left to cover entire screen */
+        width: 100%; /* Full width of the screen */
+        height: 100vh; /* Full viewport height */
+        padding-top: 10vh; /* More padding from the top */
         gap: 2rem;
-        z-index: 1;
+        z-index: 10; /* Higher z-index to ensure it's on top */
         box-sizing: border-box;
+        justify-content: center; /* Center links vertically */
+        align-items: center; /* Center links horizontally */
     }
-
     .nav-links.show {
         display: flex;
     }
-
     .hamburger {
         display: flex;
+        z-index: 11; /* Ensure hamburger is above the menu */
     }
-
-    .logo {
-        flex: 1;
+    .nav-links li {
+        text-align: center;
+        width: 100%;
+        padding: 1rem;
+    }
+    .nav-links li a {
+        font-size: 1.5rem; /* Larger font size for mobile */
     }
 }
