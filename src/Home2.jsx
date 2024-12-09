@@ -5,6 +5,7 @@ import CardList from './components/cards/CardComponent.jsx';
 import Navbar from "./components/Navbar.jsx";
 import About from "./components/about/About.jsx";
 import Footer from './components/footer/footer.jsx';
+import Gallery from './components/gallery/gallery.jsx';
 function Home() {
     const [isAtTop, setIsAtTop] = useState(true);
 
@@ -82,6 +83,7 @@ function Home() {
 
             <div className='info'>
                 <About/>
+                <Gallery/>
                 <div ref={teamsRef} className="card-row">
                     <h2 className="card-heading">Teams:-</h2>
                     <CardList cards={cardsData} />
