@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Navbar.css';
 
 function Navbar({ refs }) {
@@ -8,12 +8,48 @@ function Navbar({ refs }) {
         setIsOpen(!isOpen);
     };
 
-    const scrollToSection = (ref) => {
+    const scrollToSection = (ref, offset = 80) => {
         if (ref && ref.current) {
-            ref.current.scrollIntoView({ behavior: 'smooth' });
+            // Get the current position of the element
+            const elementPosition = ref.current.getBoundingClientRect().top + window.pageYOffset;
+            
+            // Subtract the offset (default 80px for navbar height)
+            const offsetPosition = elementPosition - offset;
+
+            // Smooth scroll to the calculated position
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
         }
         setIsOpen(false);
     };
+
+    // Optional: Close mobile menu when clicking outside
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            const navLinks = document.querySelector('.nav-links');
+            const hamburger = document.querySelector('.hamburger');
+            
+            if (
+                isOpen && 
+                navLinks && 
+                !navLinks.contains(event.target) && 
+                hamburger && 
+                !hamburger.contains(event.target)
+            ) {
+                setIsOpen(false);
+            }
+        };
+
+        if (isOpen) {
+            document.addEventListener('mousedown', handleClickOutside);
+        }
+
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, [isOpen]);
 
     return (
         <nav className="navbar">
