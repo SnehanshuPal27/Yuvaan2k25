@@ -16,31 +16,32 @@ function Footer() {
                 <div className="footer-section contact">
                     <h3>Contact Us</h3>
                     <ul>
-                        <li><FaEnvelope className="icon" /> info@yourorganization.com</li>
-                        <li>1234 Main Street, City, Country</li>
-                        <li>+123-456-7890</li>
+                        <li><FaEnvelope className="icon" /> yuvaan@iiitg.ac.in</li>
+                        <li>IIIT Guwahati, Bongora </li>
+                        <li>Guwahati, Assam - 781015</li>
+
                     </ul>
                 </div>
                 <div className="footer-section social">
                     <h3>Follow Us</h3>
                     <div className="social-icons">
-                        <a href="https://facebook.com" target="_blank" rel="noreferrer">
+                        <a href="https://www.facebook.com/YuvaanIIITG/" target="_blank" rel="noreferrer">
                             <FaFacebook className="icon" />
                         </a>
-                        <a href="https://twitter.com" target="_blank" rel="noreferrer">
+                        <a href="https://x.com/Yuvaan_IIITG" target="_blank" rel="noreferrer">
                             <FaTwitter className="icon" />
                         </a>
-                        <a href="https://instagram.com" target="_blank" rel="noreferrer">
+                        <a href="https://www.instagram.com/yuvaan_iiitg/" target="_blank" rel="noreferrer">
                             <FaInstagram className="icon" />
                         </a>
-                        <a href="https://linkedin.com" target="_blank" rel="noreferrer">
+                        <a href="https://www.linkedin.com/company/yuvaaniiitg/" target="_blank" rel="noreferrer">
                             <FaLinkedin className="icon" />
                         </a>
                     </div>
                 </div>
             </div>
             <div className="footer-bottom">
-                <p>&copy; 2024 Your Organization. Designed with ❤️ by Your Team.</p>
+                <p>&copy; 2024 Yuvaan IIIT Guwahati. Designed with ❤️ by Web & Creatives Team.</p>
             </div>
         </footer>
     );

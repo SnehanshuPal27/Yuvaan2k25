@@ -5,7 +5,7 @@ export default function About(){
     return(
     <div className='about-container'>
         <div className='after-movie'>
-            <h1>AFTERMOVIE 2023</h1>
+            <h1>AFTERMOVIES</h1>
             <div className="video-container">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/HuRkfQ2vESA?si=a-Ep0u6JltmGcLF9"
                         title="YouTube video player" frameBorder="0"

@@ -146,12 +146,12 @@ function Home() {
                     </div>   
                 </div>
                 
-                <div ref={sponsorsRef} className="card-row">
-                    <h2 className="card-heading">Sponsors:-</h2>
-                    {/* <div className="card-continer">
-                        <CardList cards={cardsData} />
-                    </div> */}
-                </div>
+                {/*<div ref={sponsorsRef} className="card-row">*/}
+                {/*    <h2 className="card-heading">Sponsors:-</h2>*/}
+                {/*    /!* <div className="card-continer">*/}
+                {/*        <CardList cards={cardsData} />*/}
+                {/*    </div> *!/*/}
+                {/*</div>*/}
             </div>
             <Footer />
             {isAtTop && (

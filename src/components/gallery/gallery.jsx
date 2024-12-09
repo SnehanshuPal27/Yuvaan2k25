@@ -12,21 +12,21 @@ const Gallery = () => {
   const requestRefRef = useRef(null);
 
   const items = [
-    { id: 1, src: '/EventManagement.jpeg', text: 'Event Management' },
-    { id: 2, src: '/bg_S.jpg', text: 'Small Background' },
-    { id: 3, src: '/MediaPublicity.jpeg', text: 'Media Publicity' },
-    { id: 4, src: '/WebCreatives.jpeg', text: 'Web Creatives' },
-    { id: 5, src: '/bg.jpg', text: 'Background' },
-    { id: 6, src: '/bg_L.jpg', text: 'Large Background' },
-    { id: 7, src: '/bg_M.jpg', text: 'Medium Background' },
-    { id: 8, src: '/bg_XL.jpg', text: 'Extra Large Background' },
-    { id: 9, src: '/card-pic.jpg', text: 'Card Picture' },
-    { id: 10, src: '/PR.jpeg', text: 'Public Relations' },
-    { id: 11, src: '/Sponsors.jpeg', text: 'Sponsors' },
-    { id: 12, src: '/image_Yuvaan.png', text: 'Yuvaan Image' },
-    { id: 13, src: '/logo.png', text: 'Logo' },
-    { id: 14, src: '/logo copy.png', text: 'Logo Copy' },
-    { id: 15, src: '/cs2.png', text: 'CS2 Image' },
+    { id: 1, src: '/g1.JPG', text: 'Event Management' },
+    { id: 2, src: '/g2.JPG', text: 'Small Background' },
+    { id: 3, src: '/g3.JPG', text: 'Media Publicity' },
+    { id: 4, src: '/g4.JPG', text: 'Web Creatives' },
+    { id: 5, src: '/g5.JPG', text: 'Background' },
+    { id: 6, src: '/g7.JPG', text: 'Large Background' },
+    { id: 7, src: '/g8.JPG', text: 'Medium Background' },
+    { id: 8, src: '/g9.JPG', text: 'Extra Large Background' },
+    { id: 9, src: '/g10.JPG', text: 'Card Picture' },
+    { id: 10, src: '/g6.JPG', text: 'Public Relations' },
+    // { id: 11, src: '/Sponsors.jpeg', text: 'Sponsors' },
+    // { id: 12, src: '/image_Yuvaan.png', text: 'Yuvaan Image' },
+    // { id: 13, src: '/logo.png', text: 'Logo' },
+    // { id: 14, src: '/logo copy.png', text: 'Logo Copy' },
+    // { id: 15, src: '/cs2.png', text: 'CS2 Image' },
   ];
 
   // Quadruple items to create a more robust infinite scroll effect
