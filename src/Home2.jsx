@@ -90,7 +90,7 @@ function Home() {
         },
         {
             name: "Madhur Jain",
-            jobTitle: "Advisor",
+            jobTitle: "General Secretary-Cultural",
             id: "",
             email: "",
             linkedin: "",
@@ -98,7 +98,7 @@ function Home() {
         },
         {
             name: "V.Kethareswaran",
-            jobTitle: "General Secretary-Cultural",
+            jobTitle: "Advisor",
             id: "2201118",
             email: "madhur.jain22b@iiitg.ac.in",
             linkedin: "",
