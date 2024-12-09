@@ -1,4 +1,8 @@
 /* Main navbar styles */
+body {
+    scroll-padding-top: 80px; /* Matches the default offset */
+}
+
 .navbar {
     z-index: 3;
     position: fixed;
