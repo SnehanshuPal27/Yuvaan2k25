@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import './App2.css';
 
 import CardList from './components/cards/CardComponent.jsx';
+import ProfileCard from './components/teams/ProfileCard.jsx';
 import Navbar from "./components/Navbar.jsx";
 import About from "./components/about/About.jsx";
 import Footer from './components/footer/footer.jsx';
@@ -69,6 +70,41 @@ function Home() {
         // Add other card data as needed...
     ];
 
+    const SGC_Members = [
+        {
+            name: "Sai Yashwant",
+            jobTitle: "President",
+            id: "2201174",
+            email: "sai.gantasala22b@iiitg.ac.in",
+            linkedin: "",
+            imageUrl: ""
+        },
+        {
+            name: "Siddharth Singh",
+            jobTitle: "Vice President",
+            id: "2201192",
+            email: "siddharth.singh22b@iiitg.ac.in",
+            linkedin: "",
+            imageUrl: ""
+        },
+        {
+            name: "Madhur Jain",
+            jobTitle: "Advisor",
+            id: "",
+            email: "",
+            linkedin: "",
+            imageUrl: ""
+        },
+        {
+            name: "V.Kethareswaran",
+            jobTitle: "General Secretary-Cultural",
+            id: "2201118",
+            email: "madhur.jain22b@iiitg.ac.in",
+            linkedin: "",
+            imageUrl: ""
+        },
+    ]
+
     return (
         <>
             <Navbar refs={{ home: introDivRef, teams: teamsRef, sgc: sgcMembersRef, sponsors: sponsorsRef }} />
@@ -86,13 +122,33 @@ function Home() {
                     <h2 className="card-heading">Teams:-</h2>
                     <CardList cards={cardsData} />
                 </div>
+
+                {/* <div ref={sgcMembersRef} className="card-row">
+                    <h2 className="card-heading">SGC Members:-</h2>
+                    <div className="card-continer">
+                        <CardList cards={cardsData} />
+                    </div>   
+                </div> */}
+
                 <div ref={sgcMembersRef} className="card-row">
                     <h2 className="card-heading">SGC Members:-</h2>
-                    <CardList cards={cardsData} />
+                    <div className="card-continer">
+                        {SGC_Members.map((member, index) => (
+                            <ProfileCard
+                            key={index}
+                            name={member.name}
+                            jobTitle={member.jobTitle}
+                            image={member.imageUrl}
+                        />
+                        ))}
+                    </div>   
                 </div>
+                
                 <div ref={sponsorsRef} className="card-row">
                     <h2 className="card-heading">Sponsors:-</h2>
-                    <CardList cards={cardsData} />
+                    {/* <div className="card-continer">
+                        <CardList cards={cardsData} />
+                    </div> */}
                 </div>
             </div>
             <Footer />

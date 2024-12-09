@@ -17,7 +17,7 @@ const Card = ({ title, copy, button, imageUrl, buttonUrl }) => {
   };
   
 
-  const CardList = ({ cards }) => {
+  const CardList2 = ({ cards }) => {
     return (
       <main className="page-content">
         {cards.map((card, index) => (
@@ -40,4 +40,4 @@ const Card = ({ title, copy, button, imageUrl, buttonUrl }) => {
 //   return <CardList cards={cardsData} />;
 // };
 
-export default CardList;
+export default CardList2;

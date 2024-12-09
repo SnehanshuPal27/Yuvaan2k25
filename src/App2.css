@@ -173,8 +173,6 @@
     transform: translateX(-50%);
   }
 
-
-
   .card-row {
     width: calc(100% - 1rem);
     margin: 1rem auto;
@@ -184,4 +182,12 @@
     margin: 0;
     text-align: center;
   }
+}
+
+.card-continer{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
 }

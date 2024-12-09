@@ -30,16 +30,32 @@ function Navbar({ refs }) {
                 </div>
                 <ul className={`nav-links ${isOpen ? 'show' : ''}`}>
                     <li>
-                        <a onClick={() => scrollToSection(refs.home)}>Home</a>
+                        <a onClick={() => scrollToSection(refs.home)}
+                         style={{
+                            cursor: 'pointer',
+                         }}
+                        >Home</a>
                     </li>
                     <li>
-                        <a onClick={() => scrollToSection(refs.teams)}>Teams</a>
+                        <a onClick={() => scrollToSection(refs.teams)}
+                        style={{
+                            cursor: 'pointer',
+                         }}
+                        >Teams</a>
                     </li>
                     <li>
-                        <a onClick={() => scrollToSection(refs.sgc)}>SGC Members</a>
+                        <a onClick={() => scrollToSection(refs.sgc)}
+                        style={{
+                            cursor: 'pointer',
+                         }}
+                        >SGC Members</a>
                     </li>
                     <li>
-                        <a onClick={() => scrollToSection(refs.sponsors)}>Sponsors</a>
+                        <a onClick={() => scrollToSection(refs.sponsors)}
+                        style={{
+                            cursor: 'pointer',
+                         }}
+                        >Sponsors</a>
                     </li>
                 </ul>
             </div>

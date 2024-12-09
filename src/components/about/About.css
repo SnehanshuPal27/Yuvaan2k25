@@ -42,7 +42,7 @@
     .about-container {
         flex-direction: column; /* Stack elements vertically */
         gap: 20px; /* Reduce the gap */
-        margin: 2rem; /* Adjust margin for smaller screens */
+        margin: 0.5rem; /* Adjust margin for smaller screens */
     }
 
     .after-movie, .about-yuvaan {
