@@ -141,8 +141,8 @@ const Gallery = () => {
       {isFullScreen && activeItem && (
         <div className="full-screen-image">
           <div className="image-content">
-            <img src={activeItem.src} alt={activeItem.text} />
-            <div className="image-text">{activeItem.text}</div>
+            <img src={activeItem.src} alt={activeItem.text} loading={"lazy"}/>
+            {/*<div className="image-text">{activeItem.text}</div>*/}
           </div>
           <div className="arrow-left" onClick={handlePrev}>❮</div>
           <div className="arrow-right" onClick={handleNext}>❯</div>

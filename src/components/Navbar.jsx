@@ -86,13 +86,13 @@ function Navbar({ refs }) {
                          }}
                         >SGC Members</a>
                     </li>
-                    <li>
-                        <a onClick={() => scrollToSection(refs.sponsors)}
-                        style={{
-                            cursor: 'pointer',
-                         }}
-                        >Sponsors</a>
-                    </li>
+                    {/*<li>*/}
+                    {/*    <a onClick={() => scrollToSection(refs.sponsors)}*/}
+                    {/*    style={{*/}
+                    {/*        cursor: 'pointer',*/}
+                    {/*     }}*/}
+                    {/*    >Sponsors</a>*/}
+                    {/*</li>*/}
                 </ul>
             </div>
         </nav>

@@ -78,7 +78,7 @@ function Home() {
             id: "2201174",
             email: "sai.gantasala22b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: ""
+            imageUrl: "/sai.png"
         },
         {
             name: "Siddharth Singh",
@@ -86,7 +86,7 @@ function Home() {
             id: "2201192",
             email: "siddharth.singh22b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: ""
+            imageUrl: "/siddharth.png"
         },
         {
             name: "Madhur Jain",
@@ -94,7 +94,7 @@ function Home() {
             id: "",
             email: "",
             linkedin: "",
-            imageUrl: ""
+            imageUrl: "/madhur.png"
         },
         {
             name: "V.Kethareswaran",
