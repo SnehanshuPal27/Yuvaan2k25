@@ -1,109 +1,58 @@
-:root {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  /*color-scheme: light dark;*/
-  /*color: rgba(255, 255, 255, 0.87);*/
-  background-color: #242424;
-   background-image: url("../public/bg.jpg");
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  box-sizing: border-box;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer and Edge */
 }
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+button, input, textarea {
+  all: unset;
+  box-sizing: border-box;
 }
-
-a:hover {
-  color: #535bf2;
+button {cursor: pointer}
+p, h1, h2, h3, h4, h5, h6 {margin: 0}
+*::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Opera */
 }
 
 body {
   margin: 0;
-  display: flex;
-  flex-direction: column;
-  /* Ensure vertical stacking of content */
-  align-items: stretch;
-  /* Stretch content to full width */
-  min-width: 320px;
-  min-height: 100vh;
-  width: 100%;
-  /* Take full width */
-}
-
-#root {
-  width: 100%;
-  /* Ensure the React root div takes full width */
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-
-button:hover {
-  border-color: #646cff;
-}
-
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-/* Full width adjustment for larger screens */
-@media (min-width: 1200px) {
-  :root {
-    width: 100%;
-    /*background-color: #242424;*/
-    /* Adjust background color for large screens if needed */
-  }
-
-  body {
-    width: 100%;
-    margin: 0 auto;
-    /* Center content horizontally */
-  }
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overscroll-behavior-y: none;
+  overscroll-behavior: none;
+  overflow-x: hidden;
 
   #root {
-    width: 100%;
+    /*background-color: #0e0e0e;*/
+    min-height: 575px;
+    height: 100dvh;
+    width: 100dvw;
   }
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    /*color: #213547;*/
-    background-color: #ffffff;
-  }
+/* Mobile devices */
+@media screen and (max-width: 600px) {
+  body #root {min-width: 320px;}
+}
 
-  a:hover {
-    /*color: #747bff;*/
-  }
+/* iPads, Tablets */
+@media screen and (min-width: 601px) and (max-width: 768px) {
+  body #root {min-width: 601px;}
+}
 
-  button {
-    /*background-color: #f9f9f9;*/
-  }
+/* Small screens, laptops */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  body #root {min-width: 769px;}
+}
+
+/* Large Devices (Desktops) */
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+  body #root {min-width: 1025px;}
+}
+
+/* Extra Large Devices (Large Desktops) */
+@media only screen and (min-width: 1201px) {
+  body #root {min-width: 1201px;}
 }

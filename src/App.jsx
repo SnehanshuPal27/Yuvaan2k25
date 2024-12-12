@@ -7,6 +7,7 @@ import SponsorshipTeam from "./components/teams/SponsorshipTeam.jsx";
 import MediaPublicityTeam from "./components/teams/MediaPublicityTeam.jsx";
 import PRTeam from "./components/teams/PRTeam.jsx";
 import WCTeam from "./components/teams/WCTeam.jsx";
+import Footer from "./components/footer/footer.jsx";
 
 function App() {
     return (
@@ -25,6 +26,7 @@ function App() {
 
                 {/* Add other routes as needed */}
             </Routes>
+            <Footer/>
         </Router>
     );
 }

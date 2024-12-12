@@ -153,7 +153,7 @@ function Home() {
                 {/*    </div> *!/*/}
                 {/*</div>*/}
             </div>
-            <Footer />
+            {/*<Footer />*/}
             {isAtTop && (
                 <div className="scroll-down-icon">
                     <span>↓</span> Scroll Down

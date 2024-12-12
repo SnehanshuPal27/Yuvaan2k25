@@ -5,7 +5,7 @@
     /*display: flex;*/
     /*align-items: center;*/
     padding: 20px;
-    margin: 5%;
+    /*margin: 5%;*/
     background-color: #10375C;
     text-align: center;
 }
@@ -30,7 +30,7 @@
     /* Target screens smaller than 768px */
     .pr-team {
         padding: 15px;
-        margin: 3%;
+        /*margin: 3%;*/
     }
 
     .pr-team h2 {
@@ -48,7 +48,7 @@
     /* Target screens smaller than 480px */
     .pr-team {
         padding: 10px;
-        margin: 2%;
+        /*margin: 2%;*/
     }
 
     .pr-team h2 {
