@@ -99,7 +99,8 @@ body {
         display: flex;
     }
     .hamburger {
-        display: flex;
+
+        display: none;
         z-index: 11; /* Ensure hamburger is above the menu */
     }
     .nav-links li {
