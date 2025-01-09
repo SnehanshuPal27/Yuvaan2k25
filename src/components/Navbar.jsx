@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Navbar.css';
+import {Link} from "react-router-dom";
 
 function Navbar({ refs }) {
     const [isOpen, setIsOpen] = useState(false);
@@ -65,26 +66,36 @@ function Navbar({ refs }) {
                     <div className="bar"></div>
                 </div>
                 <ul className={`nav-links ${isOpen ? 'show' : ''}`}>
+
                     <li>
-                        <a onClick={() => scrollToSection(refs.home)}
-                         style={{
-                            cursor: 'pointer',
-                         }}
-                        >Home</a>
+                        <Link
+                            to="/"
+                            style={{
+                                cursor: 'pointer',
+                            }}
+                        >
+                            Home
+                        </Link>
                     </li>
                     <li>
-                        <a onClick={() => scrollToSection(refs.teams)}
-                        style={{
-                            cursor: 'pointer',
-                         }}
-                        >Teams</a>
+                        <Link
+                            to="/teamIndex"
+                            style={{
+                                cursor: 'pointer',
+                            }}
+                        >
+                            Teams
+                        </Link>
                     </li>
                     <li>
-                        <a onClick={() => scrollToSection(refs.sgc)}
-                        style={{
-                            cursor: 'pointer',
-                         }}
-                        >SGC Members</a>
+                        <Link
+                            to="/sponsors"
+                            style={{
+                                cursor: 'pointer',
+                            }}
+                        >
+                            Sponsors
+                        </Link>
                     </li>
                     {/*<li>*/}
                     {/*    <a onClick={() => scrollToSection(refs.sponsors)}*/}
