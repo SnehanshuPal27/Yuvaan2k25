@@ -1,58 +1,37 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './Navbar.css';
 import {Link} from "react-router-dom";
 
 function Navbar({ refs }) {
     const [isOpen, setIsOpen] = useState(false);
+    const menuRef = useRef(null);
 
     const handleToggle = () => {
         setIsOpen(!isOpen);
     };
-
-    const scrollToSection = (ref, offset = 80) => {
-        if (ref && ref.current) {
-            // Get the current position of the element
-            const elementPosition = ref.current.getBoundingClientRect().top + window.pageYOffset;
-            
-            // Subtract the offset (default 80px for navbar height)
-            const offsetPosition = elementPosition - offset;
-
-            // Smooth scroll to the calculated position
-            window.scrollTo({
-                top: offsetPosition,
-                behavior: 'smooth'
-            });
-        }
-        setIsOpen(false);
+    const handleLinkClick = () => {
+        setIsOpen(false); // Close the menu when a link is clicked
     };
 
-    // Optional: Close mobile menu when clicking outside
+
     useEffect(() => {
         const handleClickOutside = (event) => {
-            const navLinks = document.querySelector('.nav-links');
-            const hamburger = document.querySelector('.hamburger');
-            
-            if (
-                isOpen && 
-                navLinks && 
-                !navLinks.contains(event.target) && 
-                hamburger && 
-                !hamburger.contains(event.target)
-            ) {
-                setIsOpen(false);
-            }
+          if (menuRef.current && !menuRef.current.contains(event.target)) {
+            setIsOpen(false); // Close the menu if click is outside
+          }
         };
-
-        if (isOpen) {
-            document.addEventListener('mousedown', handleClickOutside);
-        }
-
+    
+        // Add event listener for clicks outside
+        document.addEventListener('mousedown', handleClickOutside);
+    
+        // Cleanup the event listener when the component unmounts
         return () => {
-            document.removeEventListener('mousedown', handleClickOutside);
+          document.removeEventListener('mousedown', handleClickOutside);
         };
-    }, [isOpen]);
+      }, []);
 
     return (
+        <>
         <nav className="navbar">
             <div className="navbar-container">
                 <div className="logo">
@@ -60,13 +39,8 @@ function Navbar({ refs }) {
                         <img src="/logo.png" alt="Logo" />
                     </a>
                 </div>
-                <div className="hamburger" onClick={handleToggle}>
-                    <div className="bar"></div>
-                    <div className="bar"></div>
-                    <div className="bar"></div>
-                </div>
-                <ul className={`nav-links ${isOpen ? 'show' : ''}`}>
 
+                <ul className={`nav-links ${isOpen ? 'show' : ''}`}>
                     <li>
                         <Link
                             to="/"
@@ -89,6 +63,16 @@ function Navbar({ refs }) {
                     </li>
                     <li>
                         <Link
+                            to="/eventIndex"
+                            style={{
+                                cursor: 'pointer',
+                            }}
+                        >
+                            Events
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
                             to="/sponsors"
                             style={{
                                 cursor: 'pointer',
@@ -97,16 +81,38 @@ function Navbar({ refs }) {
                             Sponsors
                         </Link>
                     </li>
-                    {/*<li>*/}
-                    {/*    <a onClick={() => scrollToSection(refs.sponsors)}*/}
-                    {/*    style={{*/}
-                    {/*        cursor: 'pointer',*/}
-                    {/*     }}*/}
-                    {/*    >Sponsors</a>*/}
-                    {/*</li>*/}
                 </ul>
             </div>
         </nav>
+
+
+        {/* Mobile devices */}
+        <nav className='mobile-navbar'>
+            <div className="mobile-navbar-container">
+                <div className="logo">
+                        <a href="/">
+                            <img src="/logo.png" alt="Logo" />
+                        </a>
+                </div>
+                
+                <button onClick={handleToggle} className='hamburger-btn'>
+                <img
+                    src={isOpen ? '/close.png' : '/menu.png'}
+                    alt={isOpen ? 'Close menu' : 'Open menu'}
+                    className="menu-icon"
+                />
+                </button>     
+            </div>
+        </nav>
+
+        <div  className={`nav-menu-container ${isOpen ? 'open' : ''}`}>
+            <Link to="/" onClick={handleLinkClick} style={{ cursor: 'pointer' }}>Home</Link>
+            <Link to="/teamIndex" onClick={handleLinkClick} style={{ cursor: 'pointer' }}>Teams</Link>
+            <Link to="/eventIndex" onClick={handleLinkClick} style={{ cursor: 'pointer' }}>Events</Link>
+            <Link to="/sponsors" onClick={handleLinkClick} style={{ cursor: 'pointer' }}>Sponsors</Link>
+        </div>
+
+        </>
     );
 }
 
