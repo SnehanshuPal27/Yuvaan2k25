@@ -1,12 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
 .intro-div{
     margin: 0;
     padding: 0;
+    display: flex;
+    /*align-items: center;*/
+
+    /*justify-content: center;*/
     background-image: url('/timeBG.png');
     background-repeat: no-repeat;
     background-position: top left;
     background-size: cover;
     background-attachment: scroll;
     /*min-height: 100vh;*/
+    backdrop-filter: blur(5px);
     overflow-x: hidden;
 }
 
@@ -14,31 +20,36 @@
     height: 100vh;
     width: 100%;
     display: flex;
-    justify-content: space-between; /* Adjust this as per your layout */
-    align-items: flex-start; /* Adjust this as per your layout */
     flex-direction: column;
+    justify-content: space-between;
+    gap: 50px;
+    /*justify-content: center; !* Adjust this as per your layout *!*/
+    /*align-items: center; !* Adjust this as per your layout *!*/
+    backdrop-filter: blur(2px);
     color: white;
-    font-family: "Pacifico", serif;
+
 }
 
 .presenter{
-    margin-top: 10vh;
-    font-size: 64px;
+    font-family: "Orbitron", serif;
+    font-weight: 900;
+    padding-top: 10vh;
+    font-size: 150px;
     margin-left: 5vw;
 }
 
+.intro-bottom{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 .head-caption{
-    margin: 0 auto;
+    /*margin: 0 auto;*/
     justify-self: center;
     font-size: 150px;
     font-family: "Abhaya Libre", serif;
     font-weight: 800;
-    background: conic-gradient(from 0deg, #880b0d 37%, #220303 47%);
-    opacity: 0.85; /* To achieve 85% visibility */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text; /* For other browsers that support background-clip */
-    text-fill-color: transparent;
+    color: white;
 }
 
 .lower-caption{
