@@ -57,3 +57,8 @@ body {
 @media only screen and (min-width: 1201px) {
   body #root {min-width: 1201px;}
 }
+
+@font-face {
+  font-family: 'enigma';
+  src: url('/src/assets/enigma.otf');
+}

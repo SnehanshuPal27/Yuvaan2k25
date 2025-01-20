@@ -48,21 +48,7 @@ const Slider2 = () => {
             <SwiperSlide>
               <img src="https://swiperjs.com/demos/images/nature-3.jpg" alt="nature 3" />
             </SwiperSlide>
-            <SwiperSlide>
-              <img src="https://swiperjs.com/demos/images/nature-4.jpg" alt="nature 4" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src="https://swiperjs.com/demos/images/nature-5.jpg" alt="nature 5" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src="https://swiperjs.com/demos/images/nature-6.jpg" alt="nature 6" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src="https://swiperjs.com/demos/images/nature-7.jpg" alt="nature 7" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src="https://swiperjs.com/demos/images/nature-8.jpg" alt="nature 8" />
-            </SwiperSlide>
+            
           </Swiper>
         </>
     );
