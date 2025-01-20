@@ -10,6 +10,7 @@ import WCTeam from "./components/teams/WCTeam.jsx";
 import Footer from "./components/footer/footer.jsx";
 import Sponsors from "./components/sponsors/Sponsors.jsx";
 import TeamIndex from "./components/teams/index.jsx";
+import Events from './components/events/Events.jsx';
 
 function App() {
     return (
@@ -27,7 +28,7 @@ function App() {
                 <Route path="/sponsors" element={<Sponsors/>} />
                 <Route path="/teamIndex" element={<TeamIndex />} />
                 <Route path="*" element={<Home />} />
-
+                <Route path="/eventIndex" element={<Events />} />
 
                 {/* Add other routes as needed */}
             </Routes>

@@ -1,0 +1,42 @@
+/* html,
+body {
+  position: relative;
+  height: 100%;
+} */
+
+body {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  height:320px;
+  width: 320px;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  border: 2px solid #121036;
+  border-radius: 10px;
+  box-shadow: #000000 0px 10px 25px;
+}
+
+.swiper-slide img {
+  transition: transform 0.3s ease; /* Apply transition to transform (scale) */
+}
+
+.swiper-slide:hover img {
+  transform: scale(1.1); /* Scale the image on hover */
+}

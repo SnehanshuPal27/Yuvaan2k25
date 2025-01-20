@@ -1,0 +1,26 @@
+
+.main{
+    background-image: url('/BG_Sponsor4.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background: linear-gradient(to bottom, #121036, #0a091f);   */
+}
+.day{
+    width: 100%;
+    height: 100vh;
+    margin-top: 5rem;
+    text-align: center;   
+}
+.day2{
+    margin-bottom: 3rem;
+}
+.day h1{
+    font-size: 3rem;
+    color: white;
+}

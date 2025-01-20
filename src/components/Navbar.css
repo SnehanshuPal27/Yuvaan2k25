@@ -12,11 +12,13 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(4px);
+    /* background: rgba(255, 255, 255, 0.1); */
+    background: #0003;
+    backdrop-filter: blur(15px);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
     overflow: hidden;
+    border-bottom: 1px solid #ffffff1a;
     /* Prevent overflow */
 }
 .navbar-container {
