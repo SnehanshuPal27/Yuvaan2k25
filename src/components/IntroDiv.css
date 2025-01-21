@@ -6,7 +6,7 @@
     /*align-items: center;*/
 
     /*justify-content: center;*/
-    background-image: url('/timeBG.png');
+    background-image: url('/BG_Main.jpg');
     background-repeat: no-repeat;
     background-position: top left;
     background-size: cover;
@@ -25,7 +25,7 @@
     gap: 50px;
     /*justify-content: center; !* Adjust this as per your layout *!*/
     /*align-items: center; !* Adjust this as per your layout *!*/
-    backdrop-filter: blur(2px);
+    /*backdrop-filter: blur(2px);*/
     color: white;
 
 }
