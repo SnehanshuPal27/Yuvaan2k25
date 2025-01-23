@@ -1,6 +1,7 @@
 import React from 'react';
 import ProfileCard from './ProfileCard'; // Assuming ProfileCard is in the same directory
 import './MediaPublicityTeam.css'
+import './Animation.css'
 
 const MediaPublicityTeam = () => {
     // const teamMembers = [
@@ -23,7 +24,7 @@ const MediaPublicityTeam = () => {
             phone: "9997946767",
             email: "pranay.siwach23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: ""
+            imageUrl: "./public/card-pic.jpg"
         },
         {
             name: "IPSHITA RANJAN",
@@ -32,7 +33,7 @@ const MediaPublicityTeam = () => {
             phone: "9913870560",
             email: "ipshita.ranjan23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: ""
+            imageUrl: "./public/card-pic.jpg"
         },
         {
             name: "TALABATTULA ADARSH",
@@ -41,7 +42,7 @@ const MediaPublicityTeam = () => {
             phone: "9515203945",
             email: "talabattula.adarsh23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: ""
+            imageUrl: "./public/card-pic.jpg"
         },
         {
             name: "PRAFUL PRAKASH GOEL",
@@ -50,7 +51,7 @@ const MediaPublicityTeam = () => {
             phone: "6398633391",
             email: "praful.goel23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: ""
+            imageUrl: "./public/card-pic.jpg"
         },
         {
             name: "GUTHIKONDA SREE PRANEETH",
@@ -59,7 +60,7 @@ const MediaPublicityTeam = () => {
             phone: "739664129",
             email: "guthikonda.praneeth23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: ""
+            imageUrl: "./public/card-pic.jpg"
         },
         {
             name: "SHUBHAM KANOJIYA",
@@ -68,7 +69,7 @@ const MediaPublicityTeam = () => {
             phone: "7748835392",
             email: "shubham.kanojiya23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: ""
+            imageUrl: "./public/card-pic.jpg"
         },
         {
             name: "KAVITA YADAV",
@@ -77,7 +78,7 @@ const MediaPublicityTeam = () => {
             phone: "7398865618",
             email: "kavita.yadav23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: ""
+            imageUrl: "./public/card-pic.jpg"
         },
         {
             name: "GAUTAM GIRI",
@@ -86,7 +87,7 @@ const MediaPublicityTeam = () => {
             phone: "7068140938",
             email: "gautam.giri23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: ""
+            imageUrl: "./public/card-pic.jpg"
         },
         {
             name: "YASH SHARMA",
@@ -95,7 +96,7 @@ const MediaPublicityTeam = () => {
             phone: "9244275526",
             email: "yash.sharma23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: ""
+            imageUrl: "./public/card-pic.jpg"
         },
         {
             name: "ADARSH KUMAR",
@@ -104,7 +105,7 @@ const MediaPublicityTeam = () => {
             phone: "9955960418",
             email: "adarsh.kumar23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: ""
+            imageUrl: "./public/card-pic.jpg"
         },
         {
             name: "PRIYA DEORI",
@@ -113,7 +114,7 @@ const MediaPublicityTeam = () => {
             phone: "7002036165",
             email: "priya.deori23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: ""
+            imageUrl: "./public/card-pic.jpg"
         },
         {
             name: "THAMAS PRAKASH GAYKAWAD",
@@ -122,7 +123,7 @@ const MediaPublicityTeam = () => {
             phone: "7898187813",
             email: "thamas.gaykawad23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: ""
+            imageUrl: "./public/card-pic.jpg"
         }
     ];
 
@@ -131,15 +132,24 @@ const MediaPublicityTeam = () => {
             <h2>Media & Publicity Team</h2>
             <div className="team-members">
                 {teamMembers.map((member, index) => (
-                    <ProfileCard
-                        key={index}
-                        name={member.name}
-                        jobTitle={member.jobTitle}
-                        linkedin={member.linkedin}
-                        // github={member.github}
-                        email={member.email}
-                        image={member.imageUrl}
-                    />
+                    <div className="card" key={index}>
+                        <div className="layer layer1"></div>
+                        <div className="layer layer2"></div>
+                        <div className="layer layer3"></div>
+                        <div className="imgBx">
+                            <img
+                                src={member.imageUrl || 'https://via.placeholder.com/300x350'}
+                                alt={`${member.name}'s profile`}
+                            />
+                        </div>
+                        <div className="details">
+                            <h2>
+                                {member.name}
+                                <br />
+                                <span>{member.jobTitle}</span>
+                            </h2>
+                        </div>
+                    </div>
                 ))}
             </div>
         </div>

@@ -9,8 +9,9 @@ body {
   
   .bg {
       margin: 0;
-      padding: 20px 0 0;
+      padding: 60px 0 0;
       display: flex;
+      flex-wrap: wrap;
       align-items: center; 
       justify-content: center; 
       background-image: url('/BG_Sponsor3.jpg'); 
@@ -20,7 +21,7 @@ body {
       background-attachment: fixed; 
       height: 100vh; 
       width: 100vw; 
-      overflow: hidden; 
+      overflow: scroll; 
   }
   
   .team-index {
