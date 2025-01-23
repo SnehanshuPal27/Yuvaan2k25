@@ -6,18 +6,15 @@
 
 ### `npm create vite@latest`
 
-<br>
-
 ### `npm install react route-dom`
 
-<br>
+### `npm run dev`
 
+<br>
 Install react-ui-cards
 <br>
 
 ### `npm install react-ui-cards`
-
-### `npm run dev`
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
