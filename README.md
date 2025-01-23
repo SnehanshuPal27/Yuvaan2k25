@@ -6,7 +6,7 @@
 
 ### `npm create vite@latest`
 
-### `npm install react route-dom`
+### `npm install`
 
 ### `npm run dev`
 
