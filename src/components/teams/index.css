@@ -7,63 +7,54 @@ body {
     overflow-x: hidden;
   }
   
-  .bg {
-      margin: 0;
-      padding: 20px 0 0;
-      display: flex;
-      align-items: center; 
-      justify-content: center; 
-      background-image: url('/BG_Sponsor3.jpg'); 
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
-      background-attachment: fixed; 
-      height: 100vh; 
-      width: 100vw; 
-      overflow: hidden; 
-  }
-  
-  .team-index {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 30px 40px;
-    justify-items: center;
-    padding: 20px;
+.bg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('/BG_Sponsor3.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+  width: 100vw;
+  padding: 20px;
 }
 
-h1 {
-    grid-column: span 3;
-    text-align: center;
+.team-index {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
-    
-  .link-list {
-      display: flex;
-      flex-wrap: wrap; 
-      gap: 20px; 
-      list-style: none; 
-      padding: 0;
-      margin: 0;
+
+.team-index a {
+  text-decoration: none;
+}
+
+.team-index img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+FlippingCard, FlippingCardFront, FlippingCardBack { 
+  width: 100%;
+  max-width: 300px;
+  aspect-ratio: 3/4;
+  border: none;
+}
+
+@media (max-width: 900px) {
+  .team-index {
+    grid-template-columns: repeat(2, 1fr);
   }
-    
-  .link-list li {
-      flex: 1 1 calc(50% - 20px); 
-      max-width: calc(50% - 20px); 
-      margin: auto;
+}
+
+@media (max-width: 600px) {
+  .team-index {
+    grid-template-columns: 1fr;
   }
-    
-  @media screen and (max-width: 768px) {
-      .link-list li {
-          flex: 1 1 calc(50% - 40px); 
-      }
-  }
-    
-  @media screen and (max-width: 600px) {
-    .bg {
-      padding: 15px;
-    }
-  }
-  
-  @font-face {
-    font-family: 'enigma';
-    src: url('/src/assets/enigma.otf'); 
-  }
+}

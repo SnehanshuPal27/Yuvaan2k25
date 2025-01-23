@@ -2,7 +2,7 @@
 
 # React + Vite
 
-## To install all the dependencies
+## To get started
 
 ### `npm create vite@latest`
 
