@@ -4,7 +4,7 @@
 .pr-team {
     /*display: flex;*/
     /*align-items: center;*/
-    padding: 20px;
+    padding: 60px;
     /*margin: 5%;*/
     background-color: #10375C;
     text-align: center;
@@ -22,7 +22,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 65px;
 }
 
 /* Media Queries for responsive adjustments */

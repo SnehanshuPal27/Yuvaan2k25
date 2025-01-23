@@ -4,9 +4,14 @@
 .wc-team {
     /*display: flex;*/
     /*align-items: center;*/
-    padding: 20px;
+    padding: 60px;
     /*margin: 5%;*/
-    background-color: #10375C;
+    /* background-color: #10375C; */
+    background-image: url('../public/bg1.jpeg');
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     text-align: center;
 }
 
@@ -22,8 +27,14 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 65px;
 }
+/* .team-members {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+    justify-content: center;
+} */
 
 /* Media Queries for responsive adjustments */
 @media (max-width: 768px) {
