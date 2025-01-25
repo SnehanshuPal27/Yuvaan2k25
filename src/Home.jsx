@@ -5,8 +5,10 @@ import CardList from './components/cards/CardComponent.jsx';
 import ProfileCard from './components/teams/ProfileCard.jsx';
 import Navbar from "./components/Navbar.jsx";
 import About from "./components/about/About.jsx";
-import Gallery from './components/gallery/Gallery.jsx';
+import Gallery2 from './components/gallery/Gallery2.jsx';
 import IntroDiv from "./components/IntroDiv.jsx";
+import Counter from './components/Counter/Counter.jsx';
+
 function Home() {
     const [isAtTop, setIsAtTop] = useState(true);
 
@@ -31,8 +33,8 @@ function Home() {
         <IntroDiv/>
             <div className='info'>
                 <About/>
-
-                <Gallery/>
+                <Counter/>
+                <Gallery2/>
             </div>
 
             {isAtTop && (
