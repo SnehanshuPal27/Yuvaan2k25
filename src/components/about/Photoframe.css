@@ -7,7 +7,7 @@
 */
 
 * {
-    padding:					0;
+    padding-top:					0;
     margin:						0;
     box-sizing:				border-box;
 }
@@ -46,3 +46,4 @@ figure {
     border-style:			solid;
     border-color:			rgb(207, 166, 0) rgb(207, 166, 0) rgb(145, 110, 0) rgb(145, 110, 0);
 }
+
