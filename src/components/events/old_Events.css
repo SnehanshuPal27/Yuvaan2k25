@@ -1,0 +1,47 @@
+
+.main{
+    background-image: url('/BG_Sponsor4.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background: linear-gradient(to bottom, #121036, #0a091f);   */
+}
+
+.main::before {
+    content: ""; /* Necessary to make the pseudo-element render */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/BG_Sponsor4.jpg') no-repeat center/cover;
+    filter: blur(5px); /* Adjust the opacity of the background image */
+    z-index: -1; /* Ensure it stays behind the content */
+  }
+
+.day{
+    width: 100%;
+    height: 100vh;
+    margin-top: 5rem;
+    text-align: center;   
+}
+.day2{
+    margin-bottom: 1rem;
+}
+.day h1{
+    font-size: 3rem;
+    color: white;
+    font-family: enigma;
+    text-shadow: 0px 0px 5px rgb(237, 233, 233);
+}
+.day h2{
+    font-size: 1.5rem;
+    color: white;
+    font-family: enigma;
+    margin-top: 1rem;
+}

@@ -1,47 +1,121 @@
-
-.main{
-    background-image: url('/BG_Sponsor4.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    width: 100%;
+.events-page {
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* background: linear-gradient(to bottom, #121036, #0a091f);   */
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #1a1a1a, #2d1f3d, #1f2d3d);
 }
 
-.main::before {
-    content: ""; /* Necessary to make the pseudo-element render */
+h1 {
+    color: white;
+    text-align: center;
+    margin: 4rem 0 2rem 0;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.events-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.event-card {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 2px solid #ff0000;
+    border-radius: 15px;
+    padding: 1.5rem;
+    width: calc(25% - 2rem);
+    min-width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.event-card::before {
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('/BG_Sponsor4.jpg') no-repeat center/cover;
-    filter: blur(5px); /* Adjust the opacity of the background image */
-    z-index: -1; /* Ensure it stays behind the content */
-  }
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 13px;
+}
 
-.day{
-    width: 100%;
-    height: 100vh;
-    margin-top: 5rem;
-    text-align: center;   
+.event-card:hover {
+    transform: translateY(-5px);
 }
-.day2{
-    margin-bottom: 1rem;
-}
-.day h1{
-    font-size: 3rem;
+
+.event-card h3 {
+    position: relative;
     color: white;
-    font-family: enigma;
-    text-shadow: 0px 0px 5px rgb(237, 233, 233);
-}
-.day h2{
+    margin-bottom: 0.5rem;
     font-size: 1.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    z-index: 1;
+}
+
+.event-card .date {
+    position: relative;
     color: white;
-    font-family: enigma;
-    margin-top: 1rem;
+    font-style: italic;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    z-index: 1;
+}
+
+.event-card .description {
+    position: relative;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    z-index: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .event-card {
+        width: calc(33.33% - 2rem);
+    }
+}
+
+@media (max-width: 900px) {
+    .event-card {
+        width: calc(50% - 2rem);
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .event-card {
+        width: 100%;
+    }
+
+    .events-page {
+        padding: 2rem 1rem;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+        margin: 2rem 0 1.5rem 0;
+    }
+}
+
+/* Additional hover effects */
+.event-card:hover::before {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.event-card:hover h3,
+.event-card:hover .date,
+.event-card:hover .description {
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
 }
