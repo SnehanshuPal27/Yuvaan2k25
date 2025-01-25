@@ -33,7 +33,8 @@ h1 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
     position: relative;
-    overflow: hidden;
+    cursor: pointer;
+    min-height: 200px;
 }
 
 .event-card::before {
@@ -51,32 +52,95 @@ h1 {
     transform: translateY(-5px);
 }
 
-.event-card h3 {
+.event-card h3,
+.event-card .date,
+.event-card .description,
+.event-card .click-info {
     position: relative;
     color: white;
-    margin-bottom: 0.5rem;
-    font-size: 1.5rem;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
     z-index: 1;
 }
 
-.event-card .date {
-    position: relative;
-    color: white;
-    font-style: italic;
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: pink;
+    padding: 2rem;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 1rem;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
-    z-index: 1;
 }
 
-.event-card .description {
-    position: relative;
+.close-button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.modal-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.detail-item {
+    margin-bottom: 1.5rem;
+}
+
+.detail-item h4 {
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.button {
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
     color: white;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
-    z-index: 1;
+    font-weight: bold;
+    transition: transform 0.3s ease;
 }
 
-/* Responsive Design */
+.button:hover {
+    transform: translateY(-2px);
+}
+
+.registration-btn {
+    background: #4caf50;
+}
+
+.gallery-btn {
+    background: #2196f3;
+}
+
 @media (max-width: 1200px) {
     .event-card {
         width: calc(33.33% - 2rem);
@@ -87,10 +151,6 @@ h1 {
     .event-card {
         width: calc(50% - 2rem);
     }
-
-    h1 {
-        font-size: 2rem;
-    }
 }
 
 @media (max-width: 600px) {
@@ -98,24 +158,12 @@ h1 {
         width: 100%;
     }
 
-    .events-page {
-        padding: 2rem 1rem;
+    .buttons {
+        flex-direction: column;
     }
 
-    h1 {
-        font-size: 1.8rem;
-        margin: 2rem 0 1.5rem 0;
+    .modal-content {
+        width: 95%;
+        padding: 1rem;
     }
-}
-
-/* Additional hover effects */
-.event-card:hover::before {
-    background: rgba(0, 0, 0, 0.6);
-}
-
-.event-card:hover h3,
-.event-card:hover .date,
-.event-card:hover .description {
-    transform: scale(1.02);
-    transition: transform 0.3s ease;
 }
