@@ -1,0 +1,35 @@
+.counter-container{
+    display: flex;
+    border-radius: 30px;
+    justify-content: space-between;
+    padding: 20px 100px;
+    align-items: center;
+    height: 30vh;
+    width: 100%;
+    background: linear-gradient(135deg, #1e1e2f, #3b3b5a);
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+}
+.char{
+    font-size: 70px;
+    color: pink;
+    font-family: "Bebas Neue", sans-serif;
+}
+.plus{
+    font-size: 70px;
+    color: #ffcc00;
+    font-family: "Bebas Neue", sans-serif;
+}
+h2{
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .counter-container{
+        flex-direction: column;
+        height: auto;
+        gap: 20px;
+    }
+    
+}

@@ -7,7 +7,6 @@ export default function About(){
     <div className='about-container'>
         <div className='after-movie'>
           <PhotoFrame/>
-
         </div>
 
         <div className='about-yuvaan'>
