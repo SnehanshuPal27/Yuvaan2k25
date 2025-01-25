@@ -1,4 +1,3 @@
-
 import { useEffect } from 'react';
 import './About.css';
 import PhotoFrame from "./PhotoFrame.jsx";
@@ -19,6 +18,12 @@ export default function About() {
 
     return (
         <div className="about-container">
+            {/* Background Video */}
+            <video autoPlay muted loop className="background-video">
+                <source src="/bgAbout.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+
             <div className="after-movie">
                 <PhotoFrame />
             </div>
@@ -32,10 +37,3 @@ export default function About() {
         </div>
     );
 }
-
-
-
-
-
-
-
