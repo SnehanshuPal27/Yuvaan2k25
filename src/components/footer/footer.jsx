@@ -5,13 +5,25 @@ import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaEnvelope } from 'reac
 function Footer() {
     return (
         <footer className="modern-footer">
-            <div className="footer-container">
+            <div className="footer-container flex justify-between">
                 <div className="footer-section about">
-                    <h3>About Us</h3>
-                    <p>
-                        We are a vibrant team of creators, committed to delivering excellence and 
-                        making a positive impact. Join us on our journey!
-                    </p>
+                    <div className='h-full flex flex-col gap-4'>
+                        <div>
+                            <h4 className='text-white text-xl'>Mukund Aggrawal</h4>
+                            <div className='flex gap-2 items-center '>
+                                <img className='h-5' src="/phone-icon.png" alt="" />
+                                <h4 className='text-gray-300 text-lg'>+91 9580256143</h4>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h4 className='text-white text-xl'>Harsha Vardhan</h4>
+                            <div className='flex gap-2 items-center '>
+                                <img className='h-5' src="/phone-icon.png" alt="" />
+                                <h4 className='text-gray-300 text-lg'>+91 9346584553</h4>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div className="footer-section contact">
                     <h3>Contact Us</h3>

@@ -91,3 +91,15 @@
 .footer-bottom p {
     margin: 0;
 }
+.contact{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+.social{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
