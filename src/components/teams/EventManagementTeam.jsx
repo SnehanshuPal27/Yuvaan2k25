@@ -1,6 +1,7 @@
 import React from 'react';
 import ProfileCard from './ProfileCard'; // Assuming ProfileCard is in the same directory
 import './EventManagementTeam.css'
+import './Animation.css'
 
 const EventManagementTeam = () => {
     // const teamMembers = [
@@ -23,7 +24,7 @@ const EventManagementTeam = () => {
             phone: "6307542454",
             email: "shubhashish.shukla23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: ""
+            imageUrl: "./public/card-pic.jpg"
         },
         {
             name: "Shouraya Mishra",
@@ -32,7 +33,7 @@ const EventManagementTeam = () => {
             phone: "7737856168",
             email: "shouraya.mishra23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: ""
+            imageUrl: "./public/card-pic.jpg"
         },
         {
             name: "Samadrita Mondal",
@@ -41,16 +42,16 @@ const EventManagementTeam = () => {
             phone: "7001805007",
             email: "samadrita.mondal23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: ""
+            imageUrl: "./public/card-pic.jpg"
         },
         {
-            name: "Prakash Saini",
+            name: "Prakshay Saini",
             jobTitle: "Member",
             id: "2301149",
             phone: "9034480145",
             email: "prakshay.saini23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: ""
+            imageUrl: "./public/card-pic.jpg"
         },
         {
             name: "Aarohee Sharma",
@@ -59,7 +60,7 @@ const EventManagementTeam = () => {
             phone: "9024377640",
             email: "aarohee.sharma23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: ""
+            imageUrl: "./public/card-pic.jpg"
         },
         {
             name: "Rishabh Singh Tomar",
@@ -68,16 +69,16 @@ const EventManagementTeam = () => {
             phone: "9516663485",
             email: "rishabh.tomar23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: ""
+            imageUrl: "./public/card-pic.jpg"
         },
         {
-            name: "Tadikunta Lohit Aditya",
+            name: "Tadikonda Lohith Aditya",
             jobTitle: "Member",
             id: "2301223",
             phone: "7032323720",
             email: "tadikonda.aditya23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: ""
+            imageUrl: "./public/card-pic.jpg"
         },
         {
             name: "Seeram Karthikeya",
@@ -86,7 +87,7 @@ const EventManagementTeam = () => {
             phone: "8978327879",
             email: "seeram.karthikeya23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: ""
+            imageUrl: "./public/card-pic.jpg"
         },
         {
             name: "Mohit Kumawat",
@@ -95,7 +96,7 @@ const EventManagementTeam = () => {
             phone: "9468844484",
             email: "mohit.kumawat23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: ""
+            imageUrl: "./public/card-pic.jpg"
         },
         {
             name: "Shubh Tiwari",
@@ -104,7 +105,7 @@ const EventManagementTeam = () => {
             phone: "9528015193",
             email: "shubh.tiwari23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: ""
+            imageUrl: "./public/card-pic.jpg"
         },
         {
             name: "Ananya Anurag Lenka",
@@ -113,7 +114,7 @@ const EventManagementTeam = () => {
             phone: "9437089199",
             email: "ananya.lenka23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: ""
+            imageUrl: "./public/card-pic.jpg"
         },
         {
             name: "Katrovath Ramu Naik",
@@ -122,7 +123,7 @@ const EventManagementTeam = () => {
             phone: "9492659298",
             email: "katrovath.naik23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: ""
+            imageUrl: "./public/card-pic.jpg"
         },
         {
             name: "Samridhi Tiwari",
@@ -131,7 +132,7 @@ const EventManagementTeam = () => {
             phone: "7275720024",
             email: "samridhi.tiwari23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: ""
+            imageUrl: "./public/card-pic.jpg"
         },
         {
             name: "Vanshika Gupta",
@@ -140,7 +141,7 @@ const EventManagementTeam = () => {
             phone: "7408102130",
             email: "vanshika.gupta23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: ""
+            imageUrl: "./public/card-pic.jpg"
         },
         {
             name: "Eadara Lasya",
@@ -149,16 +150,16 @@ const EventManagementTeam = () => {
             phone: "9704653622",
             email: "eadara.raghav23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: ""
+            imageUrl: "./public/card-pic.jpg"
         },
         {
-            name: "Agnidipto Bank",
+            name: "Agnidipto Banik",
             jobTitle: "Member",
             id: "2301020",
             phone: "7998668533",
             email: "agnidipto.banik23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: ""
+            imageUrl: "./public/card-pic.jpg"
         },
         {
             name: "Shubham Kumar",
@@ -167,7 +168,7 @@ const EventManagementTeam = () => {
             phone: "9065582052",
             email: "shubham.kumar23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: ""
+            imageUrl: "./public/card-pic.jpg"
         }
     ];
 
@@ -176,15 +177,24 @@ const EventManagementTeam = () => {
             <h2>Event Management Team</h2>
             <div className="team-members">
                 {teamMembers.map((member, index) => (
-                    <ProfileCard
-                        key={index}
-                        name={member.name}
-                        jobTitle={member.jobTitle}
-                        linkedin={member.linkedin}
-                        // github={member.github}
-                        email={member.email}
-                        image={member.imageUrl}
-                    />
+                    <div className="card" key={index}>
+                        <div className="layer layer1"></div>
+                        <div className="layer layer2"></div>
+                        <div className="layer layer3"></div>
+                        <div className="imgBx">
+                            <img
+                                src={member.imageUrl || 'https://via.placeholder.com/300x350'}
+                                alt={`${member.name}'s profile`}
+                            />
+                        </div>
+                        <div className="details">
+                            <h2>
+                                {member.name}
+                                <br />
+                                <span>{member.jobTitle}</span>
+                            </h2>
+                        </div>
+                    </div>
                 ))}
             </div>
         </div>

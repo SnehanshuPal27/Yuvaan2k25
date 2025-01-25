@@ -1,6 +1,7 @@
 import React from 'react';
 import ProfileCard from './ProfileCard'; // Assuming ProfileCard is in the same directory
 import './SponsorshipTeam.css'
+import './Animation.css'
 
 const SponsorshipTeam = () => {
     // const teamMembers = [
@@ -17,13 +18,13 @@ const SponsorshipTeam = () => {
 
     const teamMembers = [
         {
-            name: "VALLURI VISWA MARUTI SRIRAMA DINAKA",
+            name: "VALLURI VISWA MARUTI SRIRAMA DINAKAR",
             jobTitle: "Head",
             id: "2201223",
             phone: "9493466656",
             email: "valluri.dinakar22b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: ""
+            imageUrl: "./public/card-pic.jpg"
         },
         {
             name: "HARSH MISHRA",
@@ -32,7 +33,7 @@ const SponsorshipTeam = () => {
             phone: "8176061358",
             email: "harsh.mishra23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: ""
+            imageUrl: "./public/card-pic.jpg"
         },
         {
             name: "HARSHITA GUPTA",
@@ -41,7 +42,7 @@ const SponsorshipTeam = () => {
             phone: "9461817644",
             email: "harshita.gupta23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: ""
+            imageUrl: "./public/card-pic.jpg"
         },
         {
             name: "MALLENA VARDHAN",
@@ -50,7 +51,7 @@ const SponsorshipTeam = () => {
             phone: "9476062388",
             email: "mallena.vardhan23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: ""
+            imageUrl: "./public/card-pic.jpg"
         },
         {
             name: "ABHIRAJ TOMAR",
@@ -59,7 +60,7 @@ const SponsorshipTeam = () => {
             phone: "9205454265",
             email: "abhiraj.tomar23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: ""
+            imageUrl: "./public/card-pic.jpg"
         },
         {
             name: "DEEPANSHU SINGH",
@@ -68,7 +69,7 @@ const SponsorshipTeam = () => {
             phone: "9313414870",
             email: "deepanshu.singh23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: ""
+            imageUrl: "./public/card-pic.jpg"
         },
         {
             name: "ANUPAM TRIPATHI",
@@ -77,7 +78,7 @@ const SponsorshipTeam = () => {
             phone: "9140922245",
             email: "anupam.tripathi23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: ""
+            imageUrl: "./public/card-pic.jpg"
         },
         {
             name: "HARSHIT JAIN",
@@ -86,7 +87,7 @@ const SponsorshipTeam = () => {
             phone: "9445040562",
             email: "harshit.jain23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: ""
+            imageUrl: "./public/card-pic.jpg"
         },
         {
             name: "KUNAL PUROHIT",
@@ -95,7 +96,7 @@ const SponsorshipTeam = () => {
             phone: "7009512702",
             email: "kunal.purohit23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: ""
+            imageUrl: "./public/card-pic.jpg"
         },
         {
             name: "HRISHI SHEKHAR",
@@ -104,7 +105,7 @@ const SponsorshipTeam = () => {
             phone: "9359019084",
             email: "hrishi.shekhar23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: ""
+            imageUrl: "./public/card-pic.jpg"
         },
         {
             name: "ARYAN PANDEY",
@@ -113,7 +114,7 @@ const SponsorshipTeam = () => {
             phone: "9244369133",
             email: "aryan.pandey23b@gmail.com",
             linkedin: "",
-            imageUrl: ""
+            imageUrl: "./public/card-pic.jpg"
         },
         {
             name: "SAHIL BARMAN",
@@ -122,7 +123,7 @@ const SponsorshipTeam = () => {
             phone: "8929890960",
             email: "sahil.barman22b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: ""
+            imageUrl: "./public/card-pic.jpg"
         },
         {
             name: "TUHIN ROY",
@@ -131,7 +132,7 @@ const SponsorshipTeam = () => {
             phone: "8258892047",
             email: "tuhin.roy23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: ""
+            imageUrl: "./public/card-pic.jpg"
         },
         {
             name: "VALLURI JAYA VENKATA SREE VARDHAN",
@@ -140,7 +141,7 @@ const SponsorshipTeam = () => {
             phone: "6300949377",
             email: "valluri.vardhan23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: ""
+            imageUrl: "./public/card-pic.jpg"
         },
         {
             name: "SHREYA SARNAGAR",
@@ -149,7 +150,7 @@ const SponsorshipTeam = () => {
             phone: "9555631688",
             email: "shreya.sarnagar23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: ""
+            imageUrl: "./public/card-pic.jpg"
         },
         {
             name: "DIVY SANTOSH SAKHALA",
@@ -158,7 +159,7 @@ const SponsorshipTeam = () => {
             phone: "8856805726",
             email: "divy.sakhala23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: ""
+            imageUrl: "./public/card-pic.jpg"
         },
         {
             name: "KARRI MOHITH BHANU",
@@ -167,7 +168,7 @@ const SponsorshipTeam = () => {
             phone: "7207944504",
             email: "karri.bhanu23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: ""
+            imageUrl: "./public/card-pic.jpg"
         },
         {
             name: "VAIBHAV",
@@ -176,7 +177,7 @@ const SponsorshipTeam = () => {
             phone: "9122719666",
             email: "vaibhav23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: ""
+            imageUrl: "./public/card-pic.jpg"
         }
     ];
 
@@ -185,15 +186,24 @@ const SponsorshipTeam = () => {
             <h2>Sponsorship Team</h2>
             <div className="team-members">
                 {teamMembers.map((member, index) => (
-                    <ProfileCard
-                        key={index}
-                        name={member.name}
-                        jobTitle={member.jobTitle}
-                        linkedin={member.linkedin}
-                        // github={member.github}
-                        email={member.email}
-                        image={member.imageUrl}
-                    />
+                    <div className="card" key={index}>
+                        <div className="layer layer1"></div>
+                        <div className="layer layer2"></div>
+                        <div className="layer layer3"></div>
+                        <div className="imgBx">
+                            <img
+                                src={member.imageUrl || 'https://via.placeholder.com/300x350'}
+                                alt={`${member.name}'s profile`}
+                            />
+                        </div>
+                        <div className="details">
+                            <h2>
+                                {member.name}
+                                <br />
+                                <span>{member.jobTitle}</span>
+                            </h2>
+                        </div>
+                    </div>
                 ))}
             </div>
         </div>

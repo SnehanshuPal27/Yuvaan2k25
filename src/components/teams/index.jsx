@@ -12,7 +12,6 @@ export default function TeamIndex() {
   return (
     <div className="bg">
       <div className="team-index">
-        <h1>Hello from Team Index</h1>
         <Link to="/eventTeam">
           <FlippingCard>
             <FlippingCardBack>

@@ -1,6 +1,7 @@
 import React from 'react';
 import ProfileCard from './ProfileCard'; // Assuming ProfileCard is in the same directory
 import './WCTeam.css'
+import './Animation.css'
 
 const WCTeam = () => {
     // const teamMembers = [
@@ -23,7 +24,7 @@ const WCTeam = () => {
             phone: "9068265551",
             email: "snehanshu.pal22b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: ""
+            imageUrl: "./public/card-pic.jpg"
         },
         {
             name: "SOLANKI DHARAK DEEPAK",
@@ -32,7 +33,7 @@ const WCTeam = () => {
             phone: "8238735681",
             email: "solanki.deepak22b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: ""
+            imageUrl: "./public/card-pic.jpg"
         },
         {
             name: "PRITHVI RAJ",
@@ -41,7 +42,7 @@ const WCTeam = () => {
             phone: "9955095089",
             email: "prithvi.raj23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: ""
+            imageUrl: "./public/card-pic.jpg"
         },
         {
             name: "SACHIN MOHANTY",
@@ -50,7 +51,7 @@ const WCTeam = () => {
             phone: "8787022847",
             email: "sachin.mohanty23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: ""
+            imageUrl: "./public/card-pic.jpg"
         },
         {
             name: "NITIN MISHRA",
@@ -59,7 +60,7 @@ const WCTeam = () => {
             phone: "8294901410",
             email: "nitin.mishra23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: ""
+            imageUrl: "./public/card-pic.jpg"
         },
         {
             name: "RISHABH KUMAR JAIN",
@@ -68,7 +69,7 @@ const WCTeam = () => {
             phone: "8920445444",
             email: "rishabh.jain23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: ""
+            imageUrl: "./public/card-pic.jpg"
         },
         {
             name: "NISHANT PRABHAT",
@@ -77,7 +78,7 @@ const WCTeam = () => {
             phone: "8179642563",
             email: "nishant.prabhat23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: ""
+            imageUrl: "./public/card-pic.jpg"
         },
         {
             name: "RATNA JAISWAL",
@@ -86,7 +87,7 @@ const WCTeam = () => {
             phone: "9555055862",
             email: "ratna.jaiswal23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: ""
+            imageUrl: "./public/card-pic.jpg"
         },
         {
             name: "ARYAN KUMAR",
@@ -95,7 +96,7 @@ const WCTeam = () => {
             phone: "7890010105",
             email: "aryan.kumar22b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: ""
+            imageUrl: "./public/card-pic.jpg"
         },
         {
             name: "GUDE SAI DHEERAN CHOWDARY",
@@ -104,7 +105,7 @@ const WCTeam = () => {
             phone: "9032863059",
             email: "gude.chowdary22b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: ""
+            imageUrl: "./public/card-pic.jpg"
         },
         {
             name: "ANMOL KUSHWAHA",
@@ -113,7 +114,7 @@ const WCTeam = () => {
             phone: "7080502411",
             email: "anmol.kushwaha23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: ""
+            imageUrl: "./public/card-pic.jpg"
         }
     ];
 
@@ -122,17 +123,27 @@ const WCTeam = () => {
             <h2>Web & Creatives Team</h2>
             <div className="team-members">
                 {teamMembers.map((member, index) => (
-                    <ProfileCard
-                        key={index}
-                        name={member.name}
-                        jobTitle={member.jobTitle}
-                        linkedin={member.linkedin}
-                        // github={member.github}
-                        email={member.email}
-                        image={member.imageUrl}
-                    />
+                    <div className="card" key={index}>
+                        <div className="layer layer1"></div> 
+                        <div className="layer layer2"></div> 
+                        <div className="layer layer3"></div>
+                        <div className="imgBx">
+                            <img
+                                src={member.imageUrl || 'https://via.placeholder.com/300x350'}
+                                alt={`${member.name}'s profile`}
+                            />
+                        </div>
+                        <div className="details">
+                            <h2>
+                                {member.name}
+                                <br />
+                                <span>{member.jobTitle}</span>
+                            </h2>
+                        </div>
+                    </div>
                 ))}
             </div>
+
         </div>
     );
 };
