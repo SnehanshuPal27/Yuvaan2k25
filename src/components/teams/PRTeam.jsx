@@ -1,6 +1,7 @@
 import React from 'react';
 import ProfileCard from './ProfileCard'; // Assuming ProfileCard is in the same directory
 import './PRTeam.css'
+import './Animation.css'
 
 const PRTeam = () => {
     // const teamMembers = [
@@ -23,7 +24,7 @@ const PRTeam = () => {
             phone: "9580256143",
             email: "mukund.agrawal22b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: ""
+            imageUrl: "./public/card-pic.jpg"
         },
         {
             name: "BHEEMUNI HARSHAVARDHAN REDDY",
@@ -32,7 +33,7 @@ const PRTeam = () => {
             phone: "9346584553",
             email: "bheemuni.reddy22b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: ""
+            imageUrl: "./public/card-pic.jpg"
         },
         {
             name: "BHAVISH SAI VISHWAS MELEKOTE",
@@ -41,7 +42,7 @@ const PRTeam = () => {
             phone: "9321432559",
             email: "bhavish.melekote23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: ""
+            imageUrl: "./public/card-pic.jpg"
         },
         {
             name: "TANISH KASHYAP",
@@ -50,7 +51,7 @@ const PRTeam = () => {
             phone: "8287801885",
             email: "tanish.kashyap23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: ""
+            imageUrl: "./public/card-pic.jpg"
         },
         {
             name: "HARSHIT SHARMA",
@@ -59,7 +60,7 @@ const PRTeam = () => {
             phone: "6375633056",
             email: "harshit.sharma23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: ""
+            imageUrl: "./public/card-pic.jpg"
         },
         {
             name: "ALAJANGI BHAVYA",
@@ -68,7 +69,7 @@ const PRTeam = () => {
             phone: "9393456809",
             email: "alajangi.bhavya23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: ""
+            imageUrl: "./public/card-pic.jpg"
         },
         {
             name: "RAHUL YADAV",
@@ -77,7 +78,7 @@ const PRTeam = () => {
             phone: "7849936546",
             email: "rahul.yadav23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: ""
+            imageUrl: "./public/card-pic.jpg"
         },
         {
             name: "LALIT KUMAR",
@@ -86,7 +87,7 @@ const PRTeam = () => {
             phone: "8630203945",
             email: "lalit.kumar23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: ""
+            imageUrl: "./public/card-pic.jpg"
         },
         {
             name: "RADHIKA",
@@ -95,7 +96,7 @@ const PRTeam = () => {
             phone: "8708070317",
             email: "radhika23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: ""
+            imageUrl: "./public/card-pic.jpg"
         },
         {
             name: "PRANITA MAHAJAN",
@@ -104,7 +105,7 @@ const PRTeam = () => {
             phone: "9870460184",
             email: "pranita.mahajan23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: ""
+            imageUrl: "./public/card-pic.jpg"
         },
         {
             name: "MANIK KUMAR SANGAL",
@@ -113,7 +114,7 @@ const PRTeam = () => {
             phone: "7017272108",
             email: "manik.sangal22b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: ""
+            imageUrl: "./public/card-pic.jpg"
         },
         {
             name: "SHANKARANAND",
@@ -122,7 +123,7 @@ const PRTeam = () => {
             phone: "6203837117",
             email: "shankaranand23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: ""
+            imageUrl: "./public/card-pic.jpg"
         },
         {
             name: "K.SHREEJA",
@@ -131,7 +132,7 @@ const PRTeam = () => {
             phone: "9866011929",
             email: "k.shreeja23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: ""
+            imageUrl: "./public/card-pic.jpg"
         },
         {
             name: "ADITYA GUPTA",
@@ -140,7 +141,7 @@ const PRTeam = () => {
             phone: "7878034627",
             email: "aditya.gupta23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: ""
+            imageUrl: "./public/card-pic.jpg"
         }
     ];
 
@@ -149,15 +150,24 @@ const PRTeam = () => {
             <h2>Public Relations Team</h2>
             <div className="team-members">
                 {teamMembers.map((member, index) => (
-                    <ProfileCard
-                        key={index}
-                        name={member.name}
-                        jobTitle={member.jobTitle}
-                        linkedin={member.linkedin}
-                        // github={member.github}
-                        email={member.email}
-                        image={member.imageUrl}
-                    />
+                    <div className="card" key={index}>
+                        <div className="layer layer1"></div>
+                        <div className="layer layer2"></div>
+                        <div className="layer layer3"></div>
+                        <div className="imgBx">
+                            <img
+                                src={member.imageUrl || 'https://via.placeholder.com/300x350'}
+                                alt={`${member.name}'s profile`}
+                            />
+                        </div>
+                        <div className="details">
+                            <h2>
+                                {member.name}
+                                <br />
+                                <span>{member.jobTitle}</span>
+                            </h2>
+                        </div>
+                    </div>
                 ))}
             </div>
         </div>
