@@ -76,8 +76,9 @@ const EventModal = ({ event, onClose }) => {
 
 const Events = () => {
   const [selectedEvent, setSelectedEvent] = useState(null);
+  const [selectedDay, setSelectedDay] = useState("day1"); // Default to day1
 
-  const events = [
+  const day1Events = [
     {
       title: "Tech Conference 2024",
       date: "Jan 15, 2024",
@@ -139,7 +140,7 @@ const Events = () => {
       galleryLink: "#",
     },
     {
-      title: "Cloud Computing Summit",
+      title: "Cloud Computing",
       date: "Jun 20, 2024",
       time: "1:00 PM - 5:00 PM",
       shortDescription: "Cloud technologies showcase",
@@ -161,13 +162,108 @@ const Events = () => {
       galleryLink: "#",
     },
     {
-      title: "Cybersecurity Conference",
+      title: "Cybersecurity Conf",
       date: "Aug 5, 2024",
       time: "10:00 AM - 4:00 PM",
       shortDescription: "Security and privacy focus",
       fullDescription: "Learn about the latest in cybersecurity.",
       location: "Security Center",
       coordinators: [{ name: "David Chen", contact: "321-321-3210" }],
+      registrationLink: "#",
+      galleryLink: "#",
+    },
+  ];
+
+  const day2Events = [
+    {
+      title: "IoT Workshop",
+      date: "Sep 15, 2024",
+      time: "10:00 AM - 5:00 PM",
+      shortDescription: "Internet of Things exploration",
+      fullDescription:
+        "Discover the potential of connected devices and IoT solutions.",
+      location: "Smart Hub",
+      coordinators: [{ name: "Elena Rodriguez", contact: "111-222-3333" }],
+      registrationLink: "#",
+      galleryLink: "#",
+    },
+    {
+      title: "Blockchain Summit",
+      date: "Oct 1, 2024",
+      time: "9:00 AM - 6:00 PM",
+      shortDescription: "Cryptocurrency and blockchain",
+      fullDescription:
+        "Explore the future of digital currencies and blockchain technology.",
+      location: "Crypto Center",
+      coordinators: [{ name: "Alex Chang", contact: "444-555-6666" }],
+      registrationLink: "#",
+      galleryLink: "#",
+    },
+    {
+      title: "Game Dev Expo",
+      date: "Oct 20, 2024",
+      time: "11:00 AM - 7:00 PM",
+      shortDescription: "Gaming industry showcase",
+      fullDescription:
+        "Experience the latest in game development and virtual reality.",
+      location: "Game Arena",
+      coordinators: [{ name: "Chris Walker", contact: "777-888-9999" }],
+      registrationLink: "#",
+      galleryLink: "#",
+    },
+    {
+      title: "DevOps Conference",
+      date: "Nov 5, 2024",
+      time: "10:00 AM - 4:00 PM",
+      shortDescription: "Modern DevOps practices",
+      fullDescription: "Learn about the latest DevOps methodologies and tools.",
+      location: "Tech Hub",
+      coordinators: [{ name: "Maria Garcia", contact: "123-123-1234" }],
+      registrationLink: "#",
+      galleryLink: "#",
+    },
+    {
+      title: "ML Workshop",
+      date: "Nov 15, 2024",
+      time: "1:00 PM - 5:00 PM",
+      shortDescription: "Machine Learning deep dive",
+      fullDescription: "Hands-on workshop on machine learning algorithms.",
+      location: "AI Center",
+      coordinators: [{ name: "James Wilson", contact: "456-456-4567" }],
+      registrationLink: "#",
+      galleryLink: "#",
+    },
+    {
+      title: "UX Design Summit",
+      date: "Nov 25, 2024",
+      time: "9:00 AM - 3:00 PM",
+      shortDescription: "User experience design",
+      fullDescription: "Master the principles of user experience design.",
+      location: "Design Studio",
+      coordinators: [{ name: "Sophie Chen", contact: "789-789-7890" }],
+      registrationLink: "#",
+      galleryLink: "#",
+    },
+    {
+      title: "Robotics Expo",
+      date: "Dec 10, 2024",
+      time: "10:00 AM - 6:00 PM",
+      shortDescription: "Robotics and automation",
+      fullDescription:
+        "Explore the latest in robotics and automation technology.",
+      location: "Robot Lab",
+      coordinators: [{ name: "Peter Kim", contact: "321-321-3210" }],
+      registrationLink: "#",
+      galleryLink: "#",
+    },
+    {
+      title: "5G Technology",
+      date: "Dec 20, 2024",
+      time: "11:00 AM - 4:00 PM",
+      shortDescription: "Next-gen connectivity",
+      fullDescription: "Understanding the impact of 5G technology.",
+      location: "Network Center",
+      coordinators: [{ name: "Linda Martinez", contact: "654-654-6543" }],
       registrationLink: "#",
       galleryLink: "#",
     },
@@ -180,10 +276,26 @@ const Events = () => {
   return (
     <div className="events-page">
       <h1>Upcoming Events</h1>
+      <div className="day-selection">
+        <button
+          className={`day-button ${selectedDay === "day1" ? "active" : ""}`}
+          onClick={() => setSelectedDay("day1")}
+        >
+          Day 1
+        </button>
+        <button
+          className={`day-button ${selectedDay === "day2" ? "active" : ""}`}
+          onClick={() => setSelectedDay("day2")}
+        >
+          Day 2
+        </button>
+      </div>
       <div className="events-container">
-        {events.map((event, index) => (
-          <EventCard key={index} event={event} onClick={handleCardClick} />
-        ))}
+        {(selectedDay === "day1" ? day1Events : day2Events).map(
+          (event, index) => (
+            <EventCard key={index} event={event} onClick={handleCardClick} />
+          ),
+        )}
       </div>
       {selectedEvent && (
         <EventModal

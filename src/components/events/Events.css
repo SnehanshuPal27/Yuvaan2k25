@@ -1,3 +1,32 @@
+.day-selection {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.day-button {
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid #ff0000;
+}
+
+.day-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.day-button.active {
+    background: #ff0000;
+    color: white;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+}
 .events-page {
     min-height: 100vh;
     padding: 4rem 2rem;
@@ -7,7 +36,7 @@
 h1 {
     color: white;
     text-align: center;
-    margin: 4rem 0 2rem 0;
+    margin: 1rem 0 2rem 0;
     font-size: 2.5rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
