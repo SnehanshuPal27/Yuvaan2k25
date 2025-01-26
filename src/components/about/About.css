@@ -1,27 +1,70 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900&display=swap');
 
 .about-container {
-    display: flex; /* Enable flexbox layout */
-    justify-content: space-between; /* Add space between child items */
-    align-items: flex-start; /* Align items at the top */
+    z-index: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: white;
-    margin: 3rem;
+    padding: 10px;
     gap: 50px;
 }
 
-.after-movie, .about-yuvaan {
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+    mix-blend-mode: screen;
+    z-index: 2;
+}
+
+.after-movie {
+    padding: 20px;
+    width: 650px;
+}
+
+.about-yuvaan {
+    position: relative;
+    background-image: url('royal-courtroom.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    padding: 20px;
+    border: 1px solid gold;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
     text-align: center;
-    width: 50%; /* Each section takes half the width */
-    box-sizing: border-box; /* Ensure padding and border are included in width */
-    padding: 10px; /* Add some padding for spacing */
+    width: 50%;
+    box-sizing: border-box;
     gap: 20px;
 }
 
-.about-yuvaan h1, .after-movie h1 {
-    padding: 20px;
-    font-size: 45px;
-    font-family: "Bebas Neue", sans-serif;
-    color: pink;
+.about-yuvaan h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 4em;
+    color: gold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    animation: dustEffect 5s ease-in-out forwards;
 }
 
 .about-yuvaan p {
@@ -29,27 +72,221 @@
     padding: 20px;
     text-align: justify;
     font-family: "Roboto Mono", monospace;
+    position: relative;
+    /* color: #d4af37 !important; */
+    color: #D39D55;
+    line-height: 1.8;
+    background-image: url('scroll.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    min-height: 300px;
 }
 
-.video-container iframe {
-    width: 100%;
-    max-width: 500px;
-    padding: 20px;
+.about-scroll span {
+    display: inline-block;
+    opacity: 0;
+    margin-right: 8px;
+    animation: sparkleEffect 0.3s ease-in-out forwards;
+    color: #d4af37;
 }
 
-/* Responsive Styles */
-@media screen and (max-width: 1100px) {
+.word {
+    display: inline-block;
+    opacity: 0;
+    animation: sparkleReveal 0.01s ease forwards;
+}
+
+.word::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0px;
+    height: 0px;
+    background: radial-gradient(circle, rgba(255, 223, 0, 1) 20%, rgba(255, 223, 0, 0) 70%);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    animation: sparkle 0.4s ease-in-out forwards;
+    z-index: -1;
+}
+
+@keyframes dustEffect {
+    0% {
+        opacity: 0;
+        transform: scale(0.5) translateY(50px);
+        filter: blur(10px);
+    }
+
+    30% {
+        opacity: 0.6;
+        transform: scale(0.8) translateY(-20px);
+        filter: blur(5px);
+    }
+
+    60% {
+        opacity: 0.8;
+        transform: scale(1) translateY(0);
+        filter: blur(2px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+        filter: blur(0px);
+    }
+}
+
+@keyframes sparkleEffect {
+    0% {
+        opacity: 0;
+        transform: scale(0.8) rotate(10deg);
+        filter: blur(5px);
+    }
+
+    50% {
+        opacity: 0.8;
+        transform: scale(1.1) rotate(0deg);
+        filter: blur(2px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+        filter: blur(0px);
+    }
+}
+
+@keyframes sparkle {
+    0% {
+        width: 0px;
+        height: 0px;
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(0);
+    }
+
+    50% {
+        width: 20px;
+        height: 20px;
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    100% {
+        width: 0px;
+        height: 0px;
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0);
+    }
+}
+
+@keyframes sparkleReveal {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media Queries */
+@media screen and (min-width: 1200px) and (max-width: 1500px) {
+    .after-movie {
+        padding: 15px;
+        width: 500px;
+    }
+
+    .about-yuvaan h1 {
+        font-size: 30px;
+    }
+
+    .about-scroll p {
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
+    .after-movie {
+        padding: 10px;
+        width: 450px;
+    }
+
+    .about-yuvaan {
+        padding: 15px;
+    }
+
+    .about-yuvaan h1 {
+        font-size: 26px;
+    }
+
+    .about-scroll p {
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
     .about-container {
-        flex-direction: column; /* Stack elements vertically */
-        gap: 20px; /* Reduce the gap */
-        margin: 0.5rem; /* Adjust margin for smaller screens */
+        gap: 20px;
     }
 
-    .after-movie, .about-yuvaan {
-        width: 100%; /* Make each section take full width */
+    .after-movie {
+        padding: 10px;
+        width: 390px;
     }
 
-    .about-yuvaan p {
-        font-size: 16px; /* Adjust font size for better readability */
+    .about-yuvaan {
+        padding: 12px;
+    }
+
+    .about-yuvaan h1 {
+        font-size: 21px;
+    }
+
+    .about-scroll p {
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .after-movie {
+        display: none;
+    }
+
+    .about-yuvaan {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 768px) {
+    .about-yuvaan {
+        padding: 15px;
+    }
+
+    .about-yuvaan h1 {
+        font-size: 35px;
+    }
+
+    .about-scroll p {
+        font-size: 15px;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 499px) {
+    .about-yuvaan {
+        padding: 10px 2px;
+    }
+
+    .about-yuvaan h1 {
+        font-size: 20px;
+    }
+
+    .about-scroll p {
+        font-size: 8px;
     }
 }

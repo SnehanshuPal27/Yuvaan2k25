@@ -1,22 +1,39 @@
-import { useState, useEffect, useRef } from 'react';
-import './About.css'
+import { useEffect } from 'react';
+import './About.css';
 import PhotoFrame from "./PhotoFrame.jsx";
 
-export default function About(){
-    return(
-    <div className='about-container'>
-        <div className='after-movie'>
-          <PhotoFrame/>
-        </div>
+export default function About() {
+    useEffect(() => {
+        const paragraph = document.querySelector('.about-yuvaan p');
+        const words = paragraph.textContent.split(' '); // Split text into words
+        paragraph.innerHTML = ''; // Clear the paragraph
 
-        <div className='about-yuvaan'>
-            <h1>About Yuvaan</h1>
-            <p>Yuvaan, the annual cultural extravaganza of IIIT Guwahati, is a vibrant celebration of art,
-                music, dance, and creativity. This multi-day event showcases the diverse talents of students,
-                featuring a plethora of engaging activities like competitions, workshops, and performances.
-                From electrifying musical concerts to mesmerizing dance performances, Yuvaan offers a
-                captivating experience for all. The festival fosters a sense of community and camaraderie
-                among students, making it a cherished tradition at the institute.</p>
-        </div>
+        words.forEach((word, index) => {
+            const span = document.createElement('span');
+            span.textContent = word + ' '; // Add a space after each word
+            span.style.animationDelay = `${index * 0.05}s`; // Delay for each word
+            paragraph.appendChild(span);
+        });
+    }, []);
 
-    </div>)}
+    return (
+        <div className="about-container">
+            {/* Background Video */}
+            <video className="background-video" autoPlay muted loop>
+                <source src="/bgAbout.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+
+            <div className="after-movie">
+                <PhotoFrame />
+            </div>
+
+            <div className="about-yuvaan">
+                <h1>ΔΒΩUT ΨUVΔΔΠ</h1>
+                <div className="about-scroll">
+                    <p>ΨUVAAN, THΞ ANNUΔL CULTURΔL ΞXTRΔVΔGΔNZΔ ΩF IIIT GUWΔHΔTI, IS Δ VIBRΔNT CΞLΞBRΔTIΩN ΩF ΔRT, MUSIC, DΔNCΞ, ΔND CRΞΔTIVITΨ. THIS MULTI-DΔΨ ΞVΞNT SHOWCΔSΞS THΞ DIVΞRSΞ TΔLΞNTS ΩF STUDΞNTS, FΞΔTURING Δ PLΞTHΩRΔ ΩF ΞNGΔGING ΔCTIVITIΞS LIKΞ CΩMPΞTITIΩNS, WΩRKSHΩPS, ΔND PΞRΓΩRMΔNCΞS. FRΩM ΞLΞCTRIFYING MUSICΔL CΩNCΞRTS TΩ MΞSMΞRIZING DΔNCΞ PΞRΓΩRMΔNCΞS, ΨUVAAN ΩFFΞRS Δ CΔPTIVΔTING ΞXPΞRIΞNCΞ FΩR ΔLL. THΞ FΞSTIVΔL FΩSTΞRS Δ SΞNSΞ ΩF CΩMMUNITΨ ΔND CΔMΔRΔDΞRIΞ ΔMΩNG STUDΞNTS, MΔKING IT Δ CHΞRISHΞD TRΔDITIΩN ΔT THΞ INSTITUTΞ.</p>
+                </div>
+            </div>
+        </div>
+    );
+}

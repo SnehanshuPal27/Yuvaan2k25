@@ -21,15 +21,12 @@ export default function IntroDiv() {
             <div className="top-content">
                 <p
                     className="presenter"
-                    style={{
-                        transform: `translateX(${Math.min(scrollPosition / 5, window.innerWidth / 2 - 5)}px)`, // Stop at middle of the div
-                    }}
                 >
                     YUVAAN
                 </p>
 
                 <div className="intro-bottom">
-                <p className="head-caption">A TALE OF TIME</p>
+                    <p className="head-caption">A TALE OF TIME</p>
                 </div>
                 {/*<p className="lower-caption">A tale of time</p>*/}
             </div>
