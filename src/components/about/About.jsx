@@ -19,7 +19,7 @@ export default function About() {
     return (
         <div className="about-container">
             {/* Background Video */}
-            <video autoPlay muted loop className="background-video">
+            <video className="background-video" autoPlay muted loop>
                 <source src="/bgAbout.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
@@ -30,9 +30,9 @@ export default function About() {
 
             <div className="about-yuvaan">
                 <h1>ΔΒΩUT ΨUVΔΔΠ</h1>
-                <p>
-                    ΨUVAAN, THΞ ANNUΔL CULTURΔL ΞXTRΔVΔGΔNZΔ ΩF IIIT GUWΔHΔTI, IS Δ VIBRΔNT CΞLΞBRΔTIΩN ΩF ΔRT, MUSIC, DΔNCΞ, ΔND CRΞΔTIVITΨ. THIS MULTI-DΔΨ ΞVΞNT SHOWCΔSΞS THΞ DIVΞRSΞ TΔLΞNTS ΩF STUDΞNTS, FΞΔTURING Δ PLΞTHΩRΔ ΩF ΞNGΔGING ΔCTIVITIΞS LIKΞ CΩMPΞTITIΩNS, WΩRKSHΩPS, ΔND PΞRΓΩRMΔNCΞS. FRΩM ΞLΞCTRIFYING MUSICΔL CΩNCΞRTS TΩ MΞSMΞRIZING DΔNCΞ PΞRΓΩRMΔNCΞS, ΨUVAAN ΩFFΞRS Δ CΔPTIVΔTING ΞXPΞRIΞNCΞ FΩR ΔLL. THΞ FΞSTIVΔL FΩSTΞRS Δ SΞNSΞ ΩF CΩMMUNITΨ ΔND CΔMΔRΔDΞRIΞ ΔMΩNG STUDΞNTS, MΔKING IT Δ CHΞRISHΞD TRΔDITIΩN ΔT THΞ INSTITUTΞ.
-                </p>
+                <div className="about-scroll">
+                    <p>ΨUVAAN, THΞ ANNUΔL CULTURΔL ΞXTRΔVΔGΔNZΔ ΩF IIIT GUWΔHΔTI, IS Δ VIBRΔNT CΞLΞBRΔTIΩN ΩF ΔRT, MUSIC, DΔNCΞ, ΔND CRΞΔTIVITΨ. THIS MULTI-DΔΨ ΞVΞNT SHOWCΔSΞS THΞ DIVΞRSΞ TΔLΞNTS ΩF STUDΞNTS, FΞΔTURING Δ PLΞTHΩRΔ ΩF ΞNGΔGING ΔCTIVITIΞS LIKΞ CΩMPΞTITIΩNS, WΩRKSHΩPS, ΔND PΞRΓΩRMΔNCΞS. FRΩM ΞLΞCTRIFYING MUSICΔL CΩNCΞRTS TΩ MΞSMΞRIZING DΔNCΞ PΞRΓΩRMΔNCΞS, ΨUVAAN ΩFFΞRS Δ CΔPTIVΔTING ΞXPΞRIΞNCΞ FΩR ΔLL. THΞ FΞSTIVΔL FΩSTΞRS Δ SΞNSΞ ΩF CΩMMUNITΨ ΔND CΔMΔRΔDΞRIΞ ΔMΩNG STUDΞNTS, MΔKING IT Δ CHΞRISHΞD TRΔDITIΩN ΔT THΞ INSTITUTΞ.</p>
+                </div>
             </div>
         </div>
     );

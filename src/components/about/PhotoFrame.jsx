@@ -1,4 +1,3 @@
-import React from "react";
 import "./Photoframe.css";
 
 const PhotoFrame = () => {
@@ -8,11 +7,9 @@ const PhotoFrame = () => {
                 <div className="flatSurface">
                     <div className="innerBevel">
                         <img
+                            alt="img"
                             src="/stage1.png"
-                            alt="Map of the U.S. during the Civil War"
                             title="The U.S. during the Civil War"
-                            width="382"
-                            height="326"
                             className="map"
                         />
                     </div>
