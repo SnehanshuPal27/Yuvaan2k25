@@ -7,6 +7,7 @@ import SponsorshipTeam from "./components/teams/SponsorshipTeam.jsx";
 import MediaPublicityTeam from "./components/teams/MediaPublicityTeam.jsx";
 import PRTeam from "./components/teams/PRTeam.jsx";
 import WCTeam from "./components/teams/WCTeam.jsx";
+import SGCTeam from "./components/teams/SGCTeam.jsx";
 import Footer from "./components/footer/footer.jsx";
 import Sponsors from "./components/sponsors/Sponsors.jsx";
 import TeamIndex from "./components/teams/index.jsx";
@@ -29,6 +30,7 @@ function App() {
                 <Route path="/teamIndex" element={<TeamIndex />} />
                 <Route path="*" element={<Home />} />
                 <Route path="/eventIndex" element={<Events />} />
+                <Route path="/sgcTeam" element={<SGCTeam />} />
 
                 {/* Add other routes as needed */}
             </Routes>

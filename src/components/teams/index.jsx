@@ -142,30 +142,32 @@ export default function TeamIndex() {
             </FlippingCardFront>
           </FlippingCard>
         </Link>
-        <FlippingCard>
-          <FlippingCardBack>
-            <div
-              style={{
-                width: "100%",
-                height: "100%",
-                backgroundSize: "contain",
-                backgroundPosition: "center",
-                backgroundImage: "url(https://i.imgur.com/wjbYGNv.jpg)",
-              }}
-            ></div>
-          </FlippingCardBack>
-          <FlippingCardFront>
-            <div
-              style={{
-                width: "100%",
-                height: "100%",
-                backgroundSize: "contain",
-                backgroundPosition: "center",
-                backgroundImage: "url(https://i.imgur.com/3sKjY8V.jpg)",
-              }}
-            ></div>
-          </FlippingCardFront>
-        </FlippingCard>
+        <Link to="/sgcTeam">
+          <FlippingCard>
+            <FlippingCardBack>
+              <div
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  backgroundSize: "contain",
+                  backgroundPosition: "center",
+                  backgroundImage: "url(/SGC_summary.jpg)",
+                }}
+              ></div>
+            </FlippingCardBack>
+            <FlippingCardFront>
+              <div
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  backgroundSize: "contain",
+                  backgroundPosition: "center",
+                  backgroundImage: "url(/SGC.jpeg)",
+                }}
+              ></div>
+            </FlippingCardFront>
+          </FlippingCard>
+        </Link>
       </div>
     </div>
   );
