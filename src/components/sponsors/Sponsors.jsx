@@ -55,6 +55,7 @@ const Sponsors = () => {
               ></div>
             </div>
           ))}
+          
         </div>
   
       

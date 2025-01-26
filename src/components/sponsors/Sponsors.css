@@ -4,6 +4,7 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
+
 .sponsor-container {
     margin: 0;
     padding: 0;
@@ -79,6 +80,8 @@ body {
 .previous_sponsor_div {
     height: auto;
     text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
 .previous_svg {
