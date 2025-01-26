@@ -91,7 +91,7 @@ video {
     opacity: 0;
     margin-right: 8px;
     animation: sparkleEffect 0.3s ease-in-out forwards;
-    color: #d4af37;
+    color: #0e0e0e;
 }
 
 .word {
