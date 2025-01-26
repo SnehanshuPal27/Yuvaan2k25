@@ -1,47 +1,228 @@
-
-.main{
-    background-image: url('/BG_Sponsor4.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    width: 100%;
-    min-height: 100vh;
+.day-selection {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* background: linear-gradient(to bottom, #121036, #0a091f);   */
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
 }
 
-.main::before {
-    content: ""; /* Necessary to make the pseudo-element render */
+.day-button {
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid #ff0000;
+}
+
+.day-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.day-button.active {
+    background: #ff0000;
+    color: white;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+}
+.events-page {
+    min-height: 100vh;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #1a1a1a, #2d1f3d, #1f2d3d);
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    margin: 1rem 0 2rem 0;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.events-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@keyframes borderGlow {
+    0% {
+        border-image: linear-gradient(45deg, #ff0000, #ffd700, #ff0000) 1;
+    }
+    50% {
+        border-image: linear-gradient(45deg, #ffd700, #ff0000, #ffd700) 1;
+    }
+    100% {
+        border-image: linear-gradient(45deg, #ff0000, #ffd700, #ff0000) 1;
+    }
+}
+
+.event-card {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 2px solid #ff0000;
+    border-radius: 15px;
+    padding: 1.5rem;
+    width: calc(25% - 2rem);
+    min-width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    cursor: pointer;
+    min-height: 200px;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+    border: 2px solid transparent;
+    animation: borderGlow 3s linear infinite;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.5); /* Golden glow */
+}
+
+.event-card::before {
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('/BG_Sponsor4.jpg') no-repeat center/cover;
-    filter: blur(5px); /* Adjust the opacity of the background image */
-    z-index: -1; /* Ensure it stays behind the content */
-  }
-
-.day{
-    width: 100%;
-    height: 100vh;
-    margin-top: 5rem;
-    text-align: center;   
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 13px;
 }
-.day2{
+
+/* For a more intense effect, you can add this additional glow */
+.event-card:hover::after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 15px;
+    background: linear-gradient(45deg, #ff0000, #ffd700, #ff0000);
+    z-index: -1;
+    filter: blur(15px);
+    opacity: 0.7;
+    animation: borderGlow 3s linear infinite;
+}
+.event-card h3,
+.event-card .date,
+.event-card .description,
+.event-card .click-info {
+    position: relative;
+    color: white;
+    z-index: 1;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: pink;
+    padding: 2rem;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 1rem;
 }
-.day h1{
-    font-size: 3rem;
-    color: white;
-    font-family: enigma;
-    text-shadow: 0px 0px 5px rgb(237, 233, 233);
-}
-.day h2{
+
+.close-button {
+    background: none;
+    border: none;
     font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.modal-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.detail-item {
+    margin-bottom: 1.5rem;
+}
+
+.detail-item h4 {
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.button {
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
     color: white;
-    font-family: enigma;
-    margin-top: 1rem;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+}
+
+.registration-btn {
+    background: #4caf50;
+}
+
+.gallery-btn {
+    background: #2196f3;
+}
+
+@media (max-width: 1200px) {
+    .event-card {
+        width: calc(33.33% - 2rem);
+    }
+}
+
+@media (max-width: 900px) {
+    .event-card {
+        width: calc(50% - 2rem);
+    }
+}
+
+@media (max-width: 600px) {
+    .event-card {
+        width: 100%;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    .modal-content {
+        width: 95%;
+        padding: 1rem;
+    }
 }
