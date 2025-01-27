@@ -50,17 +50,6 @@ h1 {
     margin: 0 auto;
 }
 
-@keyframes borderGlow {
-    0% {
-        border-image: linear-gradient(45deg, #ff0000, #ffd700, #ff0000) 1;
-    }
-    50% {
-        border-image: linear-gradient(45deg, #ffd700, #ff0000, #ffd700) 1;
-    }
-    100% {
-        border-image: linear-gradient(45deg, #ff0000, #ffd700, #ff0000) 1;
-    }
-}
 
 .event-card {
     background-size: cover;
@@ -80,9 +69,9 @@ h1 {
 
 .event-card:hover {
     transform: translateY(-5px);
-    border: 2px solid transparent;
+    /* border: 2px solid transparent;
     animation: borderGlow 3s linear infinite;
-    box-shadow: 0 0 20px rgba(255, 215, 0, 0.5); /* Golden glow */
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.5); /* Golden glow */ */
 }
 
 .event-card::before {
@@ -97,20 +86,7 @@ h1 {
 }
 
 /* For a more intense effect, you can add this additional glow */
-.event-card:hover::after {
-    content: "";
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    border-radius: 15px;
-    background: linear-gradient(45deg, #ff0000, #ffd700, #ff0000);
-    z-index: -1;
-    filter: blur(15px);
-    opacity: 0.7;
-    animation: borderGlow 3s linear infinite;
-}
+
 .event-card h3,
 .event-card .date,
 .event-card .description,
