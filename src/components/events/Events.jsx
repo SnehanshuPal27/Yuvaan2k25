@@ -57,15 +57,30 @@ const EventModal = ({ event, onClose }) => {
               ))}
             </div>
             <div className="detail-item buttons">
-              <a
-                href={event.registrationLink}
-                className="button registration-btn"
-              >
-                Register Now
-              </a>
-              <a href={event.galleryLink} className="button gallery-btn">
-                View Previous Gallery
-              </a>
+              {event.registrationLink &&
+              typeof event.registrationLink === "object" ? (
+                <>
+                  <a
+                    href={event.registrationLink.internal}
+                    className="button registration-btn"
+                  >
+                    Register (IIITG Students)
+                  </a>
+                  <a
+                    href={event.registrationLink.external}
+                    className="button registration-btn"
+                  >
+                    Register (External)
+                  </a>
+                </>
+              ) : event.registrationLink ? (
+                <a
+                  href={event.registrationLink}
+                  className="button registration-btn"
+                >
+                  Register Now
+                </a>
+              ) : null}
             </div>
           </div>
         </div>
@@ -76,197 +91,249 @@ const EventModal = ({ event, onClose }) => {
 
 const Events = () => {
   const [selectedEvent, setSelectedEvent] = useState(null);
-  const [selectedDay, setSelectedDay] = useState("day1"); // Default to day1
+  const [selectedDay, setSelectedDay] = useState("day1");
 
   const day1Events = [
     {
-      title: "Tech Conference 2024",
-      date: "Jan 15, 2024",
+      title: "ONE VOICE, ONE INSTRUMENT",
+      date: "March 1, 2025",
       time: "10:00 AM - 5:00 PM",
-      shortDescription: "Annual technology conference",
+      shortDescription: "Solo Performance Competition",
       fullDescription:
-        "Join us for our annual technology conference where industry leaders share insights.",
-      location: "Tech Center, Downtown",
+        "Showcase your talent in solo singing or instrumental performance.",
+      location: "Auditorium, IIITG",
       coordinators: [
         { name: "John Doe", contact: "123-456-7890" },
         { name: "Jane Smith", contact: "098-765-4321" },
       ],
-      registrationLink: "#",
-      galleryLink: "#",
+      registrationLink: {
+        internal: "#internal-link",
+        external: "#external-link",
+      },
     },
     {
-      title: "Coding Workshop",
-      date: "Feb 20, 2024",
+      title: "BAND BASH",
+      date: "March 1, 2025",
       time: "2:00 PM - 6:00 PM",
-      shortDescription: "Hands-on coding workshop",
-      fullDescription: "Learn practical coding skills with industry experts.",
-      location: "Innovation Hub",
+      shortDescription: "Band Competition",
+      fullDescription:
+        "Battle of the bands - showcase your group's musical talent",
+      location: "Main Stage, IIITG",
       coordinators: [{ name: "Mike Johnson", contact: "111-222-3333" }],
-      registrationLink: "#",
-      galleryLink: "#",
+      registrationLink: {
+        internal: "#internal-link",
+        external: "#external-link",
+      },
     },
     {
-      title: "AI Symposium",
-      date: "Mar 10, 2024",
+      title: "Spotlight Solo",
+      date: "March 1, 2025",
       time: "9:00 AM - 4:00 PM",
-      shortDescription: "Exploring AI innovations",
-      fullDescription:
-        "Discover the latest in artificial intelligence and machine learning.",
-      location: "Science Center",
+      shortDescription: "Solo Dance Competition",
+      fullDescription: "Showcase your individual dance skills",
+      location: "Dance Studio, IIITG",
       coordinators: [{ name: "Sarah Lee", contact: "444-555-6666" }],
       registrationLink: "#",
-      galleryLink: "#",
     },
     {
-      title: "Startup Summit",
-      date: "Apr 5, 2024",
+      title: "Prompt Wars",
+      date: "March 1, 2025",
       time: "11:00 AM - 7:00 PM",
-      shortDescription: "Networking event for startups",
-      fullDescription: "Connect with investors and fellow entrepreneurs.",
-      location: "Business Center",
+      shortDescription: "Creative Writing Challenge",
+      fullDescription: "Test your creative writing skills",
+      location: "Creative Hub, IIITG",
       coordinators: [{ name: "Tom Brown", contact: "777-888-9999" }],
       registrationLink: "#",
-      galleryLink: "#",
     },
     {
-      title: "Web Dev Bootcamp",
-      date: "May 15, 2024",
+      title: "SWAY",
+      date: "March 1, 2025",
       time: "10:00 AM - 3:00 PM",
-      shortDescription: "Intensive web development training",
-      fullDescription: "Master modern web development technologies.",
-      location: "Tech Academy",
+      shortDescription: "Dance Competition",
+      fullDescription: "Group dance showcase",
+      location: "Main Hall, IIITG",
       coordinators: [{ name: "Alice White", contact: "123-123-1234" }],
       registrationLink: "#",
-      galleryLink: "#",
     },
     {
-      title: "Cloud Computing",
-      date: "Jun 20, 2024",
+      title: "SYNC",
+      date: "March 1, 2025",
       time: "1:00 PM - 5:00 PM",
-      shortDescription: "Cloud technologies showcase",
-      fullDescription: "Explore the latest in cloud computing solutions.",
-      location: "Digital Center",
+      shortDescription: "Synchronized Performance",
+      fullDescription: "Group synchronized dance competition",
+      location: "Performance Center, IIITG",
       coordinators: [{ name: "Bob Wilson", contact: "456-456-4567" }],
       registrationLink: "#",
-      galleryLink: "#",
     },
     {
-      title: "Data Science Forum",
-      date: "Jul 10, 2024",
+      title: "POP IT UP!",
+      date: "March 1, 2025",
       time: "9:00 AM - 6:00 PM",
-      shortDescription: "Big data and analytics",
-      fullDescription: "Deep dive into data science and analytics.",
-      location: "Analytics Hub",
+      shortDescription: "Pop Culture Festival",
+      fullDescription: "Celebrate pop culture through various performances",
+      location: "Festival Ground, IIITG",
       coordinators: [{ name: "Carol Martinez", contact: "789-789-7890" }],
       registrationLink: "#",
-      galleryLink: "#",
     },
     {
-      title: "Cybersecurity Conf",
-      date: "Aug 5, 2024",
+      title: "MUSICAL OLYMPICS",
+      date: "March 1, 2025",
       time: "10:00 AM - 4:00 PM",
-      shortDescription: "Security and privacy focus",
-      fullDescription: "Learn about the latest in cybersecurity.",
-      location: "Security Center",
+      shortDescription: "Music Competition Series",
+      fullDescription: "Multiple musical events and competitions",
+      location: "Olympic Arena, IIITG",
       coordinators: [{ name: "David Chen", contact: "321-321-3210" }],
       registrationLink: "#",
-      galleryLink: "#",
+    },
+    {
+      title: "GULLY CRICKET",
+      date: "March 1, 2025",
+      time: "8:00 AM - 6:00 PM",
+      shortDescription: "Street Cricket Tournament",
+      fullDescription: "Traditional street cricket competition",
+      location: "Sports Ground, IIITG",
+      coordinators: [{ name: "Emily Wang", contact: "654-654-6543" }],
+      registrationLink: "#",
+    },
+    {
+      title: "OPEN MIC X LATENT",
+      date: "March 1, 2025",
+      time: "5:00 PM - 9:00 PM",
+      shortDescription: "Open Mic Night",
+      fullDescription: "Express yourself through poetry, music, or comedy",
+      location: "Student Center, IIITG",
+      coordinators: [{ name: "Frank Lee", contact: "987-987-9876" }],
+      registrationLink: "#",
+    },
+    {
+      title: "Squid Games",
+      date: "March 1, 2025",
+      time: "11:00 AM - 8:00 PM",
+      shortDescription: "Survival Game Series",
+      fullDescription:
+        "Series of challenging games inspired by popular culture",
+      location: "Game Zone, IIITG",
+      coordinators: [{ name: "Grace Kim", contact: "135-246-7890" }],
+      registrationLink: "#",
     },
   ];
 
   const day2Events = [
     {
-      title: "IoT Workshop",
-      date: "Sep 15, 2024",
+      title: "ONE VOICE, ONE INSTRUMENT",
+      date: "March 2, 2025",
       time: "10:00 AM - 5:00 PM",
-      shortDescription: "Internet of Things exploration",
-      fullDescription:
-        "Discover the potential of connected devices and IoT solutions.",
-      location: "Smart Hub",
-      coordinators: [{ name: "Elena Rodriguez", contact: "111-222-3333" }],
+      shortDescription: "Solo Performance Competition",
+      fullDescription: "Day 2 of solo singing and instrumental performances",
+      location: "Auditorium, IIITG",
+      coordinators: [{ name: "Helen Park", contact: "111-222-3333" }],
       registrationLink: "#",
-      galleryLink: "#",
+    },
+    // Copy the same events but change dates to March 2, 2025
+    // Repeat for all 11 events
+    {
+      title: "BAND BASH",
+      date: "March 2, 2025",
+      time: "2:00 PM - 6:00 PM",
+      shortDescription: "Band Competition Finals",
+      fullDescription: "Final round of battle of the bands",
+      location: "Main Stage, IIITG",
+      coordinators: [{ name: "Ian Clark", contact: "444-555-6666" }],
+      registrationLink: "#",
     },
     {
-      title: "Blockchain Summit",
-      date: "Oct 1, 2024",
-      time: "9:00 AM - 6:00 PM",
-      shortDescription: "Cryptocurrency and blockchain",
-      fullDescription:
-        "Explore the future of digital currencies and blockchain technology.",
-      location: "Crypto Center",
-      coordinators: [{ name: "Alex Chang", contact: "444-555-6666" }],
+      title: "Spotlight Solo",
+      date: "March 2, 2025",
+      time: "9:00 AM - 4:00 PM",
+      shortDescription: "Solo Dance Competition",
+      fullDescription: "Showcase your individual dance skills",
+      location: "Dance Studio, IIITG",
+      coordinators: [{ name: "Sarah Lee", contact: "444-555-6666" }],
       registrationLink: "#",
-      galleryLink: "#",
     },
     {
-      title: "Game Dev Expo",
-      date: "Oct 20, 2024",
+      title: "Prompt Wars",
+      date: "March 2, 2025",
       time: "11:00 AM - 7:00 PM",
-      shortDescription: "Gaming industry showcase",
-      fullDescription:
-        "Experience the latest in game development and virtual reality.",
-      location: "Game Arena",
-      coordinators: [{ name: "Chris Walker", contact: "777-888-9999" }],
+      shortDescription: "Creative Writing Challenge",
+      fullDescription: "Test your creative writing skills",
+      location: "Creative Hub, IIITG",
+      coordinators: [{ name: "Tom Brown", contact: "777-888-9999" }],
       registrationLink: "#",
-      galleryLink: "#",
     },
     {
-      title: "DevOps Conference",
-      date: "Nov 5, 2024",
-      time: "10:00 AM - 4:00 PM",
-      shortDescription: "Modern DevOps practices",
-      fullDescription: "Learn about the latest DevOps methodologies and tools.",
-      location: "Tech Hub",
-      coordinators: [{ name: "Maria Garcia", contact: "123-123-1234" }],
+      title: "SWAY",
+      date: "March 2, 2025",
+      time: "10:00 AM - 3:00 PM",
+      shortDescription: "Dance Competition",
+      fullDescription: "Group dance showcase",
+      location: "Main Hall, IIITG",
+      coordinators: [{ name: "Alice White", contact: "123-123-1234" }],
       registrationLink: "#",
-      galleryLink: "#",
     },
     {
-      title: "ML Workshop",
-      date: "Nov 15, 2024",
+      title: "SYNC",
+      date: "March 2, 2025",
       time: "1:00 PM - 5:00 PM",
-      shortDescription: "Machine Learning deep dive",
-      fullDescription: "Hands-on workshop on machine learning algorithms.",
-      location: "AI Center",
-      coordinators: [{ name: "James Wilson", contact: "456-456-4567" }],
+      shortDescription: "Synchronized Performance",
+      fullDescription: "Group synchronized dance competition",
+      location: "Performance Center, IIITG",
+      coordinators: [{ name: "Bob Wilson", contact: "456-456-4567" }],
       registrationLink: "#",
-      galleryLink: "#",
     },
     {
-      title: "UX Design Summit",
-      date: "Nov 25, 2024",
-      time: "9:00 AM - 3:00 PM",
-      shortDescription: "User experience design",
-      fullDescription: "Master the principles of user experience design.",
-      location: "Design Studio",
-      coordinators: [{ name: "Sophie Chen", contact: "789-789-7890" }],
+      title: "POP IT UP!",
+      date: "March 2, 2025",
+      time: "9:00 AM - 6:00 PM",
+      shortDescription: "Pop Culture Festival",
+      fullDescription: "Celebrate pop culture through various performances",
+      location: "Festival Ground, IIITG",
+      coordinators: [{ name: "Carol Martinez", contact: "789-789-7890" }],
       registrationLink: "#",
-      galleryLink: "#",
     },
     {
-      title: "Robotics Expo",
-      date: "Dec 10, 2024",
-      time: "10:00 AM - 6:00 PM",
-      shortDescription: "Robotics and automation",
+      title: "MUSICAL OLYMPICS",
+      date: "March 2, 2025",
+      time: "10:00 AM - 4:00 PM",
+      shortDescription: "Music Competition Series",
+      fullDescription: "Multiple musical events and competitions",
+      location: "Olympic Arena, IIITG",
+      coordinators: [{ name: "David Chen", contact: "321-321-3210" }],
+      registrationLink: "#",
+    },
+    {
+      title: "GULLY CRICKET",
+      date: "March 2, 2025",
+      time: "8:00 AM - 6:00 PM",
+      shortDescription: "Street Cricket Tournament",
+      fullDescription: "Traditional street cricket competition",
+      location: "Sports Ground, IIITG",
+      coordinators: [{ name: "Emily Wang", contact: "654-654-6543" }],
+      registrationLink: "#",
+    },
+    {
+      title: "OPEN MIC X LATENT",
+      date: "March 2, 2025",
+      time: "5:00 PM - 9:00 PM",
+      shortDescription: "Open Mic Night",
+      fullDescription: "Express yourself through poetry, music, or comedy",
+      location: "Student Center, IIITG",
+      coordinators: [{ name: "Frank Lee", contact: "987-987-9876" }],
+      registrationLink: "#",
+    },
+    {
+      title: "Squid Games",
+      date: "March 2, 2025",
+      time: "11:00 AM - 8:00 PM",
+      shortDescription: "Survival Game Series",
       fullDescription:
-        "Explore the latest in robotics and automation technology.",
-      location: "Robot Lab",
-      coordinators: [{ name: "Peter Kim", contact: "321-321-3210" }],
+        "Series of challenging games inspired by popular culture",
+      location: "Game Zone, IIITG",
+      coordinators: [{ name: "Grace Kim", contact: "135-246-7890" }],
       registrationLink: "#",
-      galleryLink: "#",
     },
-    {
-      title: "5G Technology",
-      date: "Dec 20, 2024",
-      time: "11:00 AM - 4:00 PM",
-      shortDescription: "Next-gen connectivity",
-      fullDescription: "Understanding the impact of 5G technology.",
-      location: "Network Center",
-      coordinators: [{ name: "Linda Martinez", contact: "654-654-6543" }],
-      registrationLink: "#",
-      galleryLink: "#",
-    },
+    // Continue with remaining events...
+    // Add all 11 events with March 2, 2025 date
   ];
 
   const handleCardClick = (event) => {
