@@ -2,14 +2,15 @@
     margin: 0;
     padding: 0;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     background-image: url('/BG_Main.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-attachment: scroll;
-    backdrop-filter: blur(5px);
+    /* backdrop-filter: blur(5px); */
 
     width: 100%;
     height: 100vh;
@@ -24,9 +25,9 @@
 }
 
 .main-logo-img {
-    width: 1000px;
+    width: 900px;
     /* Adjusted width for the image */
-    height: 500px;
+    height: 400px;
     /* Adjusted height for the image */
     object-fit: cover;
     /* Ensures the image fills the area proportionally */
@@ -35,7 +36,7 @@
 }
 
 .top-content {
-    padding-top: 70px;
+    padding-top: 50px;
     height: 100%;
     /* Matches the parent's height */
     width: 100%;
@@ -43,7 +44,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    gap: 50px;
+    /* gap: 50px; */
     color: white;
 }
 
@@ -55,6 +56,7 @@
 }
 
 .intro-bottom {
+    height: 300px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -127,6 +129,58 @@
 
 @media screen and (min-width: 1200px) and (max-width: 1500px) {
     .head-caption {
-        font-size: 145px;
+        font-size: 125px;
     }
+
+    .main-logo-img {
+        height: 476px;
+        width: 1000px;
+    }
+
+
+}
+
+@media screen and (min-width: 769px) and (max-width: 1050px) {
+    .head-caption {
+        font-size: 110px;
+    }
+
+    .main-logo-img {
+        height: 370px;
+        width: 770px;
+    }
+
+
+
+
+}
+
+@media screen and (min-width: 651px) and (max-width: 768px) {
+    .head-caption {
+        font-size: 93px;
+    }
+
+    .main-logo-img {
+        height: 256px;
+        width: 550px;
+    }
+
+}
+
+@media screen and (min-width: 469px) and (max-width: 650px) {
+
+    .intro-div {
+        max-height: 900px;
+    }
+
+    .head-caption {
+        font-size: 64px;
+    }
+
+    .main-logo-img {
+        height: 145px;
+        width: 300px;
+    }
+
+
 }
