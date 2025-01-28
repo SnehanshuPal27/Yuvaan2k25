@@ -6,12 +6,7 @@
     /*align-items: center;*/
     padding: 60px;
     /*margin: 5%;*/
-    /* background-color: #10375C; */
-    background-image: url('../public/bg1.jpeg');
-    background-size: cover; 
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-color: #10375C;
     text-align: center;
 }
 
