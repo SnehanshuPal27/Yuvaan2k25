@@ -67,6 +67,7 @@ video {
     animation: dustEffect 5s ease-in-out forwards;
 }
 
+
 .about-yuvaan p {
     font-size: 20px;
     padding: 20px;
@@ -263,7 +264,7 @@ video {
     }
 }
 
-@media screen and (min-width: 500px) and (max-width: 768px) {
+@media screen and (min-width: 506px) and (max-width: 768px) {
     .about-yuvaan {
         padding: 15px;
     }
@@ -277,7 +278,7 @@ video {
     }
 }
 
-@media screen and (min-width: 320px) and (max-width: 499px) {
+@media screen and (min-width: 320px) and (max-width: 505px) {
     .about-yuvaan {
         padding: 10px 2px;
     }
