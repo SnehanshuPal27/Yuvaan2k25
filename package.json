@@ -26,7 +26,8 @@
     "react-slot-counter": "^3.1.0",
     "react-ui-cards": "^3.1.0",
     "swiper": "^11.2.1",
-    "tailwindcss": "^4.0.0"
+    "tailwindcss": "^4.0.0",
+    "vite": "^6.0.11"
   },
   "devDependencies": {
     "@eslint/js": "^9.13.0",
