@@ -59,7 +59,7 @@ body {
   }
 
   .icon-style {
-    color: #e6d2c2; /* Set the color to match the background */
+    color: #82579b; /* Set the color to match the background */
     transition: color 0.3s ease; /* Smooth color change on hover */
   }
   
@@ -203,6 +203,9 @@ body {
 
 @media (min-width: 768px) {
     .mobile-navbar {
+        display: none;
+    }
+    .logo img {
         display: none;
     }
 

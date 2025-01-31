@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 import {
   HomeFilled,
   TeamOutlined,
-  ShopOutlined,
-  ReadOutlined,
+  DollarOutlined,
+  CalendarOutlined,
 } from "@ant-design/icons";
 
 function Navbar() {
@@ -72,12 +72,12 @@ function Navbar() {
             </li>
             <li>
               <Link to="/eventIndex">
-                <ReadOutlined className="icon-style" />
+                <CalendarOutlined className="icon-style" />
               </Link>
             </li>
             <li>
               <Link to="/sponsors">
-                <ShopOutlined className="icon-style" />
+                <DollarOutlined className="icon-style" />
               </Link>
             </li>
           </ul>
