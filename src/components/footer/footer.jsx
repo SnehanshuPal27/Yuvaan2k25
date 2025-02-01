@@ -54,7 +54,7 @@ function Footer() {
                 </div>
             </div>
             <div className="footer-bottom">
-                <p>&copy; 2024 Yuvaan IIIT Guwahati. Designed with ❤️ by Web & Creatives Team.</p>
+                <p>&copy; 2025 Yuvaan IIIT Guwahati. Designed with ❤️ by Web & Creatives Team.</p>
             </div>
         </footer>
     );

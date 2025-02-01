@@ -4,7 +4,7 @@ body {
 }
 
 .navbar {
-    height: 90px;
+    height: 60px;
     position: fixed;
     top: 0;
     width: 100%;
@@ -13,6 +13,8 @@ body {
     align-items: center;
     justify-content: center;
     background: transparent;
+    /* box-shadow: 0 1px 5px #0000001a; */
+    /* backdrop-filter: blur(10px); Blur effect */
     z-index: 10;
     box-sizing: border-box;
 }
@@ -59,7 +61,7 @@ body {
   }
 
   .icon-style {
-    color: #82579b; /* Set the color to match the background */
+    color: #f7e707; /* Set the color to match the background */
     transition: color 0.3s ease; /* Smooth color change on hover */
   }
   

@@ -76,7 +76,7 @@
         background-size: cover;
         width: 100%;
         /* Occupies full width on smaller screens */
-        aspect-ratio: 1;
+        aspect-ratio: 16/9;
         /* Maintains the 1:1 aspect ratio */
         max-height: 700px;
         /* Constrains maximum height */
