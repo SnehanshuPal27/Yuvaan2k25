@@ -1,173 +1,36 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import {
-  FlippingCard,
-  FlippingCardBack,
-  FlippingCardFront,
-} from "react-ui-cards";
-
+import Card from "./Card"; // Import the Card component
 import "./index.css";
 
+const Pyramid = () => (
+  <div className="scene">
+    <div className="floor"></div>
+    <div className="pyramid bottom">
+      <div></div><div></div><div></div><div></div>
+    </div>
+    <div className="pyramid top">
+      <div></div><div></div><div></div><div></div>
+    </div>
+  </div>
+);
+
 export default function TeamIndex() {
+  const teams = [
+    { path: "/eventTeam", front: "/EventManagement.jpeg", back: "/Event_summary.png" },
+    { path: "/wcTeam", front: "/WebCreatives.jpeg", back: "/Web_summary.png" },
+    { path: "/sponsorTeam", front: "/Sponsors.jpeg", back: "/Sponsor_summary.png" },
+    { path: "/prTeam", front: "/PR.jpeg", back: "/Public_summary.png" },
+    { path: "/mediaTeam", front: "/MediaPublicity.jpeg", back: "/Media_summary.png" },
+    { path: "/sgcTeam", front: "/SGC.jpeg", back: "/SGC_summary.jpg" },
+  ];
+
   return (
     <div className="bg">
+      <Pyramid /> {/* Add Pyramid Component here */}
       <div className="team-index">
-        <Link to="/eventTeam">
-          <FlippingCard>
-            <FlippingCardBack>
-              <div
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  backgroundSize: "contain",
-                  backgroundPosition: "center",
-                  backgroundImage: "url(/Event_summary.png)",
-                }}
-              ></div>
-            </FlippingCardBack>
-            <FlippingCardFront>
-              <div
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  backgroundSize: "contain",
-                  backgroundPosition: "center",
-                  backgroundImage: "url(/EventManagement.png)",
-                }}
-              ></div>
-            </FlippingCardFront>
-          </FlippingCard>
-        </Link>
-        <Link to="/wcTeam">
-          <FlippingCard>
-            <FlippingCardBack>
-              <div
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  backgroundSize: "contain",
-                  backgroundPosition: "center",
-                  backgroundImage: "url(/Web_summary.png)",
-                }}
-              ></div>
-            </FlippingCardBack>
-            <FlippingCardFront>
-              <div
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  backgroundSize: "contain",
-                  backgroundPosition: "center",
-                  backgroundImage: "url(/WebCreatives.png)",
-                }}
-              ></div>
-            </FlippingCardFront>
-          </FlippingCard>
-        </Link>
-        <Link to="/sponsorTeam">
-          <FlippingCard>
-            <FlippingCardBack>
-              <div
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  backgroundSize: "contain",
-                  backgroundPosition: "center",
-                  backgroundImage: "url(/Sponsor_summary.png)",
-                }}
-              ></div>
-            </FlippingCardBack>
-            <FlippingCardFront>
-              <div
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  backgroundSize: "contain",
-                  backgroundPosition: "center",
-                  backgroundImage: "url(/Sponsors.png)",
-                }}
-              ></div>
-            </FlippingCardFront>
-          </FlippingCard>
-        </Link>
-        <Link to="/prTeam">
-          <FlippingCard>
-            <FlippingCardBack>
-              <div
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  backgroundSize: "contain",
-                  backgroundPosition: "center",
-                  backgroundImage: "url(/Public_summary.png)",
-                }}
-              ></div>
-            </FlippingCardBack>
-            <FlippingCardFront>
-              <div
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  backgroundSize: "contain",
-                  backgroundPosition: "center",
-                  backgroundImage: "url(/PR.png)",
-                }}
-              ></div>
-            </FlippingCardFront>
-          </FlippingCard>
-        </Link>
-        <Link to="/mediaTeam">
-          <FlippingCard>
-            <FlippingCardBack>
-              <div
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  backgroundSize: "contain",
-                  backgroundPosition: "center",
-                  backgroundImage: "url(/Media_summary.png)",
-                }}
-              ></div>
-            </FlippingCardBack>
-            <FlippingCardFront>
-              <div
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  backgroundSize: "contain",
-                  backgroundPosition: "center",
-                  backgroundImage: "url(/MediaPublicity.png)",
-                }}
-              ></div>
-            </FlippingCardFront>
-          </FlippingCard>
-        </Link>
-        <Link to="/sgcTeam">
-          <FlippingCard>
-            <FlippingCardBack>
-              <div
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  backgroundSize: "contain",
-                  backgroundPosition: "center",
-                  backgroundImage: "url(/SGC_summary.jpg)",
-                }}
-              ></div>
-            </FlippingCardBack>
-            <FlippingCardFront>
-              <div
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  backgroundSize: "contain",
-                  backgroundPosition: "center",
-                  backgroundImage: "url(/SGC.jpeg)",
-                }}
-              ></div>
-            </FlippingCardFront>
-          </FlippingCard>
-        </Link>
+        {teams.map(({ path, front, back }, index) => (
+          <Card key={index} path={path} front={front} />
+        ))}
       </div>
     </div>
   );
