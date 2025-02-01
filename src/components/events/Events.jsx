@@ -1,88 +1,98 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import Particles from "react-tsparticles";
+import { loadFull } from "tsparticles";
 import "./Events.css";
 import backgroundImage from "./images.jpeg";
 
 const EventCard = ({ event, onClick }) => {
   return (
-    <div
-      className="event-card"
-      style={{ backgroundImage: `url(${backgroundImage})` }}
-      onClick={() => onClick(event)}
-    >
+    <div className="event-card" onClick={() => onClick(event)}>
       <h3>{event.title}</h3>
-      <p className="date">{event.date}</p>
-      <p className="description">{event.shortDescription}</p>
-      <div className="click-info">Click for more details</div>
+      <p>{event.date}</p>
+      <p>{event.shortDescription}</p>
+      <p>Click for more details</p>
     </div>
   );
 };
 
 const EventModal = ({ event, onClose }) => {
   if (!event) return null;
-
   return (
     <div className="modal-overlay" onClick={onClose}>
-      <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-        <div className="modal-header">
-          <h2>{event.title}</h2>
-          <button className="close-button" onClick={onClose}>
-            &times;
-          </button>
+      <div className="festival-card" onClick={(e) => e.stopPropagation()}>
+        {/* Image container only shown on larger screens */}
+        <div className="festival-card__image-container desktop-only">
+          <img
+            src={event.image}
+            alt={event.title}
+            className="festival-card__image"
+          />
         </div>
-        <div className="modal-body">
-          <div
-            className="modal-image"
-            style={{ backgroundImage: `url(${backgroundImage})` }}
-          ></div>
-          <div className="event-details">
-            <div className="detail-item">
-              <h4>Date & Time</h4>
-              <p>{event.date}</p>
-              <p>{event.time}</p>
+
+        <div className="festival-card__details">
+          <button className="close-button" onClick={onClose}>
+            ×
+          </button>
+
+          {/* Title shown only on mobile */}
+          <div className="mobile-only-title">
+            <h1>{event.title}</h1>
+            <p>{event.shortDescription}</p>
+          </div>
+
+          <div className="festival-card__date-location">
+            <div className="festival-card__date-flex">
+              <span>{event.date}</span>
+              <span>{event.location}</span>
             </div>
-            <div className="detail-item">
-              <h4>Location</h4>
-              <p>{event.location}</p>
-            </div>
-            <div className="detail-item">
-              <h4>Description</h4>
-              <p>{event.fullDescription}</p>
-            </div>
-            <div className="detail-item">
-              <h4>Coordinators</h4>
-              {event.coordinators.map((coordinator, index) => (
-                <p key={index}>
-                  {coordinator.name} - {coordinator.contact}
-                </p>
-              ))}
-            </div>
-            <div className="detail-item buttons">
-              {event.registrationLink &&
-              typeof event.registrationLink === "object" ? (
+            <div className="festival-card__time">{event.time}</div>
+          </div>
+
+          <div className="festival-card__description">
+            <p>{event.fullDescription}</p>
+          </div>
+
+          <div className="festival-card__contact">
+            {event.coordinators.map((coordinator, index) => (
+              <span key={index}>
+                {coordinator.name}: {coordinator.contact}
+              </span>
+            ))}
+          </div>
+
+          {event.registrationLink && (
+            <div className="festival-card__registration">
+              {typeof event.registrationLink === "object" ? (
                 <>
                   <a
                     href={event.registrationLink.internal}
-                    className="button registration-btn"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="registration-btn"
                   >
-                    Register (IIITG Students)
+                    IIITG Students
                   </a>
                   <a
                     href={event.registrationLink.external}
-                    className="button registration-btn"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="registration-btn"
                   >
-                    Register (External)
+                    External
                   </a>
                 </>
-              ) : event.registrationLink ? (
+              ) : (
                 <a
                   href={event.registrationLink}
-                  className="button registration-btn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="registration-btn"
                 >
                   Register Now
                 </a>
-              ) : null}
+              )}
             </div>
-          </div>
+          )}
         </div>
       </div>
     </div>
@@ -93,248 +103,532 @@ const Events = () => {
   const [selectedEvent, setSelectedEvent] = useState(null);
   const [selectedDay, setSelectedDay] = useState("day1");
 
+  const particlesInit = async (engine) => {
+    await loadFull(engine);
+  };
+
   const day1Events = [
     {
       title: "ONE VOICE, ONE INSTRUMENT",
+      image: "",
       date: "March 1, 2025",
       time: "10:00 AM - 5:00 PM",
       shortDescription: "Solo Performance Competition",
-      fullDescription:
-        "Showcase your talent in solo singing or instrumental performance.",
+      fullDescription: `This event is divided into two categories:
+      • Vocalists: Let your voice take center stage as you mesmerize the audience.
+      • Instrumentalists: Pour your soul into your instrument and captivate the judges.
+      Judging Criteria:
+      Participants will be evaluated based on:
+      • Pitch
+      • Rhythm
+      • Creativity
+      • Stage Presence
+      • Overall Performance
+      Rewards: The top 3 contestants from both categories will be crowned as champions.`,
       location: "Auditorium, IIITG",
       coordinators: [
-        { name: "John Doe", contact: "123-456-7890" },
-        { name: "Jane Smith", contact: "098-765-4321" },
+        { name: "Ananya Anurag Lenka", contact: "9437089199" },
+        { name: "Karthikeya Seeram", contact: "8978327879" },
+        { name: "Bhavish Melekote", contact: "9321432559" },
       ],
       registrationLink: {
-        internal: "#internal-link",
-        external: "#external-link",
+        internal:
+          "https://docs.google.com/forms/d/e/1FAIpQLSetukoMuauU35o5yTykBppAfclr3Ey1yA9B7OvbmuRX-FI3HA/viewform",
+        external:
+          "https://docs.google.com/forms/d/e/1FAIpQLSevcP6nhF94ojjUWyE_QvLqETY4kKNewLsUC5MfrRKxQHlmcw/viewform",
       },
+      teamSize: "1",
     },
     {
       title: "BAND BASH",
+      image: "",
       date: "March 1, 2025",
       time: "2:00 PM - 6:00 PM",
       shortDescription: "Band Competition",
-      fullDescription:
-        "Battle of the bands - showcase your group's musical talent",
+      fullDescription: `This event is divided into two categories:
+      • Vocalists: Let your voice take center stage as you mesmerize the audience.
+      • Instrumentalists: Pour your soul into your instrument and captivate the judges.
+      Judging Criteria:
+      Participants will be evaluated based on:
+      • Pitch
+      • Rhythm
+      • Creativity
+      • Stage Presence
+      • Overall Performance
+      Rewards: The top 3 contestants from both categories will be crowned as champions.`,
       location: "Main Stage, IIITG",
-      coordinators: [{ name: "Mike Johnson", contact: "111-222-3333" }],
+      coordinators: [
+        { name: "Ananya Anurag Lenka", contact: "9437089199" },
+        { name: "Karthikeya Seeram", contact: "8978327879" },
+        { name: "Bhavish Melekote", contact: "9321432559" },
+      ],
       registrationLink: {
-        internal: "#internal-link",
-        external: "#external-link",
+        internal:
+          "https://docs.google.com/forms/d/e/1FAIpQLScEA68k67JuIhaubDOGimVJN84RA5O4jG5ZqFXFOOVMMxAFfQ/viewform",
+        external:
+          "https://docs.google.com/forms/d/e/1FAIpQLSevcP6nhF94ojjUWyE_QvLqETY4kKNewLsUC5MfrRKxQHlmcw/viewform",
       },
+      teamSize: "3-8",
     },
     {
       title: "Spotlight Solo",
+      image: "",
       date: "March 1, 2025",
       time: "9:00 AM - 4:00 PM",
       shortDescription: "Solo Dance Competition",
-      fullDescription: "Showcase your individual dance skills",
+      fullDescription: `1) Participants are free to choose their theme. The content should be meaningful, engaging, and age-appropriate.
+      2) Each team must perform within the allotted time limit as per competition guidelines.
+      3) Only minimal props are allowed, and participants must manage them independently.`,
       location: "Dance Studio, IIITG",
-      coordinators: [{ name: "Sarah Lee", contact: "444-555-6666" }],
-      registrationLink: "#",
+      coordinators: [
+        { name: "Abhiraj Tomar", contact: "9205454265" },
+        { name: "Mohit Kumawat", contact: "9468844484" },
+        { name: "Prakshay Saini", contact: "9034480145" },
+      ],
+      registrationLink:
+        "https://docs.google.com/forms/d/e/1FAIpQLSd5cu5F_yObiBgfhIFKbcbseo02j4ZP3fN0LuzFNd-Uo9XsVQ/viewform?usp=header",
+      teamSize: "1",
     },
     {
       title: "Prompt Wars",
+      image: "",
       date: "March 1, 2025",
       time: "11:00 AM - 7:00 PM",
       shortDescription: "Creative Writing Challenge",
-      fullDescription: "Test your creative writing skills",
+      fullDescription: `● Prompts will be provided on the spot by the event organizers.
+      ● Vulgar or offensive content will lead to immediate disqualification.`,
       location: "Creative Hub, IIITG",
-      coordinators: [{ name: "Tom Brown", contact: "777-888-9999" }],
-      registrationLink: "#",
+      coordinators: [
+        { name: "Abhiraj Tomar", contact: "9205454265" },
+        {
+          name: "Mohit Kumawat",
+          contact: "9468844484",
+        },
+        {
+          name: "Prakshay Saini",
+          contact: "9034480145",
+        },
+      ],
+      registrationLink:
+        "https://docs.google.com/forms/d/e/1FAIpQLSfCw-vp5dNfLnLEZMEi9SjyJE3l13BmYCXJ_iZcHe6PsXRTUA/viewform?usp=header",
+      teamSize: "2-4",
     },
     {
       title: "SWAY",
+      image: "",
       date: "March 1, 2025",
       time: "10:00 AM - 3:00 PM",
-      shortDescription: "Dance Competition",
-      fullDescription: "Group dance showcase",
+      shortDescription: "Solo Dance Competition",
+      fullDescription: `• Performance duration: The maximum time allowed is 3 minutes.
+      • Any dance style is permitted; feel free to express yourself creatively.
+      • Props are allowed but must be pre-approved by the organizers.
+      • Participants must bring their own music track in MP3 format.`,
       location: "Main Hall, IIITG",
-      coordinators: [{ name: "Alice White", contact: "123-123-1234" }],
-      registrationLink: "#",
+      coordinators: [
+        { name: "Lasya Eadara", contact: "9704663622" },
+        { name: "Vanshika Gupta", contact: "7408710213" },
+        { name: "Ramu naik", contact: "9492659298" },
+      ],
+      registrationLink:
+        "https://docs.google.com/forms/d/e/1FAIpQLSfuS74l5OzImBKnH-1vqXf_Zun7G926wXUGYq7BPK0m_XUOMQ/viewform?usp=header",
+      teamSize: "1",
     },
     {
       title: "SYNC",
+      image: "",
       date: "March 1, 2025",
       time: "1:00 PM - 5:00 PM",
-      shortDescription: "Synchronized Performance",
-      fullDescription: "Group synchronized dance competition",
+      shortDescription: "Group Dance Competition",
+      fullDescription: `• Performance duration: 3 to 5 minutes.
+      • Props and costumes are allowed but must be pre-approved by the organizers.
+      • Any dance style or fusion is welcome; however, synchronization and creativity are key.
+      • Teams must submit their music track in MP3 format before the event.`,
       location: "Performance Center, IIITG",
-      coordinators: [{ name: "Bob Wilson", contact: "456-456-4567" }],
-      registrationLink: "#",
+      coordinators: [
+        { name: "Lasya Eadara", contact: "9704663622" },
+        { name: "Vanshika Gupta", contact: "7408710213" },
+        { name: "Ramu naik", contact: "9492659298" },
+      ],
+      registrationLink:
+        "https://docs.google.com/forms/d/e/1FAIpQLScqY67gLJEg4uahCk1hi00RNFr9WxFGnYS5jQTGBH5AN_vfdQ/viewform?usp=header",
+      teamSize: "4-12",
     },
     {
       title: "POP IT UP!",
+      image: "",
       date: "March 1, 2025",
       time: "9:00 AM - 6:00 PM",
       shortDescription: "Pop Culture Festival",
-      fullDescription: "Celebrate pop culture through various performances",
       location: "Festival Ground, IIITG",
-      coordinators: [{ name: "Carol Martinez", contact: "789-789-7890" }],
-      registrationLink: "#",
+      coordinators: [
+        { name: "Thamas Prakash Gaykawad", contact: "7898187813" },
+        { name: "Shubham Kumar", contact: "9065582032" },
+      ],
+      registrationLink:
+        "https://docs.google.com/forms/d/e/1FAIpQLScqjuGDR89jtcm-pr4iLEiPOJauYkMIb949bGZQPsOBBUMO7A/viewform?usp=header",
+      teamSize: "1-3",
     },
     {
       title: "MUSICAL OLYMPICS",
+      image: "",
       date: "March 1, 2025",
       time: "10:00 AM - 4:00 PM",
       shortDescription: "Music Competition Series",
-      fullDescription: "Multiple musical events and competitions",
+      fullDescription: `Unique Features:
+      • Round-Based Challenges: Each round introduces a creative twist!
+      • Missing Words: Fill in the blanks of song lyrics as the difficulty increases.
+      • Reverse Lyrics: Identify the song or continue lyrics correctly after hearing them backward.
+      • Emoji Decode: Decode a song's lyrics using emojis.
+      • Lyric Puzzle: Rearrange fragmented lyrics within a time limit.
+      • Lyric Charades: Act out lyrics while your teammate guesses the song.
+      Scoring:
+      Points will be awarded based on performance in each round, with more difficult challenges earning higher points.
+      Rewards:
+      The participant(s) with the highest total points at the end of the event will emerge as champions.`,
       location: "Olympic Arena, IIITG",
-      coordinators: [{ name: "David Chen", contact: "321-321-3210" }],
-      registrationLink: "#",
+      coordinators: [
+        { name: "Ananya Anurag Lenka", contact: "9437089199" },
+        { name: "Karthikeya Seeram", contact: "8978327879" },
+        { name: "Bhavish Melekote", contact: "9321432559" },
+      ],
+      registrationLink:
+        "https://docs.google.com/forms/d/e/1FAIpQLSd-1FERO87RREoVi9fz_9WUsaZf1nOIaL73vAl2Wlrsm4xL-g/viewform",
+      teamSize: "1",
     },
     {
       title: "GULLY CRICKET",
+      image: "",
       date: "March 1, 2025",
       time: "8:00 AM - 6:00 PM",
       shortDescription: "Street Cricket Tournament",
-      fullDescription: "Traditional street cricket competition",
+      fullDescription: `1) Matches will be played with a tennis ball.
+      2) Equipment (bat & ball) will be provided.
+      3) Maximum team size is 3 players.
+      4) Rules of the game will be briefed on the spot.
+      5) The organizers reserve the right to alter rules and/or schedule in case of an unforeseen circumstances.`,
       location: "Sports Ground, IIITG",
-      coordinators: [{ name: "Emily Wang", contact: "654-654-6543" }],
-      registrationLink: "#",
+      coordinators: [{ name: "Shubh Tiwari", contact: "9528015193" }],
+      registrationLink:
+        "https://docs.google.com/forms/d/e/1FAIpQLSeVZUBubD0i2We5mlDHTKuRiRQwjKmHEgFHnndr0LUO56zBRQ/viewform?usp=header",
+      teamSize: "3",
     },
     {
       title: "OPEN MIC X LATENT",
+      image: "",
       date: "March 1, 2025",
       time: "5:00 PM - 9:00 PM",
-      shortDescription: "Open Mic Night",
-      fullDescription: "Express yourself through poetry, music, or comedy",
+      shortDescription: "Open Mic Event",
+      fullDescription: `1) Each performer gets maximum 5 minutes.
+      2) Content should be anything but it should be family-friendly and respectful.
+      3) Performer should predict a score before performing and after performance we match the average score of judge to the guess score of the performer.
+      4) Winner will be decided if guessed score matches with average score.`,
       location: "Student Center, IIITG",
-      coordinators: [{ name: "Frank Lee", contact: "987-987-9876" }],
-      registrationLink: "#",
+      coordinators: [
+        { name: "Shubh Tiwari", contact: "9528015193" },
+        { name: "Vanshika Gupta", contact: "7408710213" },
+      ],
+      registrationLink:
+        "https://docs.google.com/forms/d/e/1FAIpQLSfjWPqY-ZC9NHzqCDXbwIE0Uql4IIYz011X28wTQra9eumP3g/viewform",
+      teamSize: "1",
     },
     {
       title: "Squid Games",
+      image: "",
       date: "March 1, 2025",
       time: "11:00 AM - 8:00 PM",
       shortDescription: "Survival Game Series",
-      fullDescription:
-        "Series of challenging games inspired by popular culture",
+      fullDescription: "Rules To Be Determined",
       location: "Game Zone, IIITG",
-      coordinators: [{ name: "Grace Kim", contact: "135-246-7890" }],
-      registrationLink: "#",
+      coordinators: [{ name: "Fun Coordinator", contact: "Contact Info" }],
+      registrationLink: "#squid-games-registration",
+      teamSize: "3-5",
     },
   ];
 
   const day2Events = [
     {
-      title: "ONE VOICE, ONE INSTRUMENT",
+      title: "ONE VOICE, ONE INSTRUMENT (Finals)",
+      image: "",
       date: "March 2, 2025",
       time: "10:00 AM - 5:00 PM",
-      shortDescription: "Solo Performance Competition",
-      fullDescription: "Day 2 of solo singing and instrumental performances",
+      shortDescription: "Solo Performance Competition Finals",
+      fullDescription: `This event is divided into two categories:
+      • Vocalists: Let your voice take center stage as you mesmerize the audience.
+      • Instrumentalists: Pour your soul into your instrument and captivate the judges.
+      Judging Criteria:
+      Participants will be evaluated based on:
+      • Pitch
+      • Rhythm
+      • Creativity
+      • Stage Presence
+      • Overall Performance
+      Rewards: The top 3 contestants from both categories will be crowned as champions.`,
       location: "Auditorium, IIITG",
-      coordinators: [{ name: "Helen Park", contact: "111-222-3333" }],
-      registrationLink: "#",
+      coordinators: [
+        { name: "Ananya Anurag Lenka", contact: "9437089199" },
+        { name: "Karthikeya Seeram", contact: "8978327879" },
+        { name: "Bhavish Melekote", contact: "9321432559" },
+      ],
+      registrationLink: {
+        internal:
+          "https://docs.google.com/forms/d/e/1FAIpQLSetukoMuauU35o5yTykBppAfclr3Ey1yA9B7OvbmuRX-FI3HA/viewform",
+        external:
+          "https://docs.google.com/forms/d/e/1FAIpQLSevcP6nhF94ojjUWyE_QvLqETY4kKNewLsUC5MfrRKxQHlmcw/viewform",
+      },
+      teamSize: "1",
     },
-    // Copy the same events but change dates to March 2, 2025
-    // Repeat for all 11 events
     {
-      title: "BAND BASH",
+      title: "BAND BASH (Finals)",
+      image: "",
       date: "March 2, 2025",
       time: "2:00 PM - 6:00 PM",
       shortDescription: "Band Competition Finals",
-      fullDescription: "Final round of battle of the bands",
+      fullDescription: `This event is divided into two categories:
+      • Vocalists: Let your voice take center stage as you mesmerize the audience.
+      • Instrumentalists: Pour your soul into your instrument and captivate the judges.
+      Judging Criteria:
+      Participants will be evaluated based on:
+      • Pitch
+      • Rhythm
+      • Creativity
+      • Stage Presence
+      • Overall Performance
+      Rewards: The top 3 contestants from both categories will be crowned as champions.`,
       location: "Main Stage, IIITG",
-      coordinators: [{ name: "Ian Clark", contact: "444-555-6666" }],
-      registrationLink: "#",
+      coordinators: [
+        { name: "Ananya Anurag Lenka", contact: "9437089199" },
+        { name: "Karthikeya Seeram", contact: "8978327879" },
+        { name: "Bhavish Melekote", contact: "9321432559" },
+      ],
+      registrationLink: {
+        internal:
+          "https://docs.google.com/forms/d/e/1FAIpQLScEA68k67JuIhaubDOGimVJN84RA5O4jG5ZqFXFOOVMMxAFfQ/viewform",
+        external:
+          "https://docs.google.com/forms/d/e/1FAIpQLSevcP6nhF94ojjUWyE_QvLqETY4kKNewLsUC5MfrRKxQHlmcw/viewform",
+      },
+      teamSize: "3-8",
     },
     {
-      title: "Spotlight Solo",
+      title: "Spotlight Solo (Finals)",
+      image: "",
       date: "March 2, 2025",
       time: "9:00 AM - 4:00 PM",
-      shortDescription: "Solo Dance Competition",
-      fullDescription: "Showcase your individual dance skills",
+      shortDescription: "Solo Dance Competition Finals",
+      fullDescription: `1) Participants are free to choose their theme. The content should be meaningful, engaging, and age-appropriate.
+      2) Each team must perform within the allotted time limit as per competition guidelines.
+      3) Only minimal props are allowed, and participants must manage them independently.`,
       location: "Dance Studio, IIITG",
-      coordinators: [{ name: "Sarah Lee", contact: "444-555-6666" }],
-      registrationLink: "#",
+      coordinators: [
+        { name: "Abhiraj Tomar", contact: "9205454265" },
+        { name: "Mohit Kumawat", contact: "9468844484" },
+        { name: "Prakshay Saini", contact: "9034480145" },
+      ],
+      registrationLink:
+        "https://docs.google.com/forms/d/e/1FAIpQLSd5cu5F_yObiBgfhIFKbcbseo02j4ZP3fN0LuzFNd-Uo9XsVQ/viewform?usp=header",
+      teamSize: "1",
     },
     {
-      title: "Prompt Wars",
+      title: "Prompt Wars (Finals)",
+      image: "",
       date: "March 2, 2025",
       time: "11:00 AM - 7:00 PM",
-      shortDescription: "Creative Writing Challenge",
-      fullDescription: "Test your creative writing skills",
+      shortDescription: "Creative Writing Challenge Finals",
+      fullDescription: `● Prompts will be provided on the spot by the event organizers.
+      ● Vulgar or offensive content will lead to immediate disqualification.`,
       location: "Creative Hub, IIITG",
-      coordinators: [{ name: "Tom Brown", contact: "777-888-9999" }],
-      registrationLink: "#",
+      coordinators: [
+        { name: "Abhiraj Tomar", contact: "9205454265" },
+        {
+          name: "Mohit Kumawat",
+          contact: "9468844484",
+        },
+        {
+          name: "Prakshay Saini",
+          contact: "9034480145",
+        },
+      ],
+      registrationLink:
+        "https://docs.google.com/forms/d/e/1FAIpQLSfCw-vp5dNfLnLEZMEi9SjyJE3l13BmYCXJ_iZcHe6PsXRTUA/viewform?usp=header",
+      teamSize: "2-4",
     },
     {
-      title: "SWAY",
+      title: "SWAY (Finals)",
+      image: "",
       date: "March 2, 2025",
       time: "10:00 AM - 3:00 PM",
-      shortDescription: "Dance Competition",
-      fullDescription: "Group dance showcase",
+      shortDescription: "Solo Dance Competition Finals",
+      fullDescription: `• Performance duration: The maximum time allowed is 3 minutes.
+      • Any dance style is permitted; feel free to express yourself creatively.
+      • Props are allowed but must be pre-approved by the organizers.
+      • Participants must bring their own music track in MP3 format.`,
       location: "Main Hall, IIITG",
-      coordinators: [{ name: "Alice White", contact: "123-123-1234" }],
-      registrationLink: "#",
+      coordinators: [
+        { name: "Lasya Eadara", contact: "9704663622" },
+        { name: "Vanshika Gupta", contact: "7408710213" },
+        { name: "Ramu naik", contact: "9492659298" },
+      ],
+      registrationLink:
+        "https://docs.google.com/forms/d/e/1FAIpQLSfuS74l5OzImBKnH-1vqXf_Zun7G926wXUGYq7BPK0m_XUOMQ/viewform?usp=header",
+      teamSize: "1",
     },
     {
-      title: "SYNC",
+      title: "SYNC (Finals)",
+      image: "",
       date: "March 2, 2025",
       time: "1:00 PM - 5:00 PM",
-      shortDescription: "Synchronized Performance",
-      fullDescription: "Group synchronized dance competition",
+      shortDescription: "Group Dance Competition Finals",
+      fullDescription: `• Performance duration: 3 to 5 minutes.
+      • Props and costumes are allowed but must be pre-approved by the organizers.
+      • Any dance style or fusion is welcome; however, synchronization and creativity are key.
+      • Teams must submit their music track in MP3 format before the event.`,
       location: "Performance Center, IIITG",
-      coordinators: [{ name: "Bob Wilson", contact: "456-456-4567" }],
-      registrationLink: "#",
+      coordinators: [
+        { name: "Lasya Eadara", contact: "9704663622" },
+        { name: "Vanshika Gupta", contact: "7408710213" },
+        { name: "Ramu naik", contact: "9492659298" },
+      ],
+      registrationLink:
+        "https://docs.google.com/forms/d/e/1FAIpQLScqY67gLJEg4uahCk1hi00RNFr9WxFGnYS5jQTGBH5AN_vfdQ/viewform?usp=header",
+      teamSize: "4-12",
     },
     {
-      title: "POP IT UP!",
+      title: "POP IT UP! (Day 2)",
+      image: "",
       date: "March 2, 2025",
       time: "9:00 AM - 6:00 PM",
-      shortDescription: "Pop Culture Festival",
-      fullDescription: "Celebrate pop culture through various performances",
+      shortDescription: "Pop Culture Festival Continuation",
       location: "Festival Ground, IIITG",
-      coordinators: [{ name: "Carol Martinez", contact: "789-789-7890" }],
-      registrationLink: "#",
+      coordinators: [
+        { name: "Thamas Prakash Gaykawad", contact: "7898187813" },
+        { name: "Shubham Kumar", contact: "9065582032" },
+      ],
+      registrationLink:
+        "https://docs.google.com/forms/d/e/1FAIpQLScqjuGDR89jtcm-pr4iLEiPOJauYkMIb949bGZQPsOBBUMO7A/viewform?usp=header",
+      teamSize: "1-3",
     },
     {
-      title: "MUSICAL OLYMPICS",
+      title: "MUSICAL OLYMPICS (Finals)",
+      image: "",
       date: "March 2, 2025",
       time: "10:00 AM - 4:00 PM",
-      shortDescription: "Music Competition Series",
-      fullDescription: "Multiple musical events and competitions",
+      shortDescription: "Music Competition Series Finals",
+      fullDescription: `Unique Features:
+      • Round-Based Challenges: Each round introduces a creative twist!
+      • Missing Words: Fill in the blanks of song lyrics as the difficulty increases.
+      • Reverse Lyrics: Identify the song or continue lyrics correctly after hearing them backward.
+      • Emoji Decode: Decode a song's lyrics using emojis.
+      • Lyric Puzzle: Rearrange fragmented lyrics within a time limit.
+      • Lyric Charades: Act out lyrics while your teammate guesses the song.
+      Scoring:
+      Points will be awarded based on performance in each round, with more difficult challenges earning higher points.
+      Rewards:
+      The participant(s) with the highest total points at the end of the event will emerge as champions.`,
       location: "Olympic Arena, IIITG",
-      coordinators: [{ name: "David Chen", contact: "321-321-3210" }],
-      registrationLink: "#",
+      coordinators: [
+        { name: "Ananya Anurag Lenka", contact: "9437089199" },
+        { name: "Karthikeya Seeram", contact: "8978327879" },
+        { name: "Bhavish Melekote", contact: "9321432559" },
+      ],
+      registrationLink:
+        "https://docs.google.com/forms/d/e/1FAIpQLSd-1FERO87RREoVi9fz_9WUsaZf1nOIaL73vAl2Wlrsm4xL-g/viewform",
+      teamSize: "1",
     },
     {
-      title: "GULLY CRICKET",
+      title: "GULLY CRICKET (Finals)",
+      image: "",
       date: "March 2, 2025",
       time: "8:00 AM - 6:00 PM",
-      shortDescription: "Street Cricket Tournament",
-      fullDescription: "Traditional street cricket competition",
+      shortDescription: "Street Cricket Tournament Finals",
+      fullDescription: `1) Matches will be played with a tennis ball.
+      2) Equipment (bat & ball) will be provided.
+      3) Maximum team size is 3 players.
+      4) Rules of the game will be briefed on the spot.
+      5) The organizers reserve the right to alter rules and/or schedule in case of an unforeseen circumstances.`,
       location: "Sports Ground, IIITG",
-      coordinators: [{ name: "Emily Wang", contact: "654-654-6543" }],
-      registrationLink: "#",
+      coordinators: [{ name: "Shubh Tiwari", contact: "9528015193" }],
+      registrationLink:
+        "https://docs.google.com/forms/d/e/1FAIpQLSeVZUBubD0i2We5mlDHTKuRiRQwjKmHEgFHnndr0LUO56zBRQ/viewform?usp=header",
+      teamSize: "3",
     },
     {
-      title: "OPEN MIC X LATENT",
+      title: "OPEN MIC X LATENT (Day 2)",
+      image: "",
       date: "March 2, 2025",
       time: "5:00 PM - 9:00 PM",
-      shortDescription: "Open Mic Night",
-      fullDescription: "Express yourself through poetry, music, or comedy",
+      shortDescription: "Open Mic Event Continuation",
+      fullDescription: `1) Each performer gets maximum 5 minutes.
+      2) Content should be anything but it should be family-friendly and respectful.
+      3) Performer should predict a score before performing and after performance we match the average score of judge to the guess score of the performer.
+      4) Winner will be decided if guessed score matches with average score.`,
       location: "Student Center, IIITG",
-      coordinators: [{ name: "Frank Lee", contact: "987-987-9876" }],
-      registrationLink: "#",
+      coordinators: [
+        { name: "Shubh Tiwari", contact: "9528015193" },
+        { name: "Vanshika Gupta", contact: "7408710213" },
+      ],
+      registrationLink:
+        "https://docs.google.com/forms/d/e/1FAIpQLSfjWPqY-ZC9NHzqCDXbwIE0Uql4IIYz011X28wTQra9eumP3g/viewform",
+      teamSize: "1",
     },
     {
-      title: "Squid Games",
+      title: "Squid Games (Finals)",
+      image: "",
       date: "March 2, 2025",
       time: "11:00 AM - 8:00 PM",
-      shortDescription: "Survival Game Series",
-      fullDescription:
-        "Series of challenging games inspired by popular culture",
+      shortDescription: "Survival Game Series Finals",
+      fullDescription: "Rules To Be Determined",
       location: "Game Zone, IIITG",
-      coordinators: [{ name: "Grace Kim", contact: "135-246-7890" }],
-      registrationLink: "#",
+      coordinators: [{ name: "Fun Coordinator", contact: "Contact Info" }],
+      registrationLink: "#squid-games-registration-finals",
+      teamSize: "3-5",
     },
-    // Continue with remaining events...
-    // Add all 11 events with March 2, 2025 date
   ];
+
+  useEffect(() => {
+    // Create pointer element
+    const pointerElement = document.createElement("div");
+    pointerElement.classList.add("pointer");
+    document.body.appendChild(pointerElement);
+
+    // Handle pointer movement
+    const handlePointerMove = (e) => {
+      pointerElement.style.left = `${e.clientX - 10}px`;
+      pointerElement.style.top = `${e.clientY - 10}px`;
+    };
+
+    // Handle pointer interactions with cards
+    const handleCardEnter = () => {
+      pointerElement.style.transform = "scale(2)";
+      pointerElement.style.backgroundColor = "rgba(255, 215, 0, 0.2)";
+    };
+    const handleCardLeave = () => {
+      pointerElement.style.transform = "scale(1)";
+      pointerElement.style.backgroundColor = "rgba(255, 215, 0, 0.5)";
+    };
+
+    // Add event listeners
+    document.addEventListener("mousemove", handlePointerMove);
+
+    // Add listeners for all interactive elements
+    const interactiveElements = document.querySelectorAll(
+      ".event-card, .button, .close-button",
+    );
+    interactiveElements.forEach((element) => {
+      element.addEventListener("mouseenter", handleCardEnter);
+      element.addEventListener("mouseleave", handleCardLeave);
+    });
+
+    // Cleanup
+    return () => {
+      document.removeEventListener("mousemove", handlePointerMove);
+      interactiveElements.forEach((element) => {
+        element.removeEventListener("mouseenter", handleCardEnter);
+        element.removeEventListener("mouseleave", handleCardLeave);
+      });
+      if (pointerElement && pointerElement.parentElement) {
+        document.body.removeChild(pointerElement);
+      }
+    };
+  }, []);
 
   const handleCardClick = (event) => {
     setSelectedEvent(event);
@@ -342,36 +636,115 @@ const Events = () => {
 
   return (
     <div className="events-page">
-      <h1>Upcoming Events</h1>
-      <div className="day-selection">
-        <button
-          className={`day-button ${selectedDay === "day1" ? "active" : ""}`}
-          onClick={() => setSelectedDay("day1")}
-        >
-          Day 1
-        </button>
-        <button
-          className={`day-button ${selectedDay === "day2" ? "active" : ""}`}
-          onClick={() => setSelectedDay("day2")}
-        >
-          Day 2
-        </button>
-      </div>
-      <div className="events-container">
-        {(selectedDay === "day1" ? day1Events : day2Events).map(
-          (event, index) => (
-            <EventCard key={index} event={event} onClick={handleCardClick} />
-          ),
+      <Particles
+        id="tsparticles"
+        init={particlesInit}
+        options={{
+          background: {
+            image: `url(${backgroundImage})`,
+            repeat: "no-repeat",
+            size: "cover",
+          },
+          fpsLimit: 60,
+          interactivity: {
+            events: {
+              onClick: {
+                enable: true,
+                mode: "push",
+              },
+              onHover: {
+                enable: true,
+                mode: "repulse",
+              },
+            },
+            modes: {
+              push: {
+                quantity: 4,
+              },
+              repulse: {
+                distance: 200,
+                duration: 0.4,
+              },
+            },
+          },
+          particles: {
+            color: {
+              value: "#ffd700",
+            },
+            links: {
+              color: "#ffffff",
+              distance: 150,
+              enable: true,
+              opacity: 0.5,
+              width: 1,
+            },
+            collisions: {
+              enable: true,
+            },
+            move: {
+              direction: "none",
+              enable: true,
+              outModes: {
+                default: "bounce",
+              },
+              random: false,
+              speed: 2,
+              straight: false,
+            },
+            number: {
+              density: {
+                enable: true,
+                area: 800,
+              },
+              value: 80,
+            },
+            opacity: {
+              value: 0.5,
+            },
+            shape: {
+              type: "circle",
+            },
+            size: {
+              value: { min: 1, max: 5 },
+            },
+          },
+          detectRetina: true,
+        }}
+      />
+      <div
+        className="content-wrapper"
+        style={{ position: "relative", zIndex: 1 }}
+      >
+        <h1 className="events-heading">Upcoming Events</h1>
+        <div className="day-selection">
+          <button
+            className={`day-button ${selectedDay === "day1" ? "active" : ""}`}
+            onClick={() => setSelectedDay("day1")}
+          >
+            Day 1
+          </button>
+          <button
+            className={`day-button ${selectedDay === "day2" ? "active" : ""}`}
+            onClick={() => setSelectedDay("day2")}
+          >
+            Day 2
+          </button>
+        </div>
+        <div className="events-container">
+          {(selectedDay === "day1" ? day1Events : day2Events).map(
+            (event, index) => (
+              <EventCard key={index} event={event} onClick={handleCardClick} />
+            ),
+          )}
+        </div>
+        {selectedEvent && (
+          <EventModal
+            event={selectedEvent}
+            onClose={() => setSelectedEvent(null)}
+          />
         )}
       </div>
-      {selectedEvent && (
-        <EventModal
-          event={selectedEvent}
-          onClose={() => setSelectedEvent(null)}
-        />
-      )}
     </div>
   );
 };
-
 export default Events;

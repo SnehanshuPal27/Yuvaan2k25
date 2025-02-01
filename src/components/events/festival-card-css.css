@@ -1,0 +1,99 @@
+/* FestivalCard.css */
+.festival-card {
+  max-width: 400px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.festival-card__image-container {
+  position: relative;
+  height: 250px;
+}
+
+.festival-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.festival-card__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.festival-card__title-container {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.festival-card__subtitle {
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.05em;
+}
+
+.festival-card__main-title h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.festival-card__main-title h2 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.festival-card__details {
+  padding: 1.5rem;
+}
+
+.festival-card__date-location {
+  background: #16a34a;
+  color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.festival-card__date-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+}
+
+.festival-card__time {
+  font-size: 0.875rem;
+  text-align: center;
+  margin-top: 0.25rem;
+}
+
+.festival-card__description {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.festival-card__description p {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.festival-card__contact {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 0.875rem;
+  color: #4b5563;
+}

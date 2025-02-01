@@ -1,0 +1,46 @@
+// FestivalCard.jsx
+import React from 'react';
+import './FestivalCard.css';
+
+const FestivalCard = () => {
+  return (
+    <div className="festival-card">
+      <div className="festival-card__image-container">
+        <img 
+          src="/api/placeholder/400/320" 
+          alt="Festival background" 
+          className="festival-card__image"
+        />
+        <div className="festival-card__overlay"></div>
+        <div className="festival-card__title-container">
+          <h3 className="festival-card__subtitle">TRIP ENROUTE FESTIVAL</h3>
+          <div className="festival-card__main-title">
+            <h1>A TRIP</h1>
+            <h2>TO THE SOUTH</h2>
+          </div>
+        </div>
+      </div>
+
+      <div className="festival-card__details">
+        <div className="festival-card__date-location">
+          <div className="festival-card__date-flex">
+            <span>DEC 29, 2024</span>
+            <span>WARRI DELTA</span>
+          </div>
+          <div className="festival-card__time">12:00PM - 12:00AM (WAT)</div>
+        </div>
+
+        <div className="festival-card__description">
+          <p>THE BIGGEST AFROBEATS PARTY</p>
+        </div>
+
+        <div className="festival-card__contact">
+          <span>0805 034 5255</span>
+          <span>0810 856 0311</span>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default FestivalCard;
