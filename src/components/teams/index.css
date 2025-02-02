@@ -13,8 +13,9 @@ body {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
-  background-image: url('/BG_Sponsor3.jpg');
+  justify-content: space-between;
+  /* background-image: url('/BG_Sponsor3.jpg'); */
+  background-color: #000;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -32,15 +33,6 @@ body {
   padding: 20px;
 }
 
-.team-index {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  justify-content: center;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
 .team-index a {
   text-decoration: none;
 }
@@ -52,23 +44,223 @@ body {
 }
 
 
-FlippingCard,
-FlippingCardFront,
-FlippingCardBack {
-  width: 100%;
-  max-width: 300px;
-  aspect-ratio: 3/4;
-  border: none;
+
+
+/* Pyramid styles */
+*, *::before, *::after {
+  padding: 0;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
-@media (max-width: 900px) {
-  .team-index {
-    grid-template-columns: repeat(2, 1fr);
+body {
+  background-color: #000;
+  color: #fff;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  perspective: 800px;
+  
+  *:not(:empty) {
+    transform-style: preserve-3d;
   }
 }
 
-@media (max-width: 600px) {
-  .team-index {
-    grid-template-columns: 1fr;
+.scene {
+    position: relative;
+    margin-top: 70px;
+  width: 10%; /* Adjust the width for pyramid */
+  animation: sceneRotate 60s infinite linear;
+  height: 30vh; /* Adjust the height */
+}
+
+@keyframes sceneRotate {
+  from { transform: translateY(10em) rotateX(-15deg) rotateY(0deg); }
+  to { transform: translateY(10em) rotateX(-15deg) rotateY(-360deg); }
+}
+
+.floor {
+  position: absolute;
+  inset: -60em;
+  background-image:
+    radial-gradient(closest-side, transparent, #000),
+    repeating-radial-gradient(circle at calc(cos(0deg) * 25% + 50%) calc(sin(0deg) * 25% + 50%), transparent 0, #fdd2, transparent 1em),
+    repeating-radial-gradient(circle at calc(cos(72deg) * 25% + 50%) calc(sin(72deg) * 25% + 50%), transparent 0, #fdd2, transparent 1em),
+    repeating-radial-gradient(circle at calc(cos(144deg) * 25% + 50%) calc(sin(144deg) * 25% + 50%), transparent 0, #fdd2, transparent 1em),
+    repeating-radial-gradient(circle at calc(cos(216deg) * 25% + 50%) calc(sin(216deg) * 25% + 50%), transparent 0, #fdd2, transparent 1em),
+    repeating-radial-gradient(circle at calc(cos(288deg) * 25% + 50%) calc(sin(288deg) * 25% + 50%), transparent 0, #fdd2, transparent 1em);
+  transform: rotateX(90deg);
+}
+
+.pyramid {
+  position: absolute;
+  
+  --bricks:
+    linear-gradient(155deg, brown 0.375em, transparent 0.375em) 0.625em 0.125em / 1em 1em,
+    linear-gradient(155deg, brown 0.375em, transparent 0.375em) 0.125em 0.625em / 1em 1em,
+    linear-gradient(335deg, maroon 0.375em, transparent 0.375em) 0 0.025em / 1em 1em,
+    linear-gradient(335deg, maroon 0.375em, transparent 0.375em) 0.5em 0.525em / 1em 1em;
+  
+  div {
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(10deg, #0007, #fff3), var(--bricks);
+    background-color: sandybrown;
+    transform-origin: bottom;
+    
+    &:nth-child(2) { --angle: 90deg; }
+    &:nth-child(3) { --angle: 180deg; }
+    &:nth-child(4) { --angle: 270deg; }
+  }
+  
+  &.top {
+    transform: translateY(-10em);
+    animation: topRotate 50s infinite linear;
+
+    div {
+      left: -4.5em;
+      width: 9em;
+      aspect-ratio: 1;
+      transform: rotateY(var(--angle, 0)) translateZ(4.5em) rotateX(30deg);
+      clip-path: polygon(0 100%, 50% 0, 100% 100%);
+    }
+  }
+  
+  &.bottom {
+    div {
+      left: -10em;
+      width: 20em;
+      aspect-ratio: 2 / 1;
+      transform: rotateY(var(--angle, 0)) translateZ(10em) rotateX(30deg);
+      clip-path: polygon(0 100%, 25% 0, 75% 0, 100% 100%); 
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      inset: -5em;
+      background: radial-gradient(#000a, 75%, #fff3), var(--bricks);
+      background-color: sandybrown;
+      transform: rotateX(90deg) translateZ(8.66em);
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      inset: -11em;
+      background-color: #0009;
+      transform: rotateX(90deg) translateZ(1px);
+      filter: blur(1em)
+    }
+  }
+}
+
+@keyframes topRotate {
+  from { transform: translateY(-10em) rotateY(0deg); }
+  to { transform: translateY(-10em) rotateY(-360deg); }
+}
+
+
+/* Media Queries for Pyramid Responsiveness */
+
+/* For small devices (mobiles) */
+@media only screen and (max-width: 600px) {
+  .scene {
+    width: 30%; /* Adjust width for small devices */
+    height: 20vh; /* Adjust height */
+  }
+
+  .pyramid {
+    --bricks:
+      linear-gradient(155deg, brown 0.25em, transparent 0.25em) 0.5em 0.1em / 1em 1em,
+      linear-gradient(155deg, brown 0.25em, transparent 0.25em) 0.1em 0.5em / 1em 1em;
+    
+    &.top {
+      transform: translateY(-8em);
+      animation: topRotate 40s infinite linear;
+    }
+
+    &.bottom {
+      div {
+        left: -8em;
+        width: 16em;
+      }
+    }
+  }
+}
+
+/* For medium devices (tablets) */
+@media only screen and (max-width: 768px) {
+  .scene {
+    width: 20%; /* Adjust width for medium devices */
+    height: 25vh; /* Adjust height */
+  }
+
+  .pyramid {
+    --bricks:
+      linear-gradient(155deg, brown 0.3em, transparent 0.3em) 0.6em 0.125em / 1em 1em,
+      linear-gradient(155deg, brown 0.3em, transparent 0.3em) 0.15em 0.6em / 1em 1em;
+    
+    &.top {
+      transform: translateY(-9em);
+      animation: topRotate 45s infinite linear;
+    }
+
+    &.bottom {
+      div {
+        left: -9em;
+        width: 18em;
+      }
+    }
+  }
+}
+
+/* For large devices (laptops/desktops) */
+@media only screen and (min-width: 1024px) {
+  .scene {
+    width: 15%; /* Adjust width for large devices */
+    height: 30vh; /* Adjust height */
+  }
+
+  .pyramid {
+    --bricks:
+      linear-gradient(155deg, brown 0.375em, transparent 0.375em) 0.625em 0.125em / 1em 1em,
+      linear-gradient(155deg, brown 0.375em, transparent 0.375em) 0.125em 0.625em / 1em 1em;
+    
+    &.top {
+      transform: translateY(-10em);
+      animation: topRotate 50s infinite linear;
+    }
+
+    &.bottom {
+      div {
+        left: -10em;
+        width: 20em;
+      }
+    }
+  }
+}
+
+/* For extra-large devices (large desktops) */
+@media only screen and (min-width: 1280px) {
+  .scene {
+    width: 12%; /* Adjust width for large desktops */
+    height: 35vh; /* Adjust height */
+  }
+
+  .pyramid {
+    --bricks:
+      linear-gradient(155deg, brown 0.4em, transparent 0.4em) 0.7em 0.15em / 1em 1em,
+      linear-gradient(155deg, brown 0.4em, transparent 0.4em) 0.2em 0.7em / 1em 1em;
+    
+    &.top {
+      transform: translateY(-12em);
+      animation: topRotate 60s infinite linear;
+    }
+
+    &.bottom {
+      div {
+        left: -12em;
+        width: 24em;
+      }
+    }
   }
 }
