@@ -22,6 +22,7 @@
     "@fortawesome/react-fontawesome": "^0.2.2",
     "@tailwindcss/vite": "^4.0.0",
     "@vitejs/plugin-react-swc": "^3.7.1",
+    "framer-motion": "^12.3.1",
     "gh-pages": "^6.3.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
@@ -32,8 +33,8 @@
     "react-ui-cards": "^3.1.0",
     "swiper": "^11.2.1",
     "tailwindcss": "^4.0.0",
-    "vite": "^6.0.11",
-    "tsparticles": "^2.12.0"
+    "tsparticles": "^2.12.0",
+    "vite": "^6.0.11"
   },
   "devDependencies": {
     "@eslint/js": "^9.13.0",

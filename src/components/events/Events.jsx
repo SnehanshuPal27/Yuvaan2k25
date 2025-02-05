@@ -3,6 +3,7 @@ import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 import "./Events.css";
 import backgroundImage from "./images.jpeg";
+import Withloader from "../WithLoader";
 
 const EventCard = ({ event, onClick }) => {
   return (
@@ -747,4 +748,4 @@ const Events = () => {
     </div>
   );
 };
-export default Events;
+export default Withloader(Events);
