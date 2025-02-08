@@ -572,3 +572,15 @@
     position: relative;
     border: 2px solid #ffd700;
 }
+@media (hover: none) and (pointer: coarse), (max-width: 1024px) {
+    .pointer {
+        display: none;
+    }
+
+    .events-page,
+    .event-card,
+    .button,
+    .close-button {
+        cursor: auto !important;
+    }
+}
