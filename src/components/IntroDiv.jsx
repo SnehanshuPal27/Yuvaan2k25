@@ -25,7 +25,7 @@ export default function IntroDiv() {
                     YUVAAN
                 </p> */}
 
-                <img className="main-logo-img" src="/yuvaan_iconL.png"></img>
+                <img className="main-logo-img" src="/yuvaan_icon_date.png"></img>
 
                 <div className="intro-bottom">
                     <p className="head-caption">A TALE OF TIME</p>
