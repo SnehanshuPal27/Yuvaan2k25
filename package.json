@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host",
-    "predeploy": "cross-env GITHUB_PAGES=true npm run build",
+    "predeploy": "cross-env VITE_GITHUB_PAGES=true npm run build",
     "deploy": "gh-pages -d dist",
     "build": "vite build",
     "lint": "eslint .",

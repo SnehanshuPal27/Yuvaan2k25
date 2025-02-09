@@ -12,33 +12,36 @@ import Footer from "./components/footer/footer.jsx";
 import Sponsors from "./components/sponsors/Sponsors.jsx";
 import TeamIndex from "./components/teams/index.jsx";
 import Events from "./components/events/Events.jsx";
+import useImagePathUpdater from "./hooks/useImagePathUpdater";
 
 function App() {
+    // // Update image paths to include the base URL
+    useImagePathUpdater();
     // Dynamically fetch the base URL
-    const baseURL = import.meta.env.BASE_URL || "";
+    // const baseURL = import.meta.env.BASE_URL || "";
 
-    useEffect(() => {
-        function updateImagePaths() {
-            document.querySelectorAll("img").forEach((img) => {
-                const currentSrc = img.getAttribute("src");
+    // useEffect(() => {
+    //     function updateImagePaths() {
+    //         document.querySelectorAll("img").forEach((img) => {
+    //             const currentSrc = img.getAttribute("src");
 
-                // Ensure we update only relative paths and avoid duplicating baseURL
-                if (currentSrc && currentSrc.startsWith("/") && !currentSrc.startsWith(baseURL)) {
-                    img.setAttribute("src", baseURL + currentSrc);
-                }
-            });
-        }
+    //             // Ensure we update only relative paths and avoid duplicating baseURL
+    //             if (currentSrc && currentSrc.startsWith("/") && !currentSrc.startsWith(baseURL)) {
+    //                 img.setAttribute("src", baseURL + currentSrc);
+    //             }
+    //         });
+    //     }
 
-        updateImagePaths();
+    //     updateImagePaths();
 
-        // Observe changes in the DOM for dynamically added images
-        const observer = new MutationObserver(updateImagePaths);
-        observer.observe(document.body, { childList: true, subtree: true });
+    //     // Observe changes in the DOM for dynamically added images
+    //     const observer = new MutationObserver(updateImagePaths);
+    //     observer.observe(document.body, { childList: true, subtree: true });
 
-        return () => observer.disconnect();
-    }, [baseURL]); // Dependency added to handle dynamic changes
+    //     return () => observer.disconnect();
+    // }, [baseURL]); // Dependency added to handle dynamic changes
 
-    const basename = process.env.NODE_ENV === "production" ? "/Yuvaan2k25" : "/"
+    const basename = __BASE_URL__; // Set the base URL for the router using global variable set in vite.config.js
 
     return (
         <Router basename={basename}>
