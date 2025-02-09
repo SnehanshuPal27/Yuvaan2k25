@@ -5,15 +5,12 @@ import tailwindcss from '@tailwindcss/vite'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss(),],
-  base: '/Yuvaan2k25/',
+  base: './', // This is important - use relative paths
   build: {
-    assetsDir: '',  // This is important - it will put assets at root level
+    assetsDir: '',
     rollupOptions: {
       output: {
-        assetFileNames: (assetInfo) => {
-          // Preserve the original path structure
-          return `[name][extname]`;
-        },
+        assetFileNames: '[name][extname]'
       }
     }
   }
