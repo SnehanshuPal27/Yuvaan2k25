@@ -15,156 +15,60 @@ export default function TeamIndex() {
         <Link to="/eventTeam">
           <FlippingCard>
             <FlippingCardBack>
-              <div
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  backgroundSize: "contain",
-                  backgroundPosition: "center",
-                  backgroundImage: "url(/Event_summary.png)",
-                }}
-              ></div>
+              <div className="flipping-card-back event-summary"></div>
             </FlippingCardBack>
             <FlippingCardFront>
-              <div
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  backgroundSize: "contain",
-                  backgroundPosition: "center",
-                  backgroundImage: "url(/EventManagement.png)",
-                }}
-              ></div>
+              <div className="flipping-card-front event-management"></div>
             </FlippingCardFront>
           </FlippingCard>
         </Link>
         <Link to="/wcTeam">
           <FlippingCard>
             <FlippingCardBack>
-              <div
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  backgroundSize: "contain",
-                  backgroundPosition: "center",
-                  backgroundImage: "url(/Web_summary.png)",
-                }}
-              ></div>
+              <div className="flipping-card-back web-summary"></div>
             </FlippingCardBack>
             <FlippingCardFront>
-              <div
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  backgroundSize: "contain",
-                  backgroundPosition: "center",
-                  backgroundImage: "url(/WebCreatives.png)",
-                }}
-              ></div>
+              <div className="flipping-card-front web-creatives"></div>
             </FlippingCardFront>
           </FlippingCard>
         </Link>
         <Link to="/sponsorTeam">
           <FlippingCard>
             <FlippingCardBack>
-              <div
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  backgroundSize: "contain",
-                  backgroundPosition: "center",
-                  backgroundImage: "url(/Sponsor_summary.png)",
-                }}
-              ></div>
+              <div className="flipping-card-back sponsor-summary"></div>
             </FlippingCardBack>
             <FlippingCardFront>
-              <div
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  backgroundSize: "contain",
-                  backgroundPosition: "center",
-                  backgroundImage: "url(/Sponsors.png)",
-                }}
-              ></div>
+              <div className="flipping-card-front sponsors"></div>
             </FlippingCardFront>
           </FlippingCard>
         </Link>
         <Link to="/prTeam">
           <FlippingCard>
             <FlippingCardBack>
-              <div
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  backgroundSize: "contain",
-                  backgroundPosition: "center",
-                  backgroundImage: "url(/Public_summary.png)",
-                }}
-              ></div>
+              <div className="flipping-card-back public-summary"></div>
             </FlippingCardBack>
             <FlippingCardFront>
-              <div
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  backgroundSize: "contain",
-                  backgroundPosition: "center",
-                  backgroundImage: "url(/PR.png)",
-                }}
-              ></div>
+              <div className="flipping-card-front pr"></div>
             </FlippingCardFront>
           </FlippingCard>
         </Link>
         <Link to="/mediaTeam">
           <FlippingCard>
             <FlippingCardBack>
-              <div
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  backgroundSize: "contain",
-                  backgroundPosition: "center",
-                  backgroundImage: "url(/Media_summary.png)",
-                }}
-              ></div>
+              <div className="flipping-card-back media-summary"></div>
             </FlippingCardBack>
             <FlippingCardFront>
-              <div
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  backgroundSize: "contain",
-                  backgroundPosition: "center",
-                  backgroundImage: "url(/MediaPublicity.png)",
-                }}
-              ></div>
+              <div className="flipping-card-front media-publicity"></div>
             </FlippingCardFront>
           </FlippingCard>
         </Link>
         <Link to="/sgcTeam">
           <FlippingCard>
             <FlippingCardBack>
-              <div
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  backgroundSize: "contain",
-                  backgroundPosition: "center",
-                  backgroundImage: "url(/SGC_summary.jpg)",
-                }}
-              ></div>
+              <div className="flipping-card-back sgc-summary"></div>
             </FlippingCardBack>
             <FlippingCardFront>
-              <div
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  backgroundSize: "contain",
-                  backgroundPosition: "center",
-                  backgroundImage: "url(/SGC.jpeg)",
-                }}
-              ></div>
+              <div className="flipping-card-front sgc"></div>
             </FlippingCardFront>
           </FlippingCard>
         </Link>
