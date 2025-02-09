@@ -7,6 +7,8 @@ import {
   DollarOutlined,
   CalendarOutlined,
 } from "@ant-design/icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBuildingUn } from "@fortawesome/free-solid-svg-icons";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -61,24 +63,39 @@ function Navbar() {
           </div>
           <ul className="nav-links">
             <li>
-              <Link to="/">
+              <Link to="/" className="nav-link">
                 <HomeFilled className="icon-style" />
+                {/* Add text element */}
+                <span className="nav-text">Home</span>
               </Link>
             </li>
             <li>
-              <Link to="/teamIndex">
+              <Link to="/teamIndex" className="nav-link">
                 <TeamOutlined className="icon-style" />
+                <span className="nav-text">Teams</span>
               </Link>
             </li>
             <li>
-              <Link to="/eventIndex">
+              <Link to="/eventIndex" className="nav-link">
                 <CalendarOutlined className="icon-style" />
+                <span className="nav-text">Events</span>
               </Link>
             </li>
             <li>
-              <Link to="/sponsors">
+              <Link to="/sponsors" className="nav-link">
                 <DollarOutlined className="icon-style" />
+                <span className="nav-text">Sponsors</span>
               </Link>
+            </li>
+            <li>
+              <a
+                href="https://iiitgmun.github.io/MUN-Website-2025/"
+                target="_blank"
+                className="nav-link"
+              >
+                <FontAwesomeIcon icon={faBuildingUn} className="icon-style" />
+                <span className="nav-text">IIITG MUN</span>
+              </a>
             </li>
           </ul>
         </div>
@@ -123,6 +140,7 @@ function Navbar() {
         <Link to="/sponsors" onClick={handleLinkClick}>
           Sponsors
         </Link>
+        <a href="https://iiitgmun.github.io/MUN-Website-2025/">IIITG-MUN</a>
       </div>
     </>
   );
