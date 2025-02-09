@@ -12,11 +12,10 @@ import Footer from "./components/footer/footer.jsx";
 import Sponsors from "./components/sponsors/Sponsors.jsx";
 import TeamIndex from "./components/teams/index.jsx";
 import Events from "./components/events/Events.jsx";
-import useImagePathUpdater from "./hooks/useImagePathUpdater";
 
 function App() {
     // // Update image paths to include the base URL
-    useImagePathUpdater();
+    // useImagePathUpdater();
     // Dynamically fetch the base URL
     // const baseURL = import.meta.env.BASE_URL || "";
 

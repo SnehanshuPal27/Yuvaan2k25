@@ -24,7 +24,7 @@ const SponsorshipTeam = () => {
             phone: "9493466656",
             email: "valluri.dinakar22b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: "./public/card-pic.jpg"
+            imageUrl: "/card-pic.jpg"
         },
         {
             name: "HARSH MISHRA",
@@ -33,7 +33,7 @@ const SponsorshipTeam = () => {
             phone: "8176061358",
             email: "harsh.mishra23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: "./public/card-pic.jpg"
+            imageUrl: "/card-pic.jpg"
         },
         {
             name: "HARSHITA GUPTA",
@@ -42,7 +42,7 @@ const SponsorshipTeam = () => {
             phone: "9461817644",
             email: "harshita.gupta23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: "./public/card-pic.jpg"
+            imageUrl: "/card-pic.jpg"
         },
         {
             name: "MALLENA VARDHAN",
@@ -51,7 +51,7 @@ const SponsorshipTeam = () => {
             phone: "9476062388",
             email: "mallena.vardhan23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: "./public/card-pic.jpg"
+            imageUrl: "/card-pic.jpg"
         },
         {
             name: "ABHIRAJ TOMAR",
@@ -60,7 +60,7 @@ const SponsorshipTeam = () => {
             phone: "9205454265",
             email: "abhiraj.tomar23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: "./public/card-pic.jpg"
+            imageUrl: "/card-pic.jpg"
         },
         {
             name: "DEEPANSHU SINGH",
@@ -69,7 +69,7 @@ const SponsorshipTeam = () => {
             phone: "9313414870",
             email: "deepanshu.singh23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: "./public/card-pic.jpg"
+            imageUrl: "/card-pic.jpg"
         },
         {
             name: "ANUPAM TRIPATHI",
@@ -78,7 +78,7 @@ const SponsorshipTeam = () => {
             phone: "9140922245",
             email: "anupam.tripathi23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: "./public/card-pic.jpg"
+            imageUrl: "/card-pic.jpg"
         },
         {
             name: "HARSHIT JAIN",
@@ -87,7 +87,7 @@ const SponsorshipTeam = () => {
             phone: "9445040562",
             email: "harshit.jain23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: "./public/card-pic.jpg"
+            imageUrl: "/card-pic.jpg"
         },
         {
             name: "KUNAL PUROHIT",
@@ -96,7 +96,7 @@ const SponsorshipTeam = () => {
             phone: "7009512702",
             email: "kunal.purohit23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: "./public/card-pic.jpg"
+            imageUrl: "/card-pic.jpg"
         },
         {
             name: "HRISHI SHEKHAR",
@@ -105,7 +105,7 @@ const SponsorshipTeam = () => {
             phone: "9359019084",
             email: "hrishi.shekhar23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: "./public/card-pic.jpg"
+            imageUrl: "/card-pic.jpg"
         },
         {
             name: "ARYAN PANDEY",
@@ -114,7 +114,7 @@ const SponsorshipTeam = () => {
             phone: "9244369133",
             email: "aryan.pandey23b@gmail.com",
             linkedin: "",
-            imageUrl: "./public/card-pic.jpg"
+            imageUrl: "/card-pic.jpg"
         },
         {
             name: "SAHIL BARMAN",
@@ -123,7 +123,7 @@ const SponsorshipTeam = () => {
             phone: "8929890960",
             email: "sahil.barman22b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: "./public/card-pic.jpg"
+            imageUrl: "/card-pic.jpg"
         },
         {
             name: "TUHIN ROY",
@@ -132,7 +132,7 @@ const SponsorshipTeam = () => {
             phone: "8258892047",
             email: "tuhin.roy23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: "./public/card-pic.jpg"
+            imageUrl: "/card-pic.jpg"
         },
         {
             name: "VALLURI JAYA VENKATA SREE VARDHAN",
@@ -141,7 +141,7 @@ const SponsorshipTeam = () => {
             phone: "6300949377",
             email: "valluri.vardhan23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: "./public/card-pic.jpg"
+            imageUrl: "/card-pic.jpg"
         },
         {
             name: "SHREYA SARNAGAR",
@@ -150,7 +150,7 @@ const SponsorshipTeam = () => {
             phone: "9555631688",
             email: "shreya.sarnagar23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: "./public/card-pic.jpg"
+            imageUrl: "/card-pic.jpg"
         },
         {
             name: "DIVY SANTOSH SAKHALA",
@@ -159,7 +159,7 @@ const SponsorshipTeam = () => {
             phone: "8856805726",
             email: "divy.sakhala23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: "./public/card-pic.jpg"
+            imageUrl: "/card-pic.jpg"
         },
         {
             name: "KARRI MOHITH BHANU",
@@ -168,7 +168,7 @@ const SponsorshipTeam = () => {
             phone: "7207944504",
             email: "karri.bhanu23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: "./public/card-pic.jpg"
+            imageUrl: "/card-pic.jpg"
         },
         {
             name: "VAIBHAV",
@@ -177,7 +177,7 @@ const SponsorshipTeam = () => {
             phone: "9122719666",
             email: "vaibhav23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: "./public/card-pic.jpg"
+            imageUrl: "/card-pic.jpg"
         }
     ];
 

@@ -24,7 +24,7 @@ const SGCTeam = () => {
             phone: "",
             email: "",
             linkedin: "",
-            imageUrl: "./public/card-pic.jpg"
+            imageUrl: "/card-pic.jpg"
         },
         {
             name: "Siddharth",
@@ -33,7 +33,7 @@ const SGCTeam = () => {
             phone: "",
             email: "",
             linkedin: "",
-            imageUrl: "./public/card-pic.jpg"
+            imageUrl: "/card-pic.jpg"
         },
         {
             name: "Madhur Jain",
@@ -42,7 +42,7 @@ const SGCTeam = () => {
             phone: "",
             email: "",
             linkedin: "",
-            imageUrl: "./public/card-pic.jpg"
+            imageUrl: "/card-pic.jpg"
         },
         {
             name: "V. Kethareswaran",
@@ -51,7 +51,7 @@ const SGCTeam = () => {
             phone: "",
             email: "",
             linkedin: "",
-            imageUrl: "./public/card-pic.jpg"
+            imageUrl: "/card-pic.jpg"
         }
     ];
 

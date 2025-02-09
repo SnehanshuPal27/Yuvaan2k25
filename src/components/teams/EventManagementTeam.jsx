@@ -24,7 +24,7 @@ const EventManagementTeam = () => {
             phone: "6307542454",
             email: "shubhashish.shukla23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: "./public/card-pic.jpg"
+            imageUrl: "/card-pic.jpg"
         },
         {
             name: "Shouraya Mishra",
@@ -33,7 +33,7 @@ const EventManagementTeam = () => {
             phone: "7737856168",
             email: "shouraya.mishra23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: "./public/card-pic.jpg"
+            imageUrl: "/card-pic.jpg"
         },
         {
             name: "Samadrita Mondal",
@@ -42,7 +42,7 @@ const EventManagementTeam = () => {
             phone: "7001805007",
             email: "samadrita.mondal23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: "./public/card-pic.jpg"
+            imageUrl: "/card-pic.jpg"
         },
         {
             name: "Prakshay Saini",
@@ -51,7 +51,7 @@ const EventManagementTeam = () => {
             phone: "9034480145",
             email: "prakshay.saini23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: "./public/card-pic.jpg"
+            imageUrl: "/card-pic.jpg"
         },
         {
             name: "Aarohee Sharma",
@@ -60,7 +60,7 @@ const EventManagementTeam = () => {
             phone: "9024377640",
             email: "aarohee.sharma23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: "./public/card-pic.jpg"
+            imageUrl: "/card-pic.jpg"
         },
         {
             name: "Rishabh Singh Tomar",
@@ -69,7 +69,7 @@ const EventManagementTeam = () => {
             phone: "9516663485",
             email: "rishabh.tomar23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: "./public/card-pic.jpg"
+            imageUrl: "/card-pic.jpg"
         },
         {
             name: "Tadikonda Lohith Aditya",
@@ -78,7 +78,7 @@ const EventManagementTeam = () => {
             phone: "7032323720",
             email: "tadikonda.aditya23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: "./public/card-pic.jpg"
+            imageUrl: "/card-pic.jpg"
         },
         {
             name: "Seeram Karthikeya",
@@ -87,7 +87,7 @@ const EventManagementTeam = () => {
             phone: "8978327879",
             email: "seeram.karthikeya23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: "./public/card-pic.jpg"
+            imageUrl: "/card-pic.jpg"
         },
         {
             name: "Mohit Kumawat",
@@ -96,7 +96,7 @@ const EventManagementTeam = () => {
             phone: "9468844484",
             email: "mohit.kumawat23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: "./public/card-pic.jpg"
+            imageUrl: "/card-pic.jpg"
         },
         {
             name: "Shubh Tiwari",
@@ -105,7 +105,7 @@ const EventManagementTeam = () => {
             phone: "9528015193",
             email: "shubh.tiwari23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: "./public/card-pic.jpg"
+            imageUrl: "/card-pic.jpg"
         },
         {
             name: "Ananya Anurag Lenka",
@@ -114,7 +114,7 @@ const EventManagementTeam = () => {
             phone: "9437089199",
             email: "ananya.lenka23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: "./public/card-pic.jpg"
+            imageUrl: "/card-pic.jpg"
         },
         {
             name: "Katrovath Ramu Naik",
@@ -123,7 +123,7 @@ const EventManagementTeam = () => {
             phone: "9492659298",
             email: "katrovath.naik23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: "./public/card-pic.jpg"
+            imageUrl: "/card-pic.jpg"
         },
         {
             name: "Samridhi Tiwari",
@@ -132,7 +132,7 @@ const EventManagementTeam = () => {
             phone: "7275720024",
             email: "samridhi.tiwari23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: "./public/card-pic.jpg"
+            imageUrl: "/card-pic.jpg"
         },
         {
             name: "Vanshika Gupta",
@@ -141,7 +141,7 @@ const EventManagementTeam = () => {
             phone: "7408102130",
             email: "vanshika.gupta23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: "./public/card-pic.jpg"
+            imageUrl: "/card-pic.jpg"
         },
         {
             name: "Eadara Lasya",
@@ -150,7 +150,7 @@ const EventManagementTeam = () => {
             phone: "9704653622",
             email: "eadara.raghav23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: "./public/card-pic.jpg"
+            imageUrl: "/card-pic.jpg"
         },
         {
             name: "Agnidipto Banik",
@@ -159,7 +159,7 @@ const EventManagementTeam = () => {
             phone: "7998668533",
             email: "agnidipto.banik23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: "./public/card-pic.jpg"
+            imageUrl: "/card-pic.jpg"
         },
         {
             name: "Shubham Kumar",
@@ -168,7 +168,7 @@ const EventManagementTeam = () => {
             phone: "9065582052",
             email: "shubham.kumar23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: "./public/card-pic.jpg"
+            imageUrl: "/card-pic.jpg"
         }
     ];
 

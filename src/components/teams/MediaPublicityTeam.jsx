@@ -24,7 +24,7 @@ const MediaPublicityTeam = () => {
             phone: "9997946767",
             email: "pranay.siwach23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: "./public/card-pic.jpg"
+            imageUrl: "/card-pic.jpg"
         },
         {
             name: "IPSHITA RANJAN",
@@ -33,7 +33,7 @@ const MediaPublicityTeam = () => {
             phone: "9913870560",
             email: "ipshita.ranjan23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: "./public/card-pic.jpg"
+            imageUrl: "/card-pic.jpg"
         },
         {
             name: "TALABATTULA ADARSH",
@@ -42,7 +42,7 @@ const MediaPublicityTeam = () => {
             phone: "9515203945",
             email: "talabattula.adarsh23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: "./public/card-pic.jpg"
+            imageUrl: "/card-pic.jpg"
         },
         {
             name: "PRAFUL PRAKASH GOEL",
@@ -51,7 +51,7 @@ const MediaPublicityTeam = () => {
             phone: "6398633391",
             email: "praful.goel23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: "./public/card-pic.jpg"
+            imageUrl: "/card-pic.jpg"
         },
         {
             name: "GUTHIKONDA SREE PRANEETH",
@@ -60,7 +60,7 @@ const MediaPublicityTeam = () => {
             phone: "739664129",
             email: "guthikonda.praneeth23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: "./public/card-pic.jpg"
+            imageUrl: "/card-pic.jpg"
         },
         {
             name: "SHUBHAM KANOJIYA",
@@ -69,7 +69,7 @@ const MediaPublicityTeam = () => {
             phone: "7748835392",
             email: "shubham.kanojiya23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: "./public/card-pic.jpg"
+            imageUrl: "/card-pic.jpg"
         },
         {
             name: "KAVITA YADAV",
@@ -78,7 +78,7 @@ const MediaPublicityTeam = () => {
             phone: "7398865618",
             email: "kavita.yadav23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: "./public/card-pic.jpg"
+            imageUrl: "/card-pic.jpg"
         },
         {
             name: "GAUTAM GIRI",
@@ -87,7 +87,7 @@ const MediaPublicityTeam = () => {
             phone: "7068140938",
             email: "gautam.giri23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: "./public/card-pic.jpg"
+            imageUrl: "/card-pic.jpg"
         },
         {
             name: "YASH SHARMA",
@@ -96,7 +96,7 @@ const MediaPublicityTeam = () => {
             phone: "9244275526",
             email: "yash.sharma23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: "./public/card-pic.jpg"
+            imageUrl: "/card-pic.jpg"
         },
         {
             name: "ADARSH KUMAR",
@@ -105,7 +105,7 @@ const MediaPublicityTeam = () => {
             phone: "9955960418",
             email: "adarsh.kumar23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: "./public/card-pic.jpg"
+            imageUrl: "/card-pic.jpg"
         },
         {
             name: "PRIYA DEORI",
@@ -114,7 +114,7 @@ const MediaPublicityTeam = () => {
             phone: "7002036165",
             email: "priya.deori23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: "./public/card-pic.jpg"
+            imageUrl: "/card-pic.jpg"
         },
         {
             name: "THAMAS PRAKASH GAYKAWAD",
@@ -123,7 +123,7 @@ const MediaPublicityTeam = () => {
             phone: "7898187813",
             email: "thamas.gaykawad23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: "./public/card-pic.jpg"
+            imageUrl: "/card-pic.jpg"
         }
     ];
 
