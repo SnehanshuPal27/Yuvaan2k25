@@ -38,8 +38,10 @@ function App() {
         return () => observer.disconnect();
     }, [baseURL]); // Dependency added to handle dynamic changes
 
+    const basename = process.env.NODE_ENV === "production" ? "/Yuvaan2k25" : "/"
+
     return (
-        <Router>
+        <Router basename={basename}>
             <Navbar refs={{ home: null, teams: null, sgc: null, sponsors: null }} />
             <Routes>
                 <Route path="/" element={<Home />} />
