@@ -1,14 +1,26 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/Yuvaan2k25/logo.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Yuvaan</title>
-    <script type="module" crossorigin src="/Yuvaan2k25/index-CLhENdqq.js"></script>
-    <link rel="stylesheet" crossorigin href="/Yuvaan2k25/index.css">
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="./logo.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    // Get the repository name from the URL
+    const repoName = window.location.pathname.split('/')[1];
+
+    // Add a base tag dynamically
+    const base = document.createElement('base');
+    base.href = `/${repoName}/`;
+    document.head.prepend(base);
+  </script>
+  <title>Yuvaan</title>
+  <script type="module" crossorigin src="./index-DPPovAdI.js"></script>
+  <link rel="stylesheet" crossorigin href="./index.css">
+</head>
+
+<body>
+  <div id="root"></div>
+</body>
+
 </html>
