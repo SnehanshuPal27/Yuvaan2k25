@@ -1,17 +1,21 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import tailwindcss from '@tailwindcss/vite'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import tailwindcss from '@tailwindcss/vite';
 
-// https://vite.dev/config/
+// Determine the base URL dynamically
+const isGitHubPages = process.env.GITHUB_PAGES === 'true';
+const repoName = 'Yuvaan2k25'; // Your GitHub repo name
+const baseURL = isGitHubPages ? `/${repoName}/` : '/'; // Set correct base
+
 export default defineConfig({
-  plugins: [react(), tailwindcss(),],
-  base: './', // This is important - use relative paths
+  plugins: [react(), tailwindcss()],
+  base: baseURL, // Dynamic base URL
   build: {
-    assetsDir: '',
+    assetsDir: '', // Avoids issues with asset paths
     rollupOptions: {
       output: {
-        assetFileNames: '[name][extname]'
-      }
-    }
-  }
-})
+        assetFileNames: '[name][extname]',
+      },
+    },
+  },
+});
