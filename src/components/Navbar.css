@@ -183,10 +183,15 @@ body {
     opacity: 1;
     color: white;
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+    height: 70px;
     font-size: 1.5rem;
     font-weight: bold;
-    margin: 1.5rem 0;
-    padding: 1rem 2rem;
+    margin: 2rem 0;
+    padding: 0;
     background: #333;
     border-radius: 12px;
     transition: background-color 0.3s ease, transform 0.2s ease;
@@ -215,24 +220,14 @@ body {
     transform: scale(1.1);
 }
 
-@media (min-width: 768px) {
-    .nav-links {
-        gap: 10rem; /* Increase the gap between the icons */
-    }
-
-    .nav-links li a {
-        font-size: 2rem; /* Increase the size of the icons */
-    }
-}
-
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 1368px) {
     .navbar {
         display: none;
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1368px) {
     .mobile-navbar {
         display: none;
     }
