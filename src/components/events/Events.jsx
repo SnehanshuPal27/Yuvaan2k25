@@ -3,7 +3,7 @@ import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 import "./Events.css";
 import backgroundImage from "./images.jpeg";
-
+import Footer from "../footer/footer";
 const EventCard = ({ event, onClick }) => {
   return (
     <div className="event-card" onClick={() => onClick(event)}>
@@ -49,7 +49,11 @@ const EventModal = ({ event, onClose }) => {
           </div>
 
           <div className="festival-card__description">
-            <p>{event.fullDescription}</p>
+            {event.fullDescription.split("\n").map((line, index) => (
+              <p key={index} className="description-line">
+                {line.trim()}
+              </p>
+            ))}
           </div>
 
           <div className="festival-card__contact">
@@ -114,17 +118,14 @@ const Events = () => {
       date: "March 1, 2025",
       time: "10:00 AM - 5:00 PM",
       shortDescription: "Solo Performance Competition",
-      fullDescription: `This event is divided into two categories:
-      • Vocalists: Let your voice take center stage as you mesmerize the audience.
-      • Instrumentalists: Pour your soul into your instrument and captivate the judges.
-      Judging Criteria:
-      Participants will be evaluated based on:
-      • Pitch
-      • Rhythm
-      • Creativity
-      • Stage Presence
-      • Overall Performance
-      Rewards: The top 3 contestants from both categories will be crowned as champions.`,
+      fullDescription: `Two Categories:\n
+    • Vocalists\n
+    • Instrumentalists\n
+    Judging Criteria:\n
+    • Pitch & Rhythm\n
+    • Creativity\n
+    • Stage Presence\n
+    • Overall Performance`,
       location: "Auditorium, IIITG",
       coordinators: [
         { name: "Ananya Anurag Lenka", contact: "9437089199" },
@@ -145,17 +146,13 @@ const Events = () => {
       date: "March 1, 2025",
       time: "2:00 PM - 6:00 PM",
       shortDescription: "Band Competition",
-      fullDescription: `This event is divided into two categories:
-      • Vocalists: Let your voice take center stage as you mesmerize the audience.
-      • Instrumentalists: Pour your soul into your instrument and captivate the judges.
-      Judging Criteria:
-      Participants will be evaluated based on:
-      • Pitch
-      • Rhythm
-      • Creativity
-      • Stage Presence
-      • Overall Performance
-      Rewards: The top 3 contestants from both categories will be crowned as champions.`,
+      fullDescription: `Performance Guidelines:\n
+    • Bands must perform original or cover songs\n
+    • Performance duration: 15-20 minutes\n
+    Judging Criteria:\n
+    • Musical Synchronization\n
+    • Stage Presence\n
+    • Overall Impact`,
       location: "Main Stage, IIITG",
       coordinators: [
         { name: "Ananya Anurag Lenka", contact: "9437089199" },
@@ -259,6 +256,12 @@ const Events = () => {
       date: "March 1, 2025",
       time: "9:00 AM - 6:00 PM",
       shortDescription: "Pop Culture Festival",
+      fullDescription: `A celebration of pop culture featuring:\n
+    • Cosplay Competition\n
+    • Fan Art Exhibition\n
+    • Pop Quiz\n
+    • Gaming Tournaments\n
+    • Merchandise Display`,
       location: "Festival Ground, IIITG",
       coordinators: [
         { name: "Thamas Prakash Gaykawad", contact: "7898187813" },
@@ -274,17 +277,12 @@ const Events = () => {
       date: "March 1, 2025",
       time: "10:00 AM - 4:00 PM",
       shortDescription: "Music Competition Series",
-      fullDescription: `Unique Features:
-      • Round-Based Challenges: Each round introduces a creative twist!
-      • Missing Words: Fill in the blanks of song lyrics as the difficulty increases.
-      • Reverse Lyrics: Identify the song or continue lyrics correctly after hearing them backward.
-      • Emoji Decode: Decode a song's lyrics using emojis.
-      • Lyric Puzzle: Rearrange fragmented lyrics within a time limit.
-      • Lyric Charades: Act out lyrics while your teammate guesses the song.
-      Scoring:
-      Points will be awarded based on performance in each round, with more difficult challenges earning higher points.
-      Rewards:
-      The participant(s) with the highest total points at the end of the event will emerge as champions.`,
+      fullDescription: `Challenge Rounds:\n
+    • Missing Words: Fill in song lyrics\n
+    • Reverse Lyrics: Identify backwards songs\n
+    • Emoji Decode: Guess songs from emojis\n
+    • Lyric Puzzle: Rearrange scrambled lyrics\n
+    • Lyric Charades: Act out song lyrics`,
       location: "Olympic Arena, IIITG",
       coordinators: [
         { name: "Ananya Anurag Lenka", contact: "9437089199" },
@@ -349,20 +347,17 @@ const Events = () => {
     {
       title: "ONE VOICE, ONE INSTRUMENT (Finals)",
       image: "",
-      date: "March 2, 2025",
+      date: "March 1, 2025",
       time: "10:00 AM - 5:00 PM",
-      shortDescription: "Solo Performance Competition Finals",
-      fullDescription: `This event is divided into two categories:
-      • Vocalists: Let your voice take center stage as you mesmerize the audience.
-      • Instrumentalists: Pour your soul into your instrument and captivate the judges.
-      Judging Criteria:
-      Participants will be evaluated based on:
-      • Pitch
-      • Rhythm
-      • Creativity
-      • Stage Presence
-      • Overall Performance
-      Rewards: The top 3 contestants from both categories will be crowned as champions.`,
+      shortDescription: "Solo Performance Competition",
+      fullDescription: `Two Categories:\n
+    • Vocalists\n
+    • Instrumentalists\n
+    Judging Criteria:\n
+    • Pitch & Rhythm\n
+    • Creativity\n
+    • Stage Presence\n
+    • Overall Performance`,
       location: "Auditorium, IIITG",
       coordinators: [
         { name: "Ananya Anurag Lenka", contact: "9437089199" },
@@ -380,20 +375,16 @@ const Events = () => {
     {
       title: "BAND BASH (Finals)",
       image: "",
-      date: "March 2, 2025",
+      date: "March 1, 2025",
       time: "2:00 PM - 6:00 PM",
-      shortDescription: "Band Competition Finals",
-      fullDescription: `This event is divided into two categories:
-      • Vocalists: Let your voice take center stage as you mesmerize the audience.
-      • Instrumentalists: Pour your soul into your instrument and captivate the judges.
-      Judging Criteria:
-      Participants will be evaluated based on:
-      • Pitch
-      • Rhythm
-      • Creativity
-      • Stage Presence
-      • Overall Performance
-      Rewards: The top 3 contestants from both categories will be crowned as champions.`,
+      shortDescription: "Band Competition",
+      fullDescription: `Performance Guidelines:\n
+    • Bands must perform original or cover songs\n
+    • Performance duration: 15-20 minutes\n
+    Judging Criteria:\n
+    • Musical Synchronization\n
+    • Stage Presence\n
+    • Overall Impact`,
       location: "Main Stage, IIITG",
       coordinators: [
         { name: "Ananya Anurag Lenka", contact: "9437089199" },
@@ -409,11 +400,11 @@ const Events = () => {
       teamSize: "3-8",
     },
     {
-      title: "Spotlight Solo (Finals)",
+      title: "Spotlight Solo",
       image: "",
-      date: "March 2, 2025",
+      date: "March 1, 2025",
       time: "9:00 AM - 4:00 PM",
-      shortDescription: "Solo Dance Competition Finals",
+      shortDescription: "Solo Dance Competition",
       fullDescription: `1) Participants are free to choose their theme. The content should be meaningful, engaging, and age-appropriate.
       2) Each team must perform within the allotted time limit as per competition guidelines.
       3) Only minimal props are allowed, and participants must manage them independently.`,
@@ -428,11 +419,11 @@ const Events = () => {
       teamSize: "1",
     },
     {
-      title: "Prompt Wars (Finals)",
+      title: "Prompt Wars",
       image: "",
-      date: "March 2, 2025",
+      date: "March 1, 2025",
       time: "11:00 AM - 7:00 PM",
-      shortDescription: "Creative Writing Challenge Finals",
+      shortDescription: "Creative Writing Challenge",
       fullDescription: `● Prompts will be provided on the spot by the event organizers.
       ● Vulgar or offensive content will lead to immediate disqualification.`,
       location: "Creative Hub, IIITG",
@@ -452,11 +443,11 @@ const Events = () => {
       teamSize: "2-4",
     },
     {
-      title: "SWAY (Finals)",
+      title: "SWAY",
       image: "",
-      date: "March 2, 2025",
+      date: "March 1, 2025",
       time: "10:00 AM - 3:00 PM",
-      shortDescription: "Solo Dance Competition Finals",
+      shortDescription: "Solo Dance Competition",
       fullDescription: `• Performance duration: The maximum time allowed is 3 minutes.
       • Any dance style is permitted; feel free to express yourself creatively.
       • Props are allowed but must be pre-approved by the organizers.
@@ -474,9 +465,9 @@ const Events = () => {
     {
       title: "SYNC (Finals)",
       image: "",
-      date: "March 2, 2025",
+      date: "March 1, 2025",
       time: "1:00 PM - 5:00 PM",
-      shortDescription: "Group Dance Competition Finals",
+      shortDescription: "Group Dance Competition",
       fullDescription: `• Performance duration: 3 to 5 minutes.
       • Props and costumes are allowed but must be pre-approved by the organizers.
       • Any dance style or fusion is welcome; however, synchronization and creativity are key.
@@ -497,6 +488,12 @@ const Events = () => {
       date: "March 2, 2025",
       time: "9:00 AM - 6:00 PM",
       shortDescription: "Pop Culture Festival Continuation",
+      fullDescription: `Day 2 Events:\n
+    • Cosplay Finals\n
+    • Art Competition Results\n
+    • Pop Culture Trivia Finals\n
+    • Gaming Tournament Finals\n
+    • Best of Show Awards`,
       location: "Festival Ground, IIITG",
       coordinators: [
         { name: "Thamas Prakash Gaykawad", contact: "7898187813" },
@@ -509,20 +506,15 @@ const Events = () => {
     {
       title: "MUSICAL OLYMPICS (Finals)",
       image: "",
-      date: "March 2, 2025",
+      date: "March 1, 2025",
       time: "10:00 AM - 4:00 PM",
-      shortDescription: "Music Competition Series Finals",
-      fullDescription: `Unique Features:
-      • Round-Based Challenges: Each round introduces a creative twist!
-      • Missing Words: Fill in the blanks of song lyrics as the difficulty increases.
-      • Reverse Lyrics: Identify the song or continue lyrics correctly after hearing them backward.
-      • Emoji Decode: Decode a song's lyrics using emojis.
-      • Lyric Puzzle: Rearrange fragmented lyrics within a time limit.
-      • Lyric Charades: Act out lyrics while your teammate guesses the song.
-      Scoring:
-      Points will be awarded based on performance in each round, with more difficult challenges earning higher points.
-      Rewards:
-      The participant(s) with the highest total points at the end of the event will emerge as champions.`,
+      shortDescription: "Music Competition Series",
+      fullDescription: `Challenge Rounds:\n
+    • Missing Words: Fill in song lyrics\n
+    • Reverse Lyrics: Identify backwards songs\n
+    • Emoji Decode: Guess songs from emojis\n
+    • Lyric Puzzle: Rearrange scrambled lyrics\n
+    • Lyric Charades: Act out song lyrics`,
       location: "Olympic Arena, IIITG",
       coordinators: [
         { name: "Ananya Anurag Lenka", contact: "9437089199" },
@@ -711,10 +703,7 @@ const Events = () => {
           detectRetina: true,
         }}
       />
-      <div
-        className="content-wrapper"
-        style={{ position: "relative", zIndex: 1 }}
-      >
+      <div className="content-wrapper">
         <h1 className="events-heading">Upcoming Events</h1>
         <div className="day-selection">
           <button
