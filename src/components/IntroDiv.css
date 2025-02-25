@@ -1,68 +1,92 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
-
 .intro-div {
     margin: 0;
     padding: 0;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     background-image: url('/BG_Main.jpg');
     background-repeat: no-repeat;
-    background-position: top left;
+    background-position: center;
     background-size: cover;
     background-attachment: scroll;
-    /*min-height: 100vh;*/
-    backdrop-filter: blur(5px);
-    overflow-x: hidden;
+    /* backdrop-filter: blur(5px); */
+
+    width: 100%;
+    height: 100vh;
+    max-height: 1900px;
+    /* Occupies the full width */
+    /* aspect-ratio: 1; */
+    /* Maintains a 1:1 aspect ratio */
+    /* max-height: 100vh; */
+    /* Constrains the maximum height */
+    overflow: hidden;
+    /* Ensures content doesn't spill out if the ratio is adjusted */
+}
+
+.main-logo-img {
+    width: 900px;
+    /* Adjusted width for the image */
+    height: 400px;
+    /* Adjusted height for the image */
+    object-fit: cover;
+    /* Ensures the image fills the area proportionally */
+    object-position: center;
+    /* Centers the image's content */
 }
 
 .top-content {
-    height: 100vh;
+    padding-top: 50px;
+    height: 100%;
+    /* Matches the parent's height */
     width: 100%;
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
-    gap: 50px;
-    /*justify-content: center; !* Adjust this as per your layout *!*/
-    /*align-items: center; !* Adjust this as per your layout *!*/
-    /*backdrop-filter: blur(2px);*/
+    justify-content: space-between;
+    /* gap: 50px; */
     color: white;
-
 }
 
 .presenter {
     font-family: "Orbitron", serif;
     font-weight: 900;
-    padding-top: 10vh;
-    font-size: 150px;
-    margin-left: 5vw;
+    font-size: 120px;
+    margin-top: 50px;
 }
 
 .intro-bottom {
+    height: 300px;
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
 .head-caption {
-    /*margin: 0 auto;*/
-    justify-self: center;
     font-size: 150px;
     font-family: "Abhaya Libre", serif;
     font-weight: 800;
     color: white;
 }
 
-.lower-caption {
-    align-items: center;
-    text-align: end;
-}
-
-@media(max-width: 468px) {
+/* Responsive styles for smaller screens */
+@media (max-width: 468px) {
     .intro-div {
         background-image: url('/timeBG_s.png');
         background-size: cover;
+        width: 100%;
+        /* Occupies full width on smaller screens */
+        aspect-ratio: 16/9;
+        /* Maintains the 1:1 aspect ratio */
+        max-height: 700px;
+        /* Constrains maximum height */
+    }
+
+    .main-logo-img {
+        width: 90%;
+        /* Scales proportionally within the container */
+        height: auto;
+        /* Maintains the aspect ratio */
     }
 
     .presenter {
@@ -70,6 +94,7 @@
     }
 
     .head-caption {
+        display: none;
         font-size: 64px;
         font-family: "Bungee", serif;
         font-weight: bold;
@@ -80,27 +105,82 @@
     }
 
     .coming-soon {
-        width: 90vw;
-        top: 50vh;
-        right: auto;
-        left: 50%;
-        transform: translateX(-50%);
+        width: 90%;
+        top: 50%;
+        transform: translate(-50%, -50%);
     }
 
     .image-yuvaan {
-        top: 1vh;
-        width: 90vw;
+        width: 90%;
         left: 50%;
         transform: translateX(-50%);
     }
 
     .card-row {
-        width: calc(100% - 1rem);
-        margin: 1rem auto;
+        width: 90%;
+        margin: 10px auto;
     }
 
     .card-heading {
         margin: 0;
         text-align: center;
     }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1500px) {
+    .head-caption {
+        font-size: 125px;
+    }
+
+    .main-logo-img {
+        height: 476px;
+        width: 1000px;
+    }
+
+
+}
+
+@media screen and (min-width: 769px) and (max-width: 1050px) {
+    .head-caption {
+        font-size: 110px;
+    }
+
+    .main-logo-img {
+        height: 370px;
+        width: 770px;
+    }
+
+
+
+
+}
+
+@media screen and (min-width: 651px) and (max-width: 768px) {
+    .head-caption {
+        font-size: 93px;
+    }
+
+    .main-logo-img {
+        height: 256px;
+        width: 550px;
+    }
+
+}
+
+@media screen and (min-width: 469px) and (max-width: 650px) {
+
+    .intro-div {
+        max-height: 900px;
+    }
+
+    .head-caption {
+        font-size: 64px;
+    }
+
+    .main-logo-img {
+        height: 145px;
+        width: 300px;
+    }
+
+
 }

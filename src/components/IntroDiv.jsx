@@ -19,11 +19,13 @@ export default function IntroDiv() {
     return (
         <div className="intro-div">
             <div className="top-content">
-                <p
+                {/* <p
                     className="presenter"
                 >
                     YUVAAN
-                </p>
+                </p> */}
+
+                <img className="main-logo-img" src="/yuvaan_icon_date.png"></img>
 
                 <div className="intro-bottom">
                     <p className="head-caption">A TALE OF TIME</p>

@@ -67,6 +67,17 @@ video {
     animation: dustEffect 5s ease-in-out forwards;
 }
 
+.about-scroll{
+    background-image: url('scroll.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    min-height: 300px;
+}
+
 .about-yuvaan p {
     font-size: 20px;
     padding: 20px;
@@ -76,14 +87,6 @@ video {
     /* color: #d4af37 !important; */
     color: #D39D55;
     line-height: 1.8;
-    background-image: url('scroll.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-position: center;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    min-height: 300px;
 }
 
 .about-scroll span {
@@ -91,7 +94,7 @@ video {
     opacity: 0;
     margin-right: 8px;
     animation: sparkleEffect 0.3s ease-in-out forwards;
-    color: #d4af37;
+    color: #0e0e0e;
 }
 
 .word {
@@ -263,7 +266,7 @@ video {
     }
 }
 
-@media screen and (min-width: 500px) and (max-width: 768px) {
+@media screen and (min-width: 506px) and (max-width: 768px) {
     .about-yuvaan {
         padding: 15px;
     }
@@ -277,8 +280,11 @@ video {
     }
 }
 
-@media screen and (min-width: 320px) and (max-width: 499px) {
+@media screen and (min-width: 320px) and (max-width: 505px) {
     .about-yuvaan {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         padding: 10px 2px;
     }
 
@@ -286,6 +292,11 @@ video {
         font-size: 20px;
     }
 
+    .about-scroll {
+        background-image: url('scroll2.png');
+        /* max-width: 325px; */
+        min-height: 0;
+    }
     .about-scroll p {
         font-size: 8px;
     }
