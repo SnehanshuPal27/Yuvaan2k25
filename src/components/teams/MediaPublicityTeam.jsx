@@ -51,7 +51,7 @@ const MediaPublicityTeam = () => {
             phone: "6398633391",
             email: "praful.goel23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: "./public/card-pic.jpg"
+            imageUrl: "./public/Teams/M&P/PRAFUL GOEL.jpg"
         },
         {
             name: "GUTHIKONDA SREE PRANEETH",
@@ -69,7 +69,7 @@ const MediaPublicityTeam = () => {
             phone: "7748835392",
             email: "shubham.kanojiya23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: "./public/card-pic.jpg"
+            imageUrl: "./public/Teams/M&P/SHUBHAM KANOJIYA.webp"
         },
         {
             name: "KAVITA YADAV",

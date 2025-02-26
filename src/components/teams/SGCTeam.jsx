@@ -24,16 +24,16 @@ const SGCTeam = () => {
             phone: "",
             email: "",
             linkedin: "",
-            imageUrl: "./public/card-pic.jpg"
+            imageUrl: "./public/Teams/SGC/sai.png"
         },
         {
-            name: "Siddharth",
+            name: "Siddharth Singh",
             jobTitle: "Vice President",
             id: "",
             phone: "",
             email: "",
             linkedin: "",
-            imageUrl: "./public/card-pic.jpg"
+            imageUrl: "./public/Teams/SGC/siddharth.png"
         },
         {
             name: "Madhur Jain",
@@ -42,7 +42,7 @@ const SGCTeam = () => {
             phone: "",
             email: "",
             linkedin: "",
-            imageUrl: "./public/card-pic.jpg"
+            imageUrl: "./public/Teams/SGC/madhur.jpeg"
         },
         {
             name: "V. Kethareswaran",
