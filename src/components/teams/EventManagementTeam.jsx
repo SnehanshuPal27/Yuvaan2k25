@@ -33,7 +33,7 @@ const EventManagementTeam = () => {
             phone: "7408102130",
             email: "vanshika.gupta23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: "./public/Teams/Event/VANSHIKA GUPTA.jpg"
+            imageUrl: "/Teams/Event/VANSHIKA GUPTA.jpg"
         },
         {
             name: "Thamas Prakash Gaykawad",
@@ -42,7 +42,7 @@ const EventManagementTeam = () => {
             phone: "",
             email: "thamas.gaykawad23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: "./public/Teams/Event/THAMAS GAYKAWAD.jpg"
+            imageUrl: "/Teams/Event/THAMAS GAYKAWAD.jpg"
         },
         {
             name: "Samadrita Mondal",
@@ -51,7 +51,7 @@ const EventManagementTeam = () => {
             phone: "7001805007",
             email: "samadrita.mondal23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: "./public/Teams/Event/SAMADRITA MONDAL.jpg"
+            imageUrl: "/Teams/Event/SAMADRITA MONDAL.jpg"
         },
         {
             name: "Prakshay Saini",
@@ -96,7 +96,7 @@ const EventManagementTeam = () => {
             phone: "8978327879",
             email: "seeram.karthikeya23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: "./public/Teams/Event/SEERAM KARTHIKEYA.jpeg"
+            imageUrl: "/Teams/Event/SEERAM KARTHIKEYA.jpeg"
         },
         {
             name: "Mohit Kumawat",
@@ -123,7 +123,7 @@ const EventManagementTeam = () => {
             phone: "9437089199",
             email: "ananya.lenka23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: "./public/Teams/Event/ANANYA LENKA.jpg"
+            imageUrl: "/Teams/Event/ANANYA LENKA.jpg"
         },
         {
             name: "Katrovath Ramu Naik",
@@ -150,7 +150,7 @@ const EventManagementTeam = () => {
             phone: "9704653622",
             email: "eadara.raghav23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: "./public/Teams/Event/EADARA RAGHAVI.jpg"
+            imageUrl: "/Teams/Event/EADARA RAGHAVI.jpg"
         },
         {
             name: "Agnidipto Banik",
@@ -168,7 +168,7 @@ const EventManagementTeam = () => {
             phone: "9065582052",
             email: "shubham.kumar23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: "./public/Teams/Event/SHUBHAM KUMAR.jpg"
+            imageUrl: "/Teams/Event/SHUBHAM KUMAR.jpg"
         }
     ];
 

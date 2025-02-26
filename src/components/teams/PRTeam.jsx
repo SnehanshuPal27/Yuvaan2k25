@@ -60,7 +60,7 @@ const PRTeam = () => {
             phone: "6375633056",
             email: "harshit.sharma23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: "./public/Teams/PR/HARSHIT SHARMA.jpeg"
+            imageUrl: "/Teams/PR/HARSHIT SHARMA.jpeg"
         },
         {
             name: "ALAJANGI BHAVYA",
@@ -87,7 +87,7 @@ const PRTeam = () => {
             phone: "8630203945",
             email: "lalit.kumar23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: "./public/Teams/PR/LALIT KUMAR.jpg"
+            imageUrl: "/Teams/PR/LALIT KUMAR.jpg"
         },
         {
             name: "RADHIKA",

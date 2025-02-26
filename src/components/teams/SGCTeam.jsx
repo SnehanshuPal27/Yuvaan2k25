@@ -24,7 +24,7 @@ const SGCTeam = () => {
             phone: "",
             email: "",
             linkedin: "",
-            imageUrl: "./public/Teams/SGC/sai.png"
+            imageUrl: "/Teams/SGC/sai.png"
         },
         {
             name: "Siddharth Singh",
@@ -33,7 +33,7 @@ const SGCTeam = () => {
             phone: "",
             email: "",
             linkedin: "",
-            imageUrl: "./public/Teams/SGC/siddharth.png"
+            imageUrl: "/Teams/SGC/siddharth.png"
         },
         {
             name: "Madhur Jain",
@@ -42,7 +42,7 @@ const SGCTeam = () => {
             phone: "",
             email: "",
             linkedin: "",
-            imageUrl: "./public/Teams/SGC/madhur.jpeg"
+            imageUrl: "/Teams/SGC/madhur.jpeg"
         },
         {
             name: "V. Kethareswaran",
@@ -57,7 +57,7 @@ const SGCTeam = () => {
 
     return (
         <div className="sgc-team">
-            <h2>SGC Team</h2>
+            <h2>SGC Members</h2>
             <div className="team-members">
                 {teamMembers.map((member, index) => (
                     <div className="card" key={index}>

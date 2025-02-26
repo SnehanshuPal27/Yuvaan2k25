@@ -51,7 +51,7 @@ const MediaPublicityTeam = () => {
             phone: "6398633391",
             email: "praful.goel23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: "./public/Teams/M&P/PRAFUL GOEL.jpg"
+            imageUrl: "/Teams/M&P/PRAFUL GOEL.jpg"
         },
         {
             name: "GUTHIKONDA SREE PRANEETH",
@@ -69,7 +69,7 @@ const MediaPublicityTeam = () => {
             phone: "7748835392",
             email: "shubham.kanojiya23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: "./public/Teams/M&P/SHUBHAM KANOJIYA.webp"
+            imageUrl: "/Teams/M&P/SHUBHAM KANOJIYA.webp"
         },
         {
             name: "KAVITA YADAV",
@@ -116,15 +116,15 @@ const MediaPublicityTeam = () => {
             linkedin: "",
             imageUrl: "./public/card-pic.jpg"
         },
-        {
-            name: "THAMAS PRAKASH GAYKAWAD",
-            jobTitle: "Member",
-            id: "2301229",
-            phone: "7898187813",
-            email: "thamas.gaykawad23b@iiitg.ac.in",
-            linkedin: "",
-            imageUrl: "./public/card-pic.jpg"
-        }
+        // {
+        //     name: "THAMAS PRAKASH GAYKAWAD",
+        //     jobTitle: "Member",
+        //     id: "2301229",
+        //     phone: "7898187813",
+        //     email: "thamas.gaykawad23b@iiitg.ac.in",
+        //     linkedin: "",
+        //     imageUrl: "./public/card-pic.jpg"
+        // }
     ];
 
     return (

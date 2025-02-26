@@ -24,7 +24,7 @@ const WCTeam = () => {
             phone: "9068265551",
             email: "snehanshu.pal22b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: "./public/Teams/Web/Snehanshu.jpg"
+            imageUrl: "/Teams/Web/Snehanshu.jpg"
         },
         {
             name: "SOLANKI DHARAK DEEPAK",
@@ -33,7 +33,7 @@ const WCTeam = () => {
             phone: "8238735681",
             email: "solanki.deepak22b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: "./public/Teams/Web/SOLANKI DEEPAK.jpg"
+            imageUrl: "/Teams/Web/SOLANKI DEEPAK.jpg"
         },
         {
             name: "SACHIN MOHANTY",
@@ -42,7 +42,7 @@ const WCTeam = () => {
             phone: "8787022847",
             email: "sachin.mohanty23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: "./public/Teams/Web/SACHIN MOHANTY.jpg"
+            imageUrl: "/Teams/Web/SACHIN MOHANTY.jpg"
         },
         {
             name: "NITIN MISHRA",
@@ -51,7 +51,7 @@ const WCTeam = () => {
             phone: "8294901410",
             email: "nitin.mishra23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: "./public/Teams/Web/NITIN MISHRA.jpg"
+            imageUrl: "/Teams/Web/NITIN MISHRA.jpg"
         },
         {
             name: "RISHABH KUMAR JAIN",
@@ -78,7 +78,7 @@ const WCTeam = () => {
             phone: "9555055862",
             email: "ratna.jaiswal23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: "./public/Teams/Web/RATNA JAISWAL.jpg"
+            imageUrl: "/Teams/Web/RATNA JAISWAL.jpg"
         },
         {
             name: "ARYAN KUMAR",
@@ -105,7 +105,7 @@ const WCTeam = () => {
             phone: "7080502411",
             email: "anmol.kushwaha23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: "./public/Teams/Web/ANMOL KUSHWAHA.jpg"
+            imageUrl: "/Teams/Web/ANMOL KUSHWAHA.jpg"
         }
     ];
 

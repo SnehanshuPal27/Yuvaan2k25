@@ -96,7 +96,7 @@ const SponsorshipTeam = () => {
             phone: "7009512702",
             email: "kunal.purohit23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: "./public/Teams/Sponsors/KUNAL PUROHIT.jpg"
+            imageUrl: "/Teams/Sponsors/KUNAL PUROHIT.jpg"
         },
         {
             name: "HRISHI SHEKHAR",
@@ -123,7 +123,7 @@ const SponsorshipTeam = () => {
             phone: "8929890960",
             email: "sahil.barman22b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: "./public/card-pic.jpg"
+            imageUrl: "/card-pic.jpg"
         },
         {
             name: "TUHIN ROY",
@@ -132,7 +132,7 @@ const SponsorshipTeam = () => {
             phone: "8258892047",
             email: "tuhin.roy23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: "./public/Teams/Sponsors/TUHIN ROY.heic"
+            imageUrl: "/Teams/Sponsors/TUHIN ROY.heic"
         },
         {
             name: "VALLURI JAYA VENKATA SREE VARDHAN",
