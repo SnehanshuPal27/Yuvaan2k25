@@ -1,10 +1,23 @@
 .events-page {
     position: relative;
-    min-height: 100vh;
+    min-height: 100vh; /* This ensures minimum full viewport height */
     width: 100%;
     padding: 20px;
+    padding-bottom: 60px; /* Add padding at bottom to prevent content from being hidden by footer */
+    display: flex;
+    flex-direction: column;
 }
-
+.content-wrapper {
+    flex: 1; /* This will make the content take available space */
+    z-index: 1;
+    position: relative;
+}
+.modern-footer {
+    position: relative;
+    z-index: 2; /* Ensure footer is above particles */
+    width: 100%;
+    margin-top: auto; /* Push footer to bottom */
+}
 #tsparticles {
     position: fixed !important;
     width: 100%;
@@ -583,4 +596,202 @@
     .close-button {
         cursor: auto !important;
     }
+}
+.festival-card__registration {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+}
+
+.registration-btn {
+    background: linear-gradient(145deg, #ffd700, #ff9f43);
+    color: #2d1810;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border: none;
+    white-space: nowrap; /* Prevent text from wrapping inside button */
+    min-width: 150px; /* Set minimum width for buttons */
+    text-align: center; /* Center text in button */
+}
+
+/* Add media query for mobile screens */
+@media screen and (max-width: 1023px) {
+    .festival-card__registration {
+        flex-direction: column; /* Stack buttons vertically on mobile */
+        align-items: center; /* Center buttons */
+        gap: 0.75rem; /* Reduce gap between buttons */
+    }
+
+    .registration-btn {
+        width: 90%; /* Make buttons take most of the container width */
+        max-width: 250px; /* But not too wide */
+        padding: 0.6rem 1rem; /* Slightly reduce padding */
+        font-size: 1rem; /* Slightly reduce font size */
+    }
+}
+.festival-card__description {
+    max-height: 400px;
+    overflow-y: auto;
+    padding-right: 10px;
+    white-space: pre-line; /* This preserves line breaks */
+}
+
+.description-line {
+    margin-bottom: 0.5rem; /* Add space between lines */
+    line-height: 1.4; /* Improve readability */
+}
+
+/* Style bullet points if needed */
+.description-line:not(:empty) {
+    padding-left: 0.5rem; /* Add slight indent */
+}
+
+/* dd */
+@media screen and (max-width: 1023px) {
+    .festival-card {
+        width: 90%;
+        max-width: 400px;
+        padding: 20px;
+    }
+
+    .desktop-only {
+        display: none;
+    }
+
+    .mobile-only-title {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .mobile-only-title h1 {
+        font-size: 1.8rem;
+        color: #ffd700;
+        margin-bottom: 10px;
+    }
+
+    .mobile-only-title p {
+        color: #ffa07a;
+        font-size: 1.1rem;
+    }
+
+    /* Center date and location while keeping them on the same line */
+    .festival-card__date-flex {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap; /* Allow wrapping if needed */
+    }
+
+    /* Keep time centered */
+    .festival-card__time {
+        text-align: center;
+        margin: 0.5rem 0;
+    }
+
+    /* Center description while maintaining text alignment */
+    .festival-card__description {
+        text-align: left;
+        max-width: 100%;
+        margin: 1rem auto;
+    }
+
+    /* Center coordinator information while keeping text readable */
+    .festival-card__contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .festival-card__contact span {
+        text-align: center;
+    }
+
+    /* Center registration buttons */
+    .festival-card__registration {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .registration-btn {
+        width: fit-content;
+        min-width: 200px;
+    }
+
+    /* Adjust details container */
+    .festival-card__details {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    /* Maintain description line spacing */
+    .description-line {
+        margin-bottom: 0.5rem;
+        padding-left: 0;
+    }
+}
+
+/* Ensure modal content is properly displayed */
+@media screen and (max-width: 1023px) {
+    .modal-overlay {
+        padding: 1rem;
+    }
+
+    .festival-card {
+        height: auto;
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+}
+.events-page img {
+    width: 99%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    margin-top: 95px;
+}
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999; /* Much higher than footer */
+}
+
+.content-wrapper {
+    z-index: 1;
+}
+
+/* Footer */
+.modern-footer {
+    z-index: 0;
+}
+
+/* Particles */
+#tsparticles {
+    z-index: -1;
+}
+
+/* Modal */
+.modal-overlay {
+    z-index: 99999;
+}
+
+.festival-card {
+    z-index: 99999;
 }
