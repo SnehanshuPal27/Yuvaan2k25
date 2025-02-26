@@ -1,74 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
 body {
   margin: 0;
-  font-family: 'Abhaya Libre', serif;
-  background-color: #f4f4f4;
-  color: #333;
-  overscroll-behavior: none;
+  font-family: 'Poppins', sans-serif;
+  background-color: #121212;
+  color: #ffffff;
   overflow-x: hidden;
 }
 
+/* Background Styling */
 .bg {
-  margin: 0;
-  padding: 60px 0 0;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
-  background-image: url('/BG_Sponsor3.jpg');
+  align-items: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/BG_Sponsor3.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-attachment: fixed;
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
-  overflow: scroll;
+  position: relative;
+  transition: background-image 0.5s ease-in-out;
 }
 
+/* Cards Grid */
 .team-index {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px 40px;
-  justify-items: center;
+  gap: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
   padding: 20px;
 }
 
-.team-index {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  justify-content: center;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.team-index a {
+/* Individual Card */
+.card-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
   text-decoration: none;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
 }
 
-.team-index img {
+/* Stagger animation delay for each card */
+.card-container:nth-child(1) { animation-delay: 0.2s; }
+.card-container:nth-child(2) { animation-delay: 0.4s; }
+.card-container:nth-child(3) { animation-delay: 0.6s; }
+.card-container:nth-child(4) { animation-delay: 0.8s; }
+.card-container:nth-child(5) { animation-delay: 1s; }
+.card-container:nth-child(6) { animation-delay: 1.2s; }
+
+/* Card Styling */
+.card {
+  position: relative;
   width: 100%;
-  height: auto;
-  display: block;
+  aspect-ratio: 4 / 5;
+  max-width: 250px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+  transition: transform 0.5s ease-in-out;
 }
 
-
-FlippingCard,
-FlippingCardFront,
-FlippingCardBack {
+.card-front {
   width: 100%;
-  max-width: 300px;
-  aspect-ratio: 3/4;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Back Content */
+.card-back {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 15px;
+  transition: left 0.5s ease-in-out;
+}
+
+.card-back p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.card-back button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
   border: none;
+  border-radius: 8px;
+  background: linear-gradient(45deg, #ff00ff, #00ffff);
+  color: #ffffff;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
+.card-back button:hover {
+  background: linear-gradient(45deg, #00ffff, #ff00ff);
+}
+
+/* Hover Effect for Desktop */
+@media (hover: hover) {
+  .card-container:hover .card-front {
+    transform: translateX(-100%);
+  }
+
+  .card-container:hover .card-back {
+    left: 0;
+  }
+}
+
+/* Responsive Design */
 @media (max-width: 900px) {
   .team-index {
     grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
   }
 }
 
 @media (max-width: 600px) {
   .team-index {
     grid-template-columns: 1fr;
+  }
+
+  .card-container.active .card-front {
+    transform: translateX(-100%);
+  }
+
+  .card-container.active .card-back {
+    left: 0;
+  }
+
+  /* Scroll to Footer Button */
+  .scroll-footer-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: black;
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+    transition: transform 0.2s ease-in-out;
+    z-index: 1000;
+    font-size: 24px;
+  }
+
+  .scroll-footer-btn:hover {
+    transform: scale(1.1);
+  }
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
