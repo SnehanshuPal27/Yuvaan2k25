@@ -224,6 +224,48 @@ const Events = () => {
       teamSize: "3-5",
     },
     {
+      title: "The Art Odyssey",
+      image: "",
+      date: "March 1, 2025",
+      time: "5:00 PM - 6:00 PM",
+      shortDescription: "Dynamic Painting Competition",
+      fullDescription: `The Art Odyssey is a dynamic painting competition where teams of two create artwork based on a given theme while adapting to periodic surprise challenges. This event tests creativity, teamwork, and adaptability.
+
+    Event Overview:
+    - Date: 1st March
+    - Time: 5:00 PM - 6:00 PM
+    - Team Size: 2 members
+    - Duration: 1 hour
+    - Theme: Revealed at the start
+
+    Event Format:
+    1. Foundation Phase (10 minutes): Start artwork based on the theme.
+    2. Challenge Phase (40 minutes): Adapt to new challenges every 10 minutes.
+    3. Refinement Phase (10 minutes): Final touches.
+
+    Judging Criteria:
+    - Creativity (30%)
+    - Adaptability (25%)
+    - Teamwork (20%)
+    - Visual Appeal (25%)
+
+    Guidelines:
+    - Bring your own paints and brushes.
+    - No pre-drawn sketches or digital tools.
+    - Follow all challenge rules and time limits.
+
+    Winner Selection:
+    Top three teams with the highest scores win. In case of a tie, adaptability to challenges decides the winner.`,
+      location: "The Townhall",
+      coordinators: [
+        { name: "Samadrita", contact: "7001805007" },
+        { name: "Prithvi", contact: "9955095089" },
+      ],
+      registrationLink:
+        "https://docs.google.com/forms/d/e/1FAIpQLSfRsAYZymC7iiMrVYZTCW-huunufen4NKJQkbwJbdtAxKXBlA/viewform",
+      teamSize: "2",
+    },
+    {
       title: "GULLY CRICKET (Finals)",
       image: "",
       date: "March 2, 2025",
@@ -266,7 +308,7 @@ const Events = () => {
   const day2Events = [
     {
       title: "SWAY",
-      image: "../../public/flyer - dance.jpg",
+      image: "/flyer - dance.jpg",
       date: "March 1, 2025",
       time: "10:00 AM - 3:00 PM",
       shortDescription: "Solo Dance Competition",
