@@ -1,174 +1,102 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import {
-  FlippingCard,
-  FlippingCardBack,
-  FlippingCardFront,
-} from "react-ui-cards";
-
 import "./index.css";
 
 export default function TeamIndex() {
+  const [activeCard, setActiveCard] = useState(null);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 900);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 900);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const handleCardClick = (index) => {
+    if (isMobile) {
+      setActiveCard(activeCard === index ? null : index);
+    }
+  };
+
+  const scrollToFooter = () => {
+    const footer = document.querySelector("footer");
+    if (footer) {
+      footer.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const teams = [
+    {
+      to: "/eventTeam",
+      img: "/EventManagement.jpg",
+      text: "Learn more about our Event Team. We organize unforgettable events.",
+    },
+    {
+      to: "/wcTeam",
+      img: "/WebCreatives.jpg",
+      text: "Discover our Web Creatives Team. We build stunning web experiences.",
+    },
+    {
+      to: "/sponsorTeam",
+      img: "/Sponsors.jpg",
+      text: "Meet our Sponsor Team. We secure amazing sponsorship deals.",
+    },
+    {
+      to: "/prTeam",
+      img: "/PR.jpg",
+      text: "Our PR Team shapes our public image with creative strategies.",
+    },
+    {
+      to: "/mediaTeam",
+      img: "/MediaPublicity.png",
+      text: "Explore our Media Team. We create compelling media content.",
+    },
+    {
+      to: "/sgcTeam",
+      img: "/SGC.jpeg",
+      text: "Our SGC Team works on groundbreaking creative solutions.",
+    },
+  ];
+
   return (
     <div className="bg">
       <div className="team-index">
-        <Link to="/eventTeam">
-          <FlippingCard>
-            <FlippingCardBack>
+        {teams.map((team, index) => (
+          <div
+            key={index}
+            className={`card-container ${
+              isMobile && activeCard === index ? "active" : ""
+            }`}
+            onClick={() => handleCardClick(index)}
+          >
+            <div className="card">
               <div
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  backgroundSize: "contain",
-                  backgroundPosition: "center",
-                  backgroundImage: "url(/Event_summary.png)",
-                }}
+                className="card-front"
+                style={{ backgroundImage: `url(${team.img})` }}
               ></div>
-            </FlippingCardBack>
-            <FlippingCardFront>
-              <div
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  backgroundSize: "contain",
-                  backgroundPosition: "center",
-                  backgroundImage: "url(/EventManagement.png)",
-                }}
-              ></div>
-            </FlippingCardFront>
-          </FlippingCard>
-        </Link>
-        <Link to="/wcTeam">
-          <FlippingCard>
-            <FlippingCardBack>
-              <div
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  backgroundSize: "contain",
-                  backgroundPosition: "center",
-                  backgroundImage: "url(/Web_summary.png)",
-                }}
-              ></div>
-            </FlippingCardBack>
-            <FlippingCardFront>
-              <div
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  backgroundSize: "contain",
-                  backgroundPosition: "center",
-                  backgroundImage: "url(/WebCreatives.png)",
-                }}
-              ></div>
-            </FlippingCardFront>
-          </FlippingCard>
-        </Link>
-        <Link to="/sponsorTeam">
-          <FlippingCard>
-            <FlippingCardBack>
-              <div
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  backgroundSize: "contain",
-                  backgroundPosition: "center",
-                  backgroundImage: "url(/Sponsor_summary.png)",
-                }}
-              ></div>
-            </FlippingCardBack>
-            <FlippingCardFront>
-              <div
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  backgroundSize: "contain",
-                  backgroundPosition: "center",
-                  backgroundImage: "url(/Sponsors.png)",
-                }}
-              ></div>
-            </FlippingCardFront>
-          </FlippingCard>
-        </Link>
-        <Link to="/prTeam">
-          <FlippingCard>
-            <FlippingCardBack>
-              <div
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  backgroundSize: "contain",
-                  backgroundPosition: "center",
-                  backgroundImage: "url(/Public_summary.png)",
-                }}
-              ></div>
-            </FlippingCardBack>
-            <FlippingCardFront>
-              <div
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  backgroundSize: "contain",
-                  backgroundPosition: "center",
-                  backgroundImage: "url(/PR.png)",
-                }}
-              ></div>
-            </FlippingCardFront>
-          </FlippingCard>
-        </Link>
-        <Link to="/mediaTeam">
-          <FlippingCard>
-            <FlippingCardBack>
-              <div
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  backgroundSize: "contain",
-                  backgroundPosition: "center",
-                  backgroundImage: "url(/Media_summary.png)",
-                }}
-              ></div>
-            </FlippingCardBack>
-            <FlippingCardFront>
-              <div
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  backgroundSize: "contain",
-                  backgroundPosition: "center",
-                  backgroundImage: "url(/MediaPublicity.png)",
-                }}
-              ></div>
-            </FlippingCardFront>
-          </FlippingCard>
-        </Link>
-        <Link to="/sgcTeam">
-          <FlippingCard>
-            <FlippingCardBack>
-              <div
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  backgroundSize: "contain",
-                  backgroundPosition: "center",
-                  backgroundImage: "url(/SGC_summary.jpg)",
-                }}
-              ></div>
-            </FlippingCardBack>
-            <FlippingCardFront>
-              <div
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  backgroundSize: "contain",
-                  backgroundPosition: "center",
-                  backgroundImage: "url(/SGC.jpeg)",
-                }}
-              ></div>
-            </FlippingCardFront>
-          </FlippingCard>
-        </Link>
+              <div className="card-back">
+                <p>{team.text}</p>
+                <Link to={team.to}>
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      handleCardClick(index);
+                    }}
+                  >
+                    Learn More
+                  </button>
+                </Link>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
+      {/* Scroll to Footer Button (Only in Mobile View) */}
+      {isMobile && (
+        <button className="scroll-footer-btn" onClick={scrollToFooter}>
+          ⬇
+        </button>
+      )}
     </div>
   );
 }
