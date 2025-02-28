@@ -284,7 +284,7 @@ const Events = () => {
     },
     {
       title: "POP IT UP! (Day 2)",
-      image: "../../public/QUIZ.JPG",
+      image: "/QUIZ.JPG",
       date: "March 2, 2025",
       time: "9:00 AM - 6:00 PM",
       shortDescription: "Pop Culture Festival Continuation",
