@@ -169,9 +169,9 @@ const Events = () => {
     },
     {
       title: "OPEN MIC X LATENT",
-      image: "../../public/flyer - open mic.jpg",
+      image: "/flyer - open mic.jpg",
       date: "March 1, 2025",
-      time: "5:00 PM - 9:00 PM",
+      time: "3:00 PM - 4:00 PM",
       shortDescription: "Open Mic Event Continuation",
       fullDescription: `1) Each performer gets maximum 5 minutes.
       2) Content should be anything but it should be family-friendly and respectful.
@@ -209,19 +209,29 @@ const Events = () => {
 
     {
       title: "Squid Game",
-      image: "",
+      image: "/Squid game.jpeg",
       date: "March 1, 2025",
-      time: "11:00 AM - 8:00 PM",
+      time: "11:30 AM - 1:30 PM",
       shortDescription: "Survival Game Series",
-      fullDescription: "Rules To Be Determined",
-      location: "Game Zone, IIITG",
-      coordinators: [{ name: "Fun Coordinator", contact: "Contact Info" }],
-      registrationLink: "#squid-games-registration",
+      fullDescription: `- Team Size: 3-4 members. 
+-No extra lifeline for teams with 3 members; players can participate in one additional game.
+- Adhere to game rules for fairness and safety.
+- Performance in each game determines progression.
+- Games: Red Light, Green Light, Colour Game, Marbles, Mystery Game.
+- Eliminated players assist in semi-finals prep but cannot compete in finals.
+- Teams with at least one non-eliminated player advance to semi-finals.
+- Top 13 teams qualify for finals; only non-eliminated players compete.`,
+      location: "Main Stage, IIITG",
+      coordinators: [
+        { name: "Vanshika Gupta", contact: "7408710213" },
+        { name: "Shubhashish", contact: "6307542454" },
+      ],
+      registrationLink: "https://forms.gle/jzHiP6fs4WWMDuC49",
       teamSize: "3-5",
     },
     {
       title: "The Art Odyssey",
-      image: "",
+      image: "/Art-Odyssey.jpeg",
       date: "March 1, 2025",
       time: "5:00 PM - 6:00 PM",
       shortDescription: "Dynamic Painting Competition",
@@ -252,7 +262,7 @@ const Events = () => {
 
     Winner Selection:
     Top three teams with the highest scores win. In case of a tie, adaptability to challenges decides the winner.`,
-      location: "The Townhall",
+      location: "Main Stage, IIITG",
       coordinators: [
         { name: "Samadrita", contact: "7001805007" },
         { name: "Prithvi", contact: "9955095089" },
@@ -263,7 +273,7 @@ const Events = () => {
     },
     {
       title: "GULLY CRICKET ",
-      image: "",
+      image: "/Gully-Cricket.jpeg",
       date: "March 1, 2025",
       time: "11:30 AM - 5:00 PM",
       shortDescription: "Street Cricket Tournament Finals",
@@ -308,38 +318,36 @@ const Events = () => {
     {
       title: "SWAY",
       image: "/flyer - dance.jpg",
-      date: "March 1, 2025",
-      time: "10:00 AM - 3:00 PM",
+      date: "March 2, 2025",
+      time: "5:30 PM - 6:15 PM",
       shortDescription: "Solo Dance Competition",
       fullDescription: `• Performance duration: The maximum time allowed is 3 minutes.
       • Any dance style is permitted; feel free to express yourself creatively.
       • Props are allowed but must be pre-approved by the organizers.
       • Participants must bring their own music track in MP3 format.`,
-      location: "Main Hall, IIITG",
+      location: "Main Stage, IIITG",
       coordinators: [
         { name: "Lasya Eadara", contact: "9704663622" },
-        { name: "Vanshika Gupta", contact: "7408710213" },
-        { name: "Ramu naik", contact: "9492659298" },
+        { name: "Vanshika Gupta", contact: "7408710213" }
       ],
       registrationLink:
         "https://docs.google.com/forms/d/e/1FAIpQLSfuS74l5OzImBKnH-1vqXf_Zun7G926wXUGYq7BPK0m_XUOMQ/viewform?usp=header",
       teamSize: "1",
     },
     {
-      title: "SYNC (Finals)",
-      image: "",
-      date: "March 1, 2025",
-      time: "1:00 PM - 5:00 PM",
+      title: "SYNC",
+      image: "/flyer - dance.jpg",
+      date: "March 2, 2025",
+      time: "6:15 PM - 7:00 PM",
       shortDescription: "Group Dance Competition",
       fullDescription: `• Performance duration: 3 to 5 minutes.
       • Props and costumes are allowed but must be pre-approved by the organizers.
       • Any dance style or fusion is welcome; however, synchronization and creativity are key.
       • Teams must submit their music track in MP3 format before the event.`,
-      location: "Performance Center, IIITG",
+      location: "Main Stage, IIITG",
       coordinators: [
         { name: "Lasya Eadara", contact: "9704663622" },
-        { name: "Vanshika Gupta", contact: "7408710213" },
-        { name: "Ramu naik", contact: "9492659298" },
+        { name: "Vanshika Gupta", contact: "7408710213" }
       ],
       registrationLink:
         "https://docs.google.com/forms/d/e/1FAIpQLScqY67gLJEg4uahCk1hi00RNFr9WxFGnYS5jQTGBH5AN_vfdQ/viewform?usp=header",
@@ -371,18 +379,37 @@ const Events = () => {
     },
 
     {
-      title: "MUSICAL OLYMPICS (Finals)",
-      image: "",
-      date: "March 1, 2025",
-      time: "10:00 AM - 4:00 PM",
+      title: "MUSICAL OLYMPICS",
+      image: "/flyer - MUSIC.jpg",
+      date: "March 2, 2025",
+      time: "3:00 PM - 4:00 PM",
       shortDescription: "Music Competition Series",
-      fullDescription: `Challenge Rounds:\n
-    • Missing Words: Fill in song lyrics\n
-    • Reverse Lyrics: Identify backwards songs\n
-    • Emoji Decode: Guess songs from emojis\n
-    • Lyric Puzzle: Rearrange scrambled lyrics\n
-    • Lyric Charades: Act out song lyrics`,
-      location: "Olympic Arena, IIITG",
+      fullDescription: `- Total Duration: 1.2 hours
+- Participation: Solo
+- Rounds: 4 Rounds (Each 20 minutes)
+- Eliminations: Participants are eliminated after each round, leading to a final showdown in Round 4.
+
+Round 1: Missing Words
+- Objective: Fill in the blanks of famous song lyrics.
+- Scoring: +5 points per correct answer.
+- Elimination: Bottom 40% eliminated.
+
+Round 2: Emoji Decode
+- Objective: Identify the song title based on emojis.
+- Scoring: +10 points per correct answer.
+- Elimination: Bottom 40% eliminated.
+
+ Round 3: Guess the Song 
+- Objective: Identify a song after hearing the first 15 seconds.
+- Scoring: +15 points per correct answer.
+- Elimination: Bottom 50% eliminated.
+
+ Final Round: Lyric Puzzle 
+- Objective: Unscramble jumbled lyrics within the time limit.
+- Scoring: +20 points per correct answer.
+- Winner: Highest total score from all rounds.
+- Tie-Breaker: Extra lyric puzzle until a winner is determined.`,
+      location: "Main Stage, IIITG",
       coordinators: [
         { name: "Ananya Anurag Lenka", contact: "9437089199" },
         { name: "Karthikeya Seeram", contact: "8978327879" },
@@ -393,10 +420,10 @@ const Events = () => {
       teamSize: "1",
     },
     {
-      title: "GULLY CRICKET (Finals)",
-      image: "",
+      title: "GULLY CRICKET Finals",
+      image: "/Gully-Cricket.jpeg",
       date: "March 2, 2025",
-      time: "8:00 AM - 6:00 PM",
+      time: "10:00 AM - 5:00 PM",
       shortDescription: "Street Cricket Tournament Finals",
       fullDescription: `1) Matches will be played with a tennis ball.
       2) Equipment (bat & ball) will be provided.
@@ -411,30 +438,40 @@ const Events = () => {
     },
 
     {
-      title: "Squid Games (Finals)",
-      image: "",
+      title: "Squid Game Finals",
+      image: "/Squid game.jpeg",
       date: "March 2, 2025",
-      time: "11:00 AM - 8:00 PM",
+      time: "10:00 AM - 12:00 PM",
       shortDescription: "Survival Game Series Finals",
-      fullDescription: "Rules To Be Determined",
-      location: "Game Zone, IIITG",
-      coordinators: [{ name: "Fun Coordinator", contact: "Contact Info" }],
-      registrationLink: "#squid-games-registration-finals",
+      fullDescription: `- Team Size: 3-4 members. 
+-No extra lifeline for teams with 3 members; players can participate in one additional game.
+- Adhere to game rules for fairness and safety.
+- Performance in each game determines progression.
+- Games: Red Light, Green Light, Colour Game, Marbles, Mystery Game.
+- Eliminated players assist in semi-finals prep but cannot compete in finals.
+- Teams with at least one non-eliminated player advance to semi-finals.
+- Top 13 teams qualify for finals; only non-eliminated players compete.`,
+      location: "Main Stage, IIITG",
+      coordinators: [
+        { name: "Vanshika Gupta", contact: "7408710213" },
+        { name: "Shubhashish", contact: "6307542454" },
+      ],
+      registrationLink: "https://forms.gle/jzHiP6fs4WWMDuC49",
       teamSize: "3-5",
     },
     {
       title: "POP IT UP!",
       image: "/QUIZ.JPG",
       date: "March 2, 2025",
-      time: "9:00 AM - 6:00 PM",
+      time: "4:45 PM - 5:30 PM",
       shortDescription: "Pop Culture Festival Continuation",
-      fullDescription: `Day 2 Events:\n
+      fullDescription: `
     • Cosplay Finals\n
     • Art Competition Results\n
     • Pop Culture Trivia Finals\n
     • Gaming Tournament Finals\n
     • Best of Show Awards`,
-      location: "Festival Ground, IIITG",
+      location: "Main Stage, IIITG",
       coordinators: [
         { name: "Thamas Prakash Gaykawad", contact: "7898187813" },
         { name: "Shubham Kumar", contact: "9065582032" },
