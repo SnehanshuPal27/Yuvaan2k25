@@ -114,10 +114,10 @@ const Events = () => {
   const day1Events = [
     {
       title: "ONE VOICE, ONE INSTRUMENT",
-      image: "",
+      image: "/flyer - MUSIC.jpg",
       date: "March 1, 2025",
-      time: "10:00 AM - 5:00 PM",
-      shortDescription: "Solo Performance Competition",
+      time: "5:00 PM - 6:00 PM",
+      shortDescription: "Solo Music Competition",
       fullDescription: `Two Categories:\n
     • Vocalists\n
     • Instrumentalists\n
@@ -126,10 +126,10 @@ const Events = () => {
     • Creativity\n
     • Stage Presence\n
     • Overall Performance`,
-      location: "Auditorium, IIITG",
+      location: "Main Stage, IIITG",
       coordinators: [
         { name: "Ananya Anurag Lenka", contact: "9437089199" },
-        { name: "Karthikeya Seeram", contact: "8978327879" },
+        { name: "Karthikeya Seeram", contact: "6307542454" },
         { name: "Bhavish Melekote", contact: "9321432559" },
       ],
       registrationLink: {
@@ -142,10 +142,10 @@ const Events = () => {
     },
     {
       title: "BAND BASH",
-      image: "../../public/flyer - MUSIC.jpg",
+      image: "/flyer - MUSIC.jpg",
       date: "March 1, 2025",
-      time: "2:00 PM - 6:00 PM",
-      shortDescription: "Band Competition",
+      time: "6:00 PM - 7:00 PM",
+      shortDescription: "Group Music Competition",
       fullDescription: `Performance Guidelines:\n
     • Bands must perform original or cover songs\n
     • Performance duration: 15-20 minutes\n
@@ -156,7 +156,7 @@ const Events = () => {
       location: "Main Stage, IIITG",
       coordinators: [
         { name: "Ananya Anurag Lenka", contact: "9437089199" },
-        { name: "Karthikeya Seeram", contact: "8978327879" },
+        { name: "Karthikeya Seeram", contact: "6307542454" },
         { name: "Bhavish Melekote", contact: "9321432559" },
       ],
       registrationLink: {
@@ -168,15 +168,34 @@ const Events = () => {
       teamSize: "3-8",
     },
     {
-      title: "Spotlight Solo",
-      image: "../../public/Drama.JPG",
+      title: "OPEN MIC X LATENT",
+      image: "../../public/flyer - open mic.jpg",
       date: "March 1, 2025",
-      time: "9:00 AM - 4:00 PM",
+      time: "5:00 PM - 9:00 PM",
+      shortDescription: "Open Mic Event Continuation",
+      fullDescription: `1) Each performer gets maximum 5 minutes.
+      2) Content should be anything but it should be family-friendly and respectful.
+      3) Performer should predict a score before performing and after performance we match the average score of judge to the guess score of the performer.
+      4) Winner will be decided if guessed score matches with average score.`,
+      location: "Main Stage, IIITG",
+      coordinators: [
+        { name: "Shubh Tiwari", contact: "9528015193" },
+        { name: "Vanshika Gupta", contact: "7408710213" },
+      ],
+      registrationLink:
+        "https://docs.google.com/forms/d/e/1FAIpQLSfjWPqY-ZC9NHzqCDXbwIE0Uql4IIYz011X28wTQra9eumP3g/viewform",
+      teamSize: "1",
+    },
+    {
+      title: "Spotlight Solo",
+      image: "/Drama.JPG",
+      date: "March 1, 2025",
+      time: "4:00 PM - 5:00 PM",
       shortDescription: "Solo Dance Competition",
       fullDescription: `1) Participants are free to choose their theme. The content should be meaningful, engaging, and age-appropriate.
       2) Each team must perform within the allotted time limit as per competition guidelines.
       3) Only minimal props are allowed, and participants must manage them independently.`,
-      location: "Dance Studio, IIITG",
+      location: "Main Stage, IIITG",
       coordinators: [
         { name: "Abhiraj Tomar", contact: "9205454265" },
         { name: "Mohit Kumawat", contact: "9468844484" },
@@ -186,33 +205,10 @@ const Events = () => {
         "https://docs.google.com/forms/d/e/1FAIpQLSd5cu5F_yObiBgfhIFKbcbseo02j4ZP3fN0LuzFNd-Uo9XsVQ/viewform?usp=header",
       teamSize: "1",
     },
-    {
-      title: "Prompt Wars",
-      image: "",
-      date: "March 1, 2025",
-      time: "11:00 AM - 7:00 PM",
-      shortDescription: "Creative Writing Challenge",
-      fullDescription: `● Prompts will be provided on the spot by the event organizers.
-      ● Vulgar or offensive content will lead to immediate disqualification.`,
-      location: "Creative Hub, IIITG",
-      coordinators: [
-        { name: "Abhiraj Tomar", contact: "9205454265" },
-        {
-          name: "Mohit Kumawat",
-          contact: "9468844484",
-        },
-        {
-          name: "Prakshay Saini",
-          contact: "9034480145",
-        },
-      ],
-      registrationLink:
-        "https://docs.google.com/forms/d/e/1FAIpQLSfCw-vp5dNfLnLEZMEi9SjyJE3l13BmYCXJ_iZcHe6PsXRTUA/viewform?usp=header",
-      teamSize: "2-4",
-    },
+    
 
     {
-      title: "Squid Games",
+      title: "Squid Game",
       image: "",
       date: "March 1, 2025",
       time: "11:00 AM - 8:00 PM",
@@ -266,10 +262,10 @@ const Events = () => {
       teamSize: "2",
     },
     {
-      title: "GULLY CRICKET (Finals)",
+      title: "GULLY CRICKET ",
       image: "",
-      date: "March 2, 2025",
-      time: "8:00 AM - 6:00 PM",
+      date: "March 1, 2025",
+      time: "11:30 AM - 5:00 PM",
       shortDescription: "Street Cricket Tournament Finals",
       fullDescription: `1) Matches will be played with a tennis ball.
       2) Equipment (bat & ball) will be provided.
@@ -283,26 +279,29 @@ const Events = () => {
       teamSize: "3",
     },
     {
-      title: "POP IT UP! (Day 2)",
-      image: "/QUIZ.JPG",
-      date: "March 2, 2025",
-      time: "9:00 AM - 6:00 PM",
-      shortDescription: "Pop Culture Festival Continuation",
-      fullDescription: `Day 2 Events:\n
-    • Cosplay Finals\n
-    • Art Competition Results\n
-    • Pop Culture Trivia Finals\n
-    • Gaming Tournament Finals\n
-    • Best of Show Awards`,
-      location: "Festival Ground, IIITG",
+      title: "Blue Wings Band",
+      image: "",
+      date: "March 1, 2025",
+      time: "8:00 PM - 10:00 PM",
+      shortDescription: "Group Music Competition",
+      fullDescription: `Performance Guidelines:\n
+    • Bands must perform original or cover songs\n
+    • Performance duration: 15-20 minutes\n
+    Judging Criteria:\n
+    • Musical Synchronization\n
+    • Stage Presence\n
+    • Overall Impact`,
+      location: "Main Stage, IIITG",
       coordinators: [
-        { name: "Thamas Prakash Gaykawad", contact: "7898187813" },
-        { name: "Shubham Kumar", contact: "9065582032" },
+        { name: "", contact: "" }
       ],
-      registrationLink:
-        "https://docs.google.com/forms/d/e/1FAIpQLScqjuGDR89jtcm-pr4iLEiPOJauYkMIb949bGZQPsOBBUMO7A/viewform?usp=header",
-      teamSize: "1-3",
+      registrationLink: {
+        internal:
+          "",
+      },
+      teamSize: "3-8",
     },
+    
   ];
 
   const day2Events = [
@@ -346,6 +345,30 @@ const Events = () => {
         "https://docs.google.com/forms/d/e/1FAIpQLScqY67gLJEg4uahCk1hi00RNFr9WxFGnYS5jQTGBH5AN_vfdQ/viewform?usp=header",
       teamSize: "4-12",
     },
+    {
+      title: "Prompt Wars",
+      image: "/Drama.JPG",
+      date: "March 2, 2025",
+      time: "12:00 PM - 1:00 PM",
+      shortDescription: "Group Performance",
+      fullDescription: `● Prompts will be provided on the spot by the event organizers.
+      ● Vulgar or offensive content will lead to immediate disqualification.`,
+      location: "Main Stage, IIITG",
+      coordinators: [
+        { name: "Abhiraj Tomar", contact: "9205454265" },
+        {
+          name: "Mohit Kumawat",
+          contact: "9468844484",
+        },
+        {
+          name: "Prakshay Saini",
+          contact: "9034480145",
+        },
+      ],
+      registrationLink:
+        "https://docs.google.com/forms/d/e/1FAIpQLSfCw-vp5dNfLnLEZMEi9SjyJE3l13BmYCXJ_iZcHe6PsXRTUA/viewform?usp=header",
+      teamSize: "2-4",
+    },
 
     {
       title: "MUSICAL OLYMPICS (Finals)",
@@ -386,25 +409,7 @@ const Events = () => {
         "https://docs.google.com/forms/d/e/1FAIpQLSeVZUBubD0i2We5mlDHTKuRiRQwjKmHEgFHnndr0LUO56zBRQ/viewform?usp=header",
       teamSize: "3",
     },
-    {
-      title: "OPEN MIC X LATENT (Day 2)",
-      image: "../../public/flyer - open mic.jpg",
-      date: "March 2, 2025",
-      time: "5:00 PM - 9:00 PM",
-      shortDescription: "Open Mic Event Continuation",
-      fullDescription: `1) Each performer gets maximum 5 minutes.
-      2) Content should be anything but it should be family-friendly and respectful.
-      3) Performer should predict a score before performing and after performance we match the average score of judge to the guess score of the performer.
-      4) Winner will be decided if guessed score matches with average score.`,
-      location: "Student Center, IIITG",
-      coordinators: [
-        { name: "Shubh Tiwari", contact: "9528015193" },
-        { name: "Vanshika Gupta", contact: "7408710213" },
-      ],
-      registrationLink:
-        "https://docs.google.com/forms/d/e/1FAIpQLSfjWPqY-ZC9NHzqCDXbwIE0Uql4IIYz011X28wTQra9eumP3g/viewform",
-      teamSize: "1",
-    },
+
     {
       title: "Squid Games (Finals)",
       image: "",
@@ -416,6 +421,27 @@ const Events = () => {
       coordinators: [{ name: "Fun Coordinator", contact: "Contact Info" }],
       registrationLink: "#squid-games-registration-finals",
       teamSize: "3-5",
+    },
+    {
+      title: "POP IT UP!",
+      image: "/QUIZ.JPG",
+      date: "March 2, 2025",
+      time: "9:00 AM - 6:00 PM",
+      shortDescription: "Pop Culture Festival Continuation",
+      fullDescription: `Day 2 Events:\n
+    • Cosplay Finals\n
+    • Art Competition Results\n
+    • Pop Culture Trivia Finals\n
+    • Gaming Tournament Finals\n
+    • Best of Show Awards`,
+      location: "Festival Ground, IIITG",
+      coordinators: [
+        { name: "Thamas Prakash Gaykawad", contact: "7898187813" },
+        { name: "Shubham Kumar", contact: "9065582032" },
+      ],
+      registrationLink:
+        "https://docs.google.com/forms/d/e/1FAIpQLScqjuGDR89jtcm-pr4iLEiPOJauYkMIb949bGZQPsOBBUMO7A/viewform?usp=header",
+      teamSize: "1-3",
     },
   ];
 
