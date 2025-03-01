@@ -24,7 +24,7 @@ const PRTeam = () => {
             phone: "9580256143",
             email: "mukund.agrawal22b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: "./public/card-pic.jpg"
+            imageUrl: "/Teams/PR/Mukund.jpeg"
         },
         {
             name: "BHEEMUNI HARSHAVARDHAN REDDY",
@@ -78,7 +78,7 @@ const PRTeam = () => {
             phone: "7849936546",
             email: "rahul.yadav23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: "./public/card-pic.jpg"
+            imageUrl: "/Teams/PR/RAHUL YADAV.jpg"
         },
         {
             name: "LALIT KUMAR",

@@ -24,7 +24,7 @@ const EventManagementTeam = () => {
             phone: "6307542454",
             email: "shubhashish.shukla23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: "./public/card-pic.jpg"
+            imageUrl: "/Teams/Event/SHUBHASHISH SHUKLA.jpeg"
         },
         {
             name: "Vanshika Gupta",
@@ -87,7 +87,7 @@ const EventManagementTeam = () => {
             phone: "7032323720",
             email: "tadikonda.aditya23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: "./public/card-pic.jpg"
+            imageUrl: "/Teams/Event/TADIKONDA ADITYA.jpg"
         },
         {
             name: "Seeram Karthikeya",
@@ -114,7 +114,7 @@ const EventManagementTeam = () => {
             phone: "9528015193",
             email: "shubh.tiwari23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: "./public/card-pic.jpg"
+            imageUrl: "/Teams/Event/SHUBH TIWARI.jpg"
         },
         {
             name: "Ananya Anurag Lenka",

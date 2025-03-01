@@ -33,7 +33,7 @@ const WCTeam = () => {
             phone: "8238735681",
             email: "solanki.deepak22b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: "/Teams/Web/SOLANKI DEEPAK.jpg"
+            imageUrl: "/Teams/Web/Dharak.jpeg"
         },
         {
             name: "SACHIN MOHANTY",
@@ -69,7 +69,7 @@ const WCTeam = () => {
             phone: "8179642563",
             email: "nishant.prabhat23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: "./public/card-pic.jpg"
+            imageUrl: "/Teams/Web/NISHANT PRABHAT.jpeg"
         },
         {
             name: "RATNA JAISWAL",
@@ -87,7 +87,7 @@ const WCTeam = () => {
             phone: "7890010105",
             email: "aryan.kumar22b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: "./public/card-pic.jpg"
+            imageUrl: "/Teams/Web/Aryan.jpeg"
         },
         {
             name: "GUDE SAI DHEERAN CHOWDARY",
@@ -106,6 +106,15 @@ const WCTeam = () => {
             email: "anmol.kushwaha23b@iiitg.ac.in",
             linkedin: "",
             imageUrl: "/Teams/Web/ANMOL KUSHWAHA.jpg"
+        },
+        {
+            name: "SHAURYA MANI TRIPATHI",
+            jobTitle: "Member",
+            id: "2201184",
+            phone: "",
+            email: "",
+            linkedin: "",
+            imageUrl: "/Teams/Web/Shaurya.jpeg"
         }
     ];
 

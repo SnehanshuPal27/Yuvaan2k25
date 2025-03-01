@@ -24,7 +24,7 @@ const SGCTeam = () => {
             phone: "",
             email: "",
             linkedin: "",
-            imageUrl: "/Teams/SGC/sai.png"
+            imageUrl: "/Teams/SGC/sai (2).jpeg"
         },
         {
             name: "Siddharth Singh",
@@ -33,7 +33,7 @@ const SGCTeam = () => {
             phone: "",
             email: "",
             linkedin: "",
-            imageUrl: "/Teams/SGC/siddharth.png"
+            imageUrl: "/Teams/SGC/vp.jpeg"
         },
         {
             name: "Madhur Jain",
@@ -51,7 +51,7 @@ const SGCTeam = () => {
             phone: "",
             email: "",
             linkedin: "",
-            imageUrl: "./public/card-pic.jpg"
+            imageUrl: "/Teams/SGC/KT_SIR.jpeg"
         }
     ];
 

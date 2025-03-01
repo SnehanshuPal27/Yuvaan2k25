@@ -105,7 +105,7 @@ const MediaPublicityTeam = () => {
             phone: "9955960418",
             email: "adarsh.kumar23b@iiitg.ac.in",
             linkedin: "",
-            imageUrl: "./public/card-pic.jpg"
+            imageUrl: "/Teams/M&P/ADARSH KUMAR.jpeg"
         },
         {
             name: "PRIYA DEORI",
